@@ -1,0 +1,135 @@
+.working-process {
+	text-align: center;
+	padding: 50px 20px;
+	background-color: #f9f9f9;
+  }
+  
+  .working-process h2 {
+	font-size: 2.5rem;
+	margin-bottom: 40px;
+  }
+  
+  .steps-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 0; /* No gap between the cards */
+  }
+  
+  .step {
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 30px 20px;
+	margin: 0;
+	width: 23%;
+	text-align: center;
+	position: relative;
+	opacity: 0; /* Initially hidden */
+	transform: translateY(100px) scale(0.8); /* Start outside the screen and zoomed out */
+	transition: transform 1s ease-in-out, opacity 1s ease-in-out; /* Smooth transition */
+  }
+ 
+  .step.visible {
+	opacity: 1;
+	transform: translateY(0) scale(1); /* Move into the final position and size */
+  }
+  
+  .step-header-container {
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: white;
+	padding: 0 10px;
+  }
+  
+  .step-header {
+	background-color: #c69c6d;
+	color: white;
+	padding: 8px 16px;
+	border-radius: 50px;
+	font-weight: bold;
+  }
+  
+  .icon {
+	font-size: 3rem;
+	color: #c69c6d;
+	margin: 0px 0 0px;
+  }
+  
+  h3 {
+	font-size: 1.2rem;
+	margin-bottom: 15px;
+  }
+  
+  p {
+	font-size: 0.9rem;
+	color: #555;
+  }
+  
+  @media screen and (max-width: 768px) {
+	.step {
+	  width: 100%;
+	  margin-bottom: 20px;
+	}
+  }
+  
+
+
+  @media (max-width: 575px) {
+	.project-details-area {
+	  padding: 15px; /* Reducing padding on mobile */
+	}
+  
+	.project-details-top-text {
+	  font-size: 14px; /* Smaller font size for mobile */
+	  line-height: 1.4; /* Better readability */
+	}
+  
+	/* Stack Tour and Amenities vertically */
+	.col-lg-6, .col-lg-4 {
+	  width: 100%; /* Full width on mobile */
+	  margin-bottom: 20px; /* Add space between components */
+	}
+  
+	/* Adjust project-overview-box for mobile */
+	.project-overview-box {
+	  margin: 15px auto; /* Center items and reduce margin */
+	  padding: 15px; /* Smaller padding */
+	  text-align: center; /* Keep text centered */
+	}
+  
+	.project-overview-box img {
+	  width: 70px; /* Reduce icon size */
+	}
+  
+	.project-overview-box h5 {
+	  font-size: 18px; /* Smaller headings */
+	}
+  
+	.project-overview-box p {
+	  font-size: 12px; /* Smaller text */
+	}
+  }
+  
+  /* Responsive styles for medium screens (tablets) */
+  @media (min-width: 576px) and (max-width: 991px) {
+	.col-lg-6, .col-lg-4 {
+	  width: 100%;
+	  margin-bottom: 20px; /* Add space between components */
+	}
+	
+	/* Adjustments for project-overview */
+	.project-overview-box img {
+	  width: 80px; /* Reduce icon size */
+	}
+	
+	.project-overview-box h5 {
+	  font-size: 20px; /* Slightly smaller headings */
+	}
+  
+	.project-overview-box p {
+	  font-size: 14px; /* Adjust text size */
+	}
+  }

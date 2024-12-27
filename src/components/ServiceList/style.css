@@ -1,0 +1,91 @@
+/* ===================== SERVICE ======================*/
+.service-icon{
+	margin: auto;
+	width: 120px;
+	height: 120px;
+	background-color:#e9f2ea ;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+.service-icon:hover{
+	background-color: black;
+}
+.service-icon img{
+	width: 75px;
+	height: 75px;
+	object-fit: cover;
+	
+}
+.service-icon:hover img {
+	filter: brightness(0) invert(1); /* Change image color to white */
+  }
+.service-area {
+	padding-top: 50px;
+	padding-bottom: 25px
+}
+
+.service-box {
+	text-align: center;
+	padding: 50px 30px;
+	position: relative;
+	z-index: 1;
+	box-shadow: 0 3px 30px rgba(0, 0, 0, 0.05);
+	margin-bottom: 30px
+}
+
+
+.service-box:hover:after,
+.service-box:hover>img {
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+}
+
+.service-text {
+	margin-top: 30px;
+}
+
+.service-text h3 {
+	color: #000;
+	font-size: 34px;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+.service-text p,
+.service-text h3 {
+	-webkit-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+
+
+
+.service-text .btn-border {
+	border-width: 1px;
+	margin-top: 15px
+}
+
+.service-page-area {
+	padding-top: 70px;
+	padding-bottom: 100px
+}
+
+.service-page-area .service-box {
+	margin-top: 30px;
+	margin-bottom: 0
+}
+/*Responsive*/
+@media(max-width: 767px) {
+	.service-area {
+		padding-top: 0
+	}
+	.service-page-area {
+		padding-top: 70px
+	}
+	.service-text h3 {
+		font-size: 30px
+	}
+
+}

@@ -1,0 +1,93 @@
+/* ===================== SERVICE ======================*/
+
+.service-area {
+  padding-top: 50px;
+  padding-bottom: 70px;
+}
+.service-area h1 {
+  padding-bottom: 50px;
+}
+
+.service-text {
+  margin-top: 30px;
+}
+
+.service-icon img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+
+.service-area-container {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  user-select: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+.service-steps {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  margin: 0;
+  /* font-style: normal; */
+  font-weight: 600;
+  /* letter-spacing: 1px; */
+}
+
+.service-text h3 {
+  color: #000;
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.service-text p,
+.service-text h3 {
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.service-text .btn-border {
+  border-width: 1px;
+  margin-top: 15px;
+}
+
+.service-page-area {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+.work-title {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Responsive*/
+@media (max-width: 767px) {
+  .service-area-container {
+    margin-top: 35px;
+  }
+  .service-area {
+    padding-top: 0;
+  }
+  .service-page-area {
+    padding-top: 70px;
+  }
+  .service-text h3 {
+    font-size: 30px;
+  }
+  .service-steps {
+    font-weight: 600;
+  }
+}
+.step-header-container {
+  background-color: #c69c6d;
+  border-radius: 50px;
+}
+.step-header {
+  background-color: #c69c6d;
+  width: 100px;
+}

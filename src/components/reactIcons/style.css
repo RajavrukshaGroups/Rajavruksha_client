@@ -1,0 +1,65 @@
+/* Custom styles for the smaller project boxes */
+.project-box {
+    background-color: #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    padding: 15px;
+  }
+  
+  .project-box:hover {
+    transform: scale(1.05);
+  }
+  
+  .project-box h6 {
+    font-weight: 600;
+    font-size: 14px; /* Smaller font size */
+    color: #b600a7; /* Adjust this for the text color */
+  }
+  
+  .project-box .status {
+    color: #8b9a88;
+    font-size: 12px; /* Smaller status text */
+  }
+  
+  .project-box .icon img {
+    max-width: 45px; /* Smaller icon size */
+    color: #d4a832; /* Optional if the icon should have a specific color */
+  }
+  
+  @media (max-width: 768px) {
+    .project-box {
+      margin-bottom: 20px;
+    }
+  }
+  
+
+  .projects-section {
+    background-color: #af1010;
+    border-radius: 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-box {
+    padding: 1px;
+    background-color: yellow;
+  }
+  
+  .icon {
+    width: 10px; /* Adjust this size as per your requirement */
+  }
+  
+  .project-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .project-divider {
+    width: 50%;
+    margin: 0 auto 15px;
+    border-top: 2px dotted #dddddd;
+  }
+  
+  .project-status {
+    font-size: 2px;
+  }
+  

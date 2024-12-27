@@ -1,0 +1,85 @@
+/* ===================== TESTIMONIAL NEW SLIDER ======================*/
+.testimonial-new-slider-area {
+  background: rgba(249, 249, 249, 0.76);
+}
+
+.testimonial-new-slider .testimonial-new-slide {
+  padding: 0 10px;
+}
+
+.testimonial-new-slider .testimonial-new-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.testimonial-new-slider .slick-dots li {
+  margin: 0 2px;
+}
+
+.testimonial-new-slider .slick-dots li button:before {
+  font-size: 12px;
+  opacity: 0.2;
+  color: #000;
+}
+
+.testimonial-new-slider .slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #b78d65;
+}
+
+.testimonial-new-slider .slick-dots {
+  position: inherit;
+  margin-top: -39px;
+}
+.single-testimonial img {
+  border-radius: 30px;
+}
+
+.gal-cont {
+  margin-top: 120px;
+}
+
+.gallery-title {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  font-size: 60px;
+  letter-spacing: 0px;
+  font-weight: 500;
+  line-height: 70px;
+}
+
+.gallery-testimonial {
+  border-radius: 17px;
+  overflow: visible;
+  padding: 14px;
+  background: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  margin: 25px;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.slide {
+  margin: auto;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .testimonial-new-slider .slick-dots {
+    bottom: -20px;
+  }
+}
+
+@media (max-width: 430px) {
+  .gal-cont {
+    margin-top: 46px;
+  }
+  .testimonial-new-slider {
+    margin: -110px;
+    margin-top: 49px;
+    margin-bottom: 79px;
+  }
+}

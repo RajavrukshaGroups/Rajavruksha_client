@@ -1,0 +1,186 @@
+.containers {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  padding-left: 157px;
+  padding-right: 157px;
+  padding-top: 56px;
+  flex-wrap: wrap;
+}
+
+.input-bde {
+  background-color: transparent;
+}
+
+.job-description {
+  flex: 1;
+  color: #333;
+}
+
+.job-description h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #006400;
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.job-description h3,
+.job-description h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 1rem;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.job-description p,
+.job-description ul {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.list-methods {
+  margin-bottom: 10px;
+}
+
+.list-methods li {
+  list-style-type: disc;
+  margin-left: 40px;
+  color: #777;
+}
+
+.consent-sec {
+  color: #777;
+}
+
+.career-form {
+  flex: 1;
+  background: #ffffff;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.career-form h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  color: #006400;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  background: #e8f5e9;
+  padding-left: 1rem;
+  box-sizing: border-box;
+}
+
+input::placeholder {
+  padding-left: 1rem;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.error {
+  display: block;
+  font-size: 0.8rem;
+  color: #ff0000;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.form-group input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.choose-file {
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  background-color: #f0f0f0;
+  color: #333;
+  text-align: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.choose-file:hover {
+  background-color: #e0e0e0;
+}
+.choose-file:active {
+  background-color: #d0d0d0;
+  transform: scale(0.98);
+}
+
+.submit-button {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: #ffb74d;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: #ff9800;
+}
+
+.file-pdf p {
+  color: red;
+  font-size: 0.7rem;
+  line-height: normal;
+  padding-left: -37px;
+}
+
+.car-ind {
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .containers {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .career-form {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .job-description {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .submit-button {
+    width: 50%;
+  }
+}
