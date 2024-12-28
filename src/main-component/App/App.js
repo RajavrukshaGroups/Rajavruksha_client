@@ -6,7 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
 import '../../index.css';
-
+//optimization level
 const App = () => {
     useEffect(() => {
         AOS.init({

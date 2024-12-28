@@ -8,8 +8,7 @@ import {
 import "./style.css";
 
 const FloatingIcons = () => {
-  const [isExpanded, setIsExpanded] = useState(true);
-
+  const [isExpanded, setIsExpanded] =useState(true);
   const handleClick = (type, value) => {
     if (type === "phone") {
       window.location.href = `tel:${value}`;
