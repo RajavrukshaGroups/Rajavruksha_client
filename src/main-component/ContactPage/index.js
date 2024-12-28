@@ -1,17 +1,52 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 import Header from "../../components/header";
 import PageTitle from "../../components/pagetitle";
 import Contactpage from "../../components/Contactpage";
 import Footer from "../../components/footer";
-// import bg from "../../components/assets/contactedited.jpg";
-import bg from "../../components/assets/customer_support.webp";
-// import bg from "../../components/assets/contact_page_new.jpg"
+import { Helmet } from "react-helmet";
+import { updateMetaTags } from "../../utils/updateMetaTags"; // Import the updateMetaTags function
 import contact_us from "../../components/assets/Contact_us.jpg";
 
 const ContactPage = () => {
-  const title = "contact";
+  const title = "Contact Us";
+  const description =
+    "Get in touch with Rajavruksha Group for inquiries, support, or to know more about our real estate services and properties.";
+  const ogTitle = "Contact Rajavruksha Group - Real Estate Assistance";
+  const ogDescription =
+    "Reach out to Rajavruksha Group for inquiries, feedback, or to explore our farmland and plot offerings.";
+  const ogUrl = "https://rajavrukshagroup.in/contact";
+
+  useEffect(() => {
+    // Use updateMetaTags to update meta tags dynamically
+    updateMetaTags({
+      title,
+      description,
+      ogTitle,
+      ogDescription,
+      ogUrl,
+    });
+  }, [title, description, ogTitle, ogDescription, ogUrl]);
+
   return (
     <Fragment>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={ogTitle} />
+        <meta property="og:description" content={ogDescription} />
+        <meta
+          property="og:image"
+          content="https://rajavrukshagroup.in/wp-content/uploads/2024/05/RRPL-Horizontal_Final.png"
+        />
+        <meta property="og:url" content={ogUrl} />
+        {/* <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Rajavruksha Group" />
+        <meta name="twitter:description" content="Contact Rajavruksha Group for all real estate inquiries." />
+        <meta
+          name="twitter:image"
+          content="https://rajavrukshagroup.in/wp-content/uploads/2024/05/RRPL-Horizontal_Final.png"
+        /> */}
+      </Helmet>
       <Header />
       <PageTitle
         PageTitle={"CONTACT"}
@@ -24,4 +59,5 @@ const ContactPage = () => {
     </Fragment>
   );
 };
+
 export default ContactPage;

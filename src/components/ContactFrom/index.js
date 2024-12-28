@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button, Grid, FormHelperText } from "@mui/material";
 import Loader from "../Loader/loader";
+import { Filter } from "bad-words";
 import ReCAPTCHA from "react-google-recaptcha";
 import "./style.css";
 
@@ -31,9 +32,14 @@ const ContactForm = ({ status }) => {
   });
 
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  const filter = new Filter(); // Initialize the bad-words filter
 
   const changeHandler = (e) => {
     const { name, value, type, checked } = e.target;
+    let errorText = "";
+    if (filter.isProfane(value)) {
+      errorText = "Please avoid using inappropriate language.";
+    }
     setFormData((prevData) => ({
       ...prevData,
       [name]: type === "checkbox" ? checked : value,
@@ -41,7 +47,7 @@ const ContactForm = ({ status }) => {
 
     setError((prevError) => ({
       ...prevError,
-      [name]: "",
+      [name]: errorText,
     }));
   };
 
@@ -51,9 +57,9 @@ const ContactForm = ({ status }) => {
 
   const handleCaptcha = (value) => {
     if (value) {
-      setCaptchaVerified(true); 
+      setCaptchaVerified(true);
     } else {
-      setCaptchaVerified(false); 
+      setCaptchaVerified(false);
     }
   };
 
@@ -85,7 +91,7 @@ const ContactForm = ({ status }) => {
     setError(formErrors);
 
     const hasErrors = Object.values(formErrors).some((err) => err !== "");
-    if (hasErrors) return;  
+    if (hasErrors) return;
 
     try {
       setIsLoading(true);
@@ -93,7 +99,7 @@ const ContactForm = ({ status }) => {
 
       const response = await fetch(
         "https://servermain.rajavrukshagroup.in/contact",
-        // "http://localhost:3000/contact",
+        // "http://localhost:4000/contact",
         {
           method: "POST",
           headers: {
@@ -154,8 +160,8 @@ const ContactForm = ({ status }) => {
           sx={{
             "& > :not(style)": {
               width: {
-                xs: "50%", 
-                sm: "80%", 
+                xs: "50%",
+                sm: "80%",
                 md: "80%", // For screens 960px and larger (Desktop)
               },
             },
@@ -284,7 +290,7 @@ const ContactForm = ({ status }) => {
 
           {/* Add the reCAPTCHA here */}
           <div className="recaptcha-container">
-            <Grid container spacing={2} style={{ justifyContent:"center" }}>
+            <Grid container spacing={2} style={{ justifyContent: "center" }}>
               <Grid item xs={12}>
                 <ReCAPTCHA
                   // sitekey="6Lem4Y8qAAAAAP5GA-KEiS_3fBdJQxuhFL6IqHxV"

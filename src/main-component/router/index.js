@@ -5,6 +5,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import Homepage from "../HomePage";
 import AboutPage from "../AboutPage";
@@ -49,7 +50,7 @@ const RoutesWithLoader = () => {
       // "/terms-conditions",
       "/about",
       "/careers",
-      "/careerDetails/:id"
+      "/careerDetails/:id",
     ];
     const delay = longLoadingRoutes.includes(location.pathname) ? 3000 : 1000;
     const timer = setTimeout(() => {
@@ -113,5 +114,3 @@ const AllRoute = () => {
 };
 
 export default AllRoute;
-
-
