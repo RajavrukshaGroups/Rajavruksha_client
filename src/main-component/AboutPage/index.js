@@ -1,27 +1,61 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import Header from "../../components/header";
 import PageTitle from "../../components/pagetitle";
-import Feature from "../../components/feature";
-import Partners from "../../components/partners";
-import Expertise from "../../components/expertise";
-import Team from "../../components/team";
-import Footer from "../../components/footer";
-import bg from "../../components/assets/project_page.webp";
 import About from "../../components/about";
 import Animation from "../../components/reactIcons/journeySection";
+import Footer from "../../components/footer";
+import bg from "../../components/assets/project_page.webp";
+import { updateMetaTags } from "../../utils/updateMetaTags";
 
-let Text =
-  "At Rajavrusksha we truly appreciate the wonders of nature. Understand the tranquility it can bring to ones existence. Our purpose is to turn your aspiration of owning a plot of land into an experience by providing selected and well maintained farm plots in the scenic surroundings of Bangalore.";
+// Description text for the About page
+const aboutText = `
+  At Rajavruksha, we truly appreciate the wonders of nature and understand 
+  the tranquility it can bring to one's existence. Our purpose is to turn 
+  your aspiration of owning a plot of land into an experience by providing 
+  selected and well-maintained farm plots in the scenic surroundings of Bangalore.
+`;
 
 const AboutPage = () => {
+  useEffect(() => {
+    updateMetaTags({
+      title: "About Us - Rajavruksha",
+      description:
+        "Discover Rajavruksha's mission to connect people with nature through serene farm plots near Bangalore.",
+      ogTitle: "About Us - Rajavruksha",
+      ogDescription:
+        "Discover Rajavruksha's mission to connect people with nature.",
+      ogUrl: "https://rajavrukshagroup.in/about",
+    });
+  }, []);
+
   return (
     <Fragment>
+      <Helmet>
+        <title>About Us - Rajavruksha</title>
+        <meta
+          name="description"
+          content="Discover Rajavruksha's mission to connect people with nature through serene farm plots near Bangalore."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="About Us - Rajavruksha" />
+        <meta
+          property="og:description"
+          content="Discover Rajavruksha's mission to connect people with nature through serene farm plots near Bangalore."
+        />
+        <meta
+          property="og:image"
+          content="https://rajavrukshagroup.in/wp-content/uploads/2024/05/RRPL-Horizontal_Final.png"
+        />
+      </Helmet>
+
       <Header />
-      <PageTitle PageTitle={"About Us"} pagesub={"About"} pageImg={bg} />
-      <About text={Text} image={bg} />
+      <PageTitle PageTitle="About Us" pagesub="About" pageImg={bg} />
+      <About text={aboutText} image={bg} />
       <Animation />
       <Footer />
     </Fragment>
   );
 };
+
 export default AboutPage;
