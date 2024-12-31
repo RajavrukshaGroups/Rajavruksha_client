@@ -23,7 +23,7 @@ const CareerForm = ({ careerDetails }) => {
   const handleCaptcha = (value) => {
     if (value) {
       setCaptchaVerified(true);
-      setCaptchaVerified(false);
+      // setCaptchaVerified(false);
     }
   };
 
