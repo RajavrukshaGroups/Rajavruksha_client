@@ -2,7 +2,7 @@ import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
 import { Helmet } from "react-helmet";
 import { updateMetaTags } from "../../utils/updateMetaTags"; // Import the updateMetaTags function
-import contact_us from "../../components/assets/Contact_us.jpg";
+import contact_us from "../../components/assets/Contact_us_new.webp";
 import "../AboutPage/loading.css";
 import Loader from "../../components/Loader/loader";
 

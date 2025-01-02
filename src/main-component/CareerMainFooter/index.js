@@ -1,7 +1,7 @@
 import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
 import bg from "../../components/assets/career_page.webp";
-import career_desktop from "../../components/assets/career_desktop.jpg";
+import career_desktop from "../../components/assets/career_desktop_new.webp";
 import { Helmet } from "react-helmet";
 import { updateMetaTags } from "../../utils/updateMetaTags"; // Import the updateMetaTags function
 import "../AboutPage/loading.css";
