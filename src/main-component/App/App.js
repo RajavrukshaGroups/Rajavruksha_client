@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import AllRoute from '../router';
-import { Helmet } from 'react-helmet';
 import AOS from 'aos';
 // import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 import 'aos/dist/aos.css';

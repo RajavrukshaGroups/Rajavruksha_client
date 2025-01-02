@@ -20,6 +20,7 @@ const CareerForm = ({ careerDetails }) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+  
   const handleCaptcha = (value) => {
     if (value) {
       setCaptchaVerified(true);
