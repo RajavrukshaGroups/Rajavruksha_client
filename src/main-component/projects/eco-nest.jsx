@@ -1,13 +1,20 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
-import PageTitle from "../../components/pagetitle";
-import EcoNexts from "../../components/Projects/eco-nest";
-import Footer from "../../components/footer";
 import bg from "../../components/assets/eco_nest_img.webp";
-import ContactUs from "../../components/Projects/contactform";
-import Layoutguide from "../../components/layoutGuide/layoutguide";
 import { Helmet } from "react-helmet"; // Import Helmet for SEO
 import { updateMetaTags } from "../../utils/updateMetaTags"; // Import the updateMetaTags function
+import "../AboutPage/loading.css";
+import Loader from "../../components/Loader/loader";
+
+const PageTitle = React.lazy(() => import("../../components/pagetitle"));
+const EcoNexts = React.lazy(() => import("../../components/Projects/eco-nest"));
+const Footer = React.lazy(() => import("../../components/footer"));
+const ContactUs = React.lazy(() =>
+  import("../../components/Projects/contactform")
+);
+const Layoutguide = React.lazy(() =>
+  import("../../components/layoutGuide/layoutguide")
+);
 
 function Econext() {
   const title = "Eco-Nest - Sustainable Living & Green Farmland";
@@ -55,17 +62,26 @@ function Econext() {
       </Helmet>
 
       <Header />
-      <PageTitle
-        PageTitle={"Eco-nest"}
-        pagesub={"Project Details"}
-        pageImg={bg}
-      />
-      <EcoNexts />
-      <div className="flex-container">
-        <ContactUs page={"Eco-Nest"} contact_page_title={"Eco-Nest"} />
-      </div>
-      <Layoutguide />
-      <Footer />
+      <Suspense
+        fallback={
+          <div>
+            <Loader color="#C1933C" secondaryColor="#C1933C" logo={true} />{" "}
+          </div>
+        }
+      >
+        {" "}
+        <PageTitle
+          PageTitle={"Eco-nest"}
+          pagesub={"Project Details"}
+          pageImg={bg}
+        />
+        <EcoNexts />
+        <div className="flex-container">
+          <ContactUs page={"Eco-Nest"} contact_page_title={"Eco-Nest"} />
+        </div>
+        <Layoutguide />
+        <Footer />
+      </Suspense>
     </Fragment>
   );
 }

@@ -5,8 +5,6 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-import { Helmet } from "react-helmet";
-
 import Homepage from "../HomePage";
 import AboutPage from "../AboutPage";
 import ProjectPage from "../ProjectPage";
@@ -43,27 +41,21 @@ const RoutesWithLoader = () => {
 
   useEffect(() => {
     console.log("location", location.pathname);
+
     setLoading(true);
-    const longLoadingRoutes = [
-      "/projects",
-      "/privacyPolicy",
-      // "/terms-conditions",
-      "/about",
-      "/careers",
-      "/careerDetails/:id",
-    ];
-    const delay = longLoadingRoutes.includes(location.pathname) ? 3000 : 1000;
+
     const timer = setTimeout(() => {
       setLoading(false);
-    }, delay);
+    }, 3000); // Adjust delay to match your content loading time
+
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
   return (
     <>
-      {loading && (
+      {/* {loading && (
         <Loader logo={true} color="#C1933C" secondaryColor="#C1933C" />
-      )}
+      )} */}
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/home" element={<Homepage />} />
@@ -82,15 +74,12 @@ const RoutesWithLoader = () => {
         <Route path="/experienceSection" element={<ExperienceSection />} />
         <Route path="/careers" element={<CareerMainFooterComp />} />
         <Route path="/careerDetails/:id" element={<CareerDetails />} />
-        {/* <Route path="/bdeCareerForm" element={<BdeCareerMain />} /> */}
-        {/* <Route path="/bdeIntern" element={<BdeInternCareerMain />} /> */}
         <Route path="/sylvan-retreat" element={<SylvanRetreat />} />
         <Route path="/eco-nest" element={<Econest />} />
         <Route path="/journeySection" element={<JourneySection />} />
         <Route path="/status" element={<Status />} />
         <Route path="/amenities" element={<Amenities />} />
         <Route path="/privacyPolicy" element={<MainPrivacyPolicy />} />
-        {/* <Route path="/terms-conditions" element={<MainTermsCondition />} /> */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
