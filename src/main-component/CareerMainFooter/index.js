@@ -1,12 +1,17 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
-import Footer from "../../components/footer";
-import CareerFooter from "../../components/CareerFooter/careerFooter";
-import PageTitle from "../../components/pagetitle";
 import bg from "../../components/assets/career_page.webp";
-import career_desktop from "../../components/assets/career_desktop.jpg";
+import career_desktop from "../../components/assets/career_desktop_new.webp";
 import { Helmet } from "react-helmet";
 import { updateMetaTags } from "../../utils/updateMetaTags"; // Import the updateMetaTags function
+import "../AboutPage/loading.css";
+import Loader from "../../components/Loader/loader";
+
+const CareerFooter = React.lazy(() =>
+  import("../../components/CareerFooter/careerFooter")
+);
+const PageTitle = React.lazy(() => import("../../components/pagetitle"));
+const Footer = React.lazy(() => import("../../components/footer"));
 
 const CareerMainFooterComp = () => {
   const description =
@@ -49,9 +54,17 @@ const CareerMainFooterComp = () => {
         /> */}
       </Helmet>
       <Header />
-      <PageTitle PageTitle={"Current Openings"} pageImg={career_desktop} />
-      <CareerFooter />
-      <Footer />
+      <Suspense
+        fallback={
+          <div>
+            <Loader color="#C1933C" secondaryColor="#C1933C" logo={true} />{" "}
+          </div>
+        }
+      >
+        <PageTitle PageTitle={"Current Openings"} pageImg={career_desktop} />
+        <CareerFooter />
+        <Footer />
+      </Suspense>
     </Fragment>
   );
 };

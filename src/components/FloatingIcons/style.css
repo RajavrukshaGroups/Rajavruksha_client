@@ -24,10 +24,11 @@
 }
 
 .floating-icons .icon {
+  position: relative;
   font-size: 26px;
   width: 50px;
   height: 50px;
-  background-color: #25d366; /* WhatsApp green */
+  background-color: #25d366;
   color: white;
   border-radius: 50%;
   display: flex;
@@ -39,7 +40,7 @@
 }
 
 .floating-icons .icon.phone {
-  background-color: #007bff; /* Phone blue */
+  background-color: #007bff;
   font-size: 15px;
 }
 
@@ -48,21 +49,50 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
+.floating-icons .icon:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%);
+  background-color: #c1933c;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.floating-icons .icon:hover::after {
+  opacity: 1;
+}
+
 .toggle-arrow {
   width: 50px;
   height: 50px;
   background-color: #c1933c;
-  color: #333;
+  color: rgb(77 72 72);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  font-size: 26px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .toggle-arrow:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-arrow.rotated {
+  transform: rotate(180deg);
 }

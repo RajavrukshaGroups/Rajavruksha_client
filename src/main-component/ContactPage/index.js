@@ -1,11 +1,14 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
-import PageTitle from "../../components/pagetitle";
-import Contactpage from "../../components/Contactpage";
-import Footer from "../../components/footer";
 import { Helmet } from "react-helmet";
 import { updateMetaTags } from "../../utils/updateMetaTags"; // Import the updateMetaTags function
-import contact_us from "../../components/assets/Contact_us.jpg";
+import contact_us from "../../components/assets/Contact_us_new.webp";
+import "../AboutPage/loading.css";
+import Loader from "../../components/Loader/loader";
+
+const PageTitle = React.lazy(() => import("../../components/pagetitle"));
+const Contactpage = React.lazy(() => import("../../components/Contactpage"));
+const Footer = React.lazy(() => import("../../components/footer"));
 
 const ContactPage = () => {
   const title = "Contact Us";
@@ -48,14 +51,23 @@ const ContactPage = () => {
         /> */}
       </Helmet>
       <Header />
-      <PageTitle
-        PageTitle={"CONTACT"}
-        pagesub={"Contact"}
-        pageImg={contact_us}
-        title={title}
-      />
-      <Contactpage ContactClasss="contact-container" />
-      <Footer />
+      <Suspense
+        fallback={
+          <div>
+            <Loader color="#C1933C" secondaryColor="#C1933C" logo={true} />{" "}
+          </div>
+        }
+      >
+        {" "}
+        <PageTitle
+          PageTitle={"CONTACT"}
+          pagesub={"Contact"}
+          pageImg={contact_us}
+          title={title}
+        />
+        <Contactpage ContactClasss="contact-container" />
+        <Footer />
+      </Suspense>
     </Fragment>
   );
 };

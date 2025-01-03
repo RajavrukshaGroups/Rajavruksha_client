@@ -1,14 +1,22 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
-import Hero from "../../components/hero";
-import About from "../../components/about";
-import ServiceSection from "../../components/ServiceSection";
-import Testimonial from "../../components/testimonial";
-import Footer from "../../components/footer";
-import Container from "../Status/status.jsx";
-import OngoingProjects from "../../components/ourOnGoingProjects/ourOnGoingProjects.jsx";
 import { Helmet } from "react-helmet";
-import { updateMetaTags } from "../../utils/updateMetaTags.js"; // Import the updateMetaTags function
+import { updateMetaTags } from "../../utils/updateMetaTags.js";
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallback from "../../components/ErrorBoundary/errorBoundary.js";
+import Loader from "../../components/Loader/loader.jsx";
+const Hero = React.lazy(() => import("../../components/hero"));
+const About = React.lazy(() => import("../../components/about"));
+const Container = React.lazy(() => import("../Status/status.jsx"));
+const ServiceSection = React.lazy(() =>
+  import("../../components/ServiceSection")
+);
+const Testimonial = React.lazy(() => import("../../components/testimonial"));
+const Footer = React.lazy(() => import("../../components/footer"));
+const OngoingProjects = React.lazy(() =>
+  import("../../components/ourOnGoingProjects/ourOnGoingProjects.jsx")
+);
+import "../AboutPage/loading.css";
 
 const HomePage = () => {
   const description =
@@ -21,7 +29,6 @@ const HomePage = () => {
     "Welcome to Rajavruksha – Your Real Estate Partner for Farmland & Plots located at Hebbal, North Bangalore";
 
   useEffect(() => {
-    // Use updateMetaTags to update meta tags dynamically
     updateMetaTags({
       title,
       description,
@@ -38,18 +45,28 @@ const HomePage = () => {
         <meta name="description" content={description} />
         <meta property="og:title" content={ogTitle} />
         <meta property="og:description" content={ogDescription} />
-        <meta property="og:image" content="https://rajavrukshagroup.in/wp-content/uploads/2024/05/RRPL-Horizontal_Final.png" />
+        <meta
+          property="og:image"
+          content="https://rajavrukshagroup.in/wp-content/uploads/2024/05/RRPL-Horizontal_Final.png"
+        />
         <meta property="og:url" content={ogUrl} />
-        {/* <meta name="twitter:card" content="summary_large_image" /> */}
       </Helmet>
       <Header />
-      <Hero />
-      <Container />
-      <About text={""} readMore="read more" />
-      <OngoingProjects />
-      <ServiceSection />
-      <Testimonial />
-      <Footer />
+      <Suspense
+        fallback={
+          <div>
+            <Loader color="#C1933C" secondaryColor="#C1933C" logo={true} />{" "}
+          </div>
+        }
+      >
+        <Hero />
+        <Container />
+        <About text={""} readMore="read more" />
+        <OngoingProjects />
+        <ServiceSection />
+        <Testimonial />
+        <Footer />
+      </Suspense>
     </Fragment>
   );
 };

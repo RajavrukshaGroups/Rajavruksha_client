@@ -1,15 +1,25 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
-import PageTitle from "../../components/pagetitle";
-import Sylvanretreat from "../../components/Projects/sylvanretreat";
-import Testimonial from "../../components/testimonial";
-import Footer from "../../components/footer";
 import bg from "../../components/assets/Sylan_retreat_new_Banner.webp";
-import ContactUs from "../../components/Projects/contactform";
-import Carousel from "../../components/carouselImage/carousel";
-import NewCarousel from "../../components/newCarousel/newCarousel";
 import { Helmet } from "react-helmet"; // Import Helmet for SEO
 import { updateMetaTags } from "../../utils/updateMetaTags"; // Import the updateMetaTags function
+import "../AboutPage/loading.css";
+import Loader from "../../components/Loader/loader";
+
+const PageTitle = React.lazy(() => import("../../components/pagetitle"));
+const Sylvanretreat = React.lazy(() =>
+  import("../../components/Projects/sylvanretreat")
+);
+const ContactUs = React.lazy(() =>
+  import("../../components/Projects/contactform")
+);
+const Carousel = React.lazy(() =>
+  import("../../components/carouselImage/carousel")
+);
+const Footer = React.lazy(() => import("../../components/footer"));
+const NewCarousel = React.lazy(() =>
+  import("../../components/newCarousel/newCarousel")
+);
 
 function Sylvanretreats() {
   const title = "Sylvan Retreat - Premium Farmlands & Plots";
@@ -57,15 +67,23 @@ function Sylvanretreats() {
       </Helmet>
 
       <Header />
-      <PageTitle
-        pagesub={"Project Details"}
-        pageImg={bg}
-        project_page_syl={"Sylvan-Retreat"}
-      />
-      <Sylvanretreat />
-      <ContactUs projectTitle={"Sylvan-Retreat"} />
-      <Carousel />
-      <Footer />
+      <Suspense
+        fallback={
+          <div>
+            <Loader color="#C1933C" secondaryColor="#C1933C" logo={true} />{" "}
+          </div>
+        }
+      >
+        <PageTitle
+          pagesub={"Project Details"}
+          pageImg={bg}
+          project_page_syl={"Sylvan-Retreat"}
+        />
+        <Sylvanretreat />
+        <ContactUs projectTitle={"Sylvan-Retreat"} />
+        <Carousel />
+        <Footer />
+      </Suspense>
     </Fragment>
   );
 }

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import AllRoute from '../router';
-import { Helmet } from 'react-helmet';
 import AOS from 'aos';
 // import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 import 'aos/dist/aos.css';
@@ -17,8 +16,6 @@ const App = () => {
 
     return (
         <div className="App body_wrap">
-            
-
                 {/* <TawkMessengerReact
                     propertyId="66d2d5ab50c10f7a00a26593"
                     widgetId="1i70srim4"

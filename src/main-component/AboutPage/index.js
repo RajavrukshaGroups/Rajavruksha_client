@@ -1,12 +1,17 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, Suspense, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Header from "../../components/header";
-import PageTitle from "../../components/pagetitle";
-import About from "../../components/about";
-import Animation from "../../components/reactIcons/journeySection";
-import Footer from "../../components/footer";
 import bg from "../../components/assets/project_page.webp";
 import { updateMetaTags } from "../../utils/updateMetaTags";
+import "./loading.css";
+import Loader from "../../components/Loader/loader";
+
+const About = React.lazy(() => import("../../components/about"));
+const PageTitle = React.lazy(() => import("../../components/pagetitle"));
+const Animation = React.lazy(() =>
+  import("../../components/reactIcons/journeySection")
+);
+const Footer = React.lazy(() => import("../../components/footer"));
 
 // Description text for the About page
 const aboutText = `
@@ -50,10 +55,18 @@ const AboutPage = () => {
       </Helmet>
 
       <Header />
-      <PageTitle PageTitle="About Us" pagesub="About" pageImg={bg} />
-      <About text={aboutText} image={bg} />
-      <Animation />
-      <Footer />
+      <Suspense
+        fallback={
+          <div>
+            <Loader color="#C1933C" secondaryColor="#C1933C" logo={true} />{" "}
+          </div>
+        }
+      >
+        <PageTitle PageTitle="About Us" pagesub="About" pageImg={bg} />
+        <About text={aboutText} image={bg} />
+        <Animation />
+        <Footer />
+      </Suspense>
     </Fragment>
   );
 };

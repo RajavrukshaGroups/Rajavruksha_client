@@ -1,11 +1,14 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
-import PageTitle from "../../components/pagetitle";
-import ProjectList from "../../components/ProjectList";
-import Footer from "../../components/footer";
 import bg from "../../components/assets/new_project.webp";
 import { Helmet } from "react-helmet";
 import { updateMetaTags } from "../../utils/updateMetaTags"; // Import the updateMetaTags function
+import "../AboutPage/loading.css";
+import Loader from "../../components/Loader/loader";
+
+const PageTitle = React.lazy(() => import("../../components/pagetitle"));
+const ProjectList = React.lazy(() => import("../../components/ProjectList"));
+const Footer = React.lazy(() => import("../../components/footer"));
 
 const ProjectPage = () => {
   const description =
@@ -34,7 +37,10 @@ const ProjectPage = () => {
         <meta name="description" content={description} />
         <meta property="og:title" content={ogTitle} />
         <meta property="og:description" content={ogDescription} />
-        <meta property="og:image" content="https://rajavrukshagroup.in/wp-content/uploads/2024/05/RRPL-Horizontal_Final.png" />
+        <meta
+          property="og:image"
+          content="https://rajavrukshagroup.in/wp-content/uploads/2024/05/RRPL-Horizontal_Final.png"
+        />
         <meta property="og:url" content={ogUrl} />
         {/* <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Rajavruksha Projects" />
@@ -42,9 +48,17 @@ const ProjectPage = () => {
         <meta name="twitter:image" content="https://rajavrukshagroup.in/wp-content/uploads/2024/05/RRPL-Horizontal_Final.png" /> */}
       </Helmet>
       <Header />
-      <PageTitle PageTitle={"PROJECTS"} pagesub={"Projects"} pageImg={bg} />
-      <ProjectList />
-      <Footer />
+      <Suspense
+        fallback={
+          <div>
+            <Loader color="#C1933C" secondaryColor="#C1933C" logo={true} />{" "}
+          </div>
+        }
+      >
+        <PageTitle PageTitle={"PROJECTS"} pagesub={"Projects"} pageImg={bg} />
+        <ProjectList />
+        <Footer />
+      </Suspense>
     </Fragment>
   );
 };

@@ -4,11 +4,13 @@ import {
   FaWhatsapp,
   FaArrowRight,
   FaArrowLeft,
+  FaComment,
+  FaTimes,
 } from "react-icons/fa";
 import "./style.css";
 
 const FloatingIcons = () => {
-  const [isExpanded, setIsExpanded] =useState(true);
+  const [isExpanded, setIsExpanded] = useState(true);
   const handleClick = (type, value) => {
     if (type === "phone") {
       window.location.href = `tel:${value}`;
@@ -28,12 +30,14 @@ const FloatingIcons = () => {
           <>
             <div
               className="icon phone"
+              data-tooltip="Call Us"
               onClick={() => handleClick("phone", "+91 8549 955 955")}
             >
               <FaPhoneAlt />
             </div>
             <div
               className="icon whatsapp"
+              data-tooltip="WhatsApp"
               onClick={() => handleClick("whatsapp", "+91 8549 955 955")}
             >
               <FaWhatsapp />
@@ -41,8 +45,11 @@ const FloatingIcons = () => {
           </>
         )}
       </div>
-      <div className="toggle-arrow" onClick={toggleIcons}>
-        {isExpanded ? <FaArrowLeft /> : <FaArrowRight />}
+      <div
+        className={`toggle-arrow ${isExpanded ? "rotated" : ""}`}
+        onClick={toggleIcons}
+      >
+        {isExpanded ? <FaTimes /> : <FaComment />}
       </div>
     </div>
   );
