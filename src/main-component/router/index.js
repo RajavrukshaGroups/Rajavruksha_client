@@ -5,9 +5,10 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+
 import Homepage from "../HomePage";
 import AboutPage from "../AboutPage";
-import ProjectPage from "../ProjectPage";0
+import ProjectPage from "../ProjectPage";
 import ProjectSinglePage from "../ProjectSinglePage";
 import ServicePage from "../ServicePage";
 import ContactPage from "../ContactPage";
@@ -72,20 +73,20 @@ const RoutesWithLoader = () => {
   );
 };
 
-const AllRoute = () => {
-  return (
-    <div>
-      <Router>
-        <FloatingIcons />
-        {/* <TawkMessengerReact
-                    propertyId="66d2d5ab50c10f7a00a26593"
-                    widgetId="1i70srim4"
-                    /> */}
-        <ScrollToTop />
-        <RoutesWithLoader />
-      </Router>
-    </div>
-  );
-};
+      const AllRoute = () => {
+        return (
+          <div>
+            <Router>
+              <FloatingIcons />
+              {/* <TawkMessengerReact
+                          propertyId="66d2d5ab50c10f7a00a26593"
+                          widgetId="1i70srim4"
+                          /> */}
+              <ScrollToTop />
+              <RoutesWithLoader />
+            </Router>
+          </div>
+        );
+      };
 
-export default AllRoute;
+      export default AllRoute;
