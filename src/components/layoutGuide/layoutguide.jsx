@@ -28,7 +28,7 @@ function Layoutguide() {
         </h1>
       </div>
       <div>
-        <button className="brochure-download" onClick={handleOpenModal}>
+        <button className="econest-download" onClick={handleOpenModal}>
           Download Brochure
         </button>
       </div>
