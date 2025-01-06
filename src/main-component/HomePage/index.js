@@ -5,6 +5,7 @@ import { updateMetaTags } from "../../utils/updateMetaTags.js";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "../../components/ErrorBoundary/errorBoundary.js";
 import Loader from "../../components/Loader/loader.jsx";
+import "../AboutPage/loading.css";
 const Hero = React.lazy(() => import("../../components/hero"));
 const About = React.lazy(() => import("../../components/about"));
 const Container = React.lazy(() => import("../Status/status.jsx"));
@@ -16,7 +17,6 @@ const Footer = React.lazy(() => import("../../components/footer"));
 const OngoingProjects = React.lazy(() =>
   import("../../components/ourOnGoingProjects/ourOnGoingProjects.jsx")
 );
-import "../AboutPage/loading.css";
 
 const HomePage = () => {
   const description =
@@ -37,7 +37,6 @@ const HomePage = () => {
       ogUrl,
     });
   }, [title, description, ogTitle, ogDescription, ogUrl]);
-
   return (
     <Fragment>
       <Helmet>

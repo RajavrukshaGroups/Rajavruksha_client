@@ -2,7 +2,7 @@ import React from "react";
 
 import { createRoot } from "react-dom/client"; 
 
-import "./index.css";
+import "./index.css" ;
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/all.min.css";
 import TagManager from "react-gtm-module";
