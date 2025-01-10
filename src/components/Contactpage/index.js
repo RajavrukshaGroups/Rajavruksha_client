@@ -1,5 +1,10 @@
 import React from "react";
 import ContactForm from "../ContactFrom";
+import lottie from "lottie-web";
+import { defineElement } from "@lordicon/element";
+
+// define "lord-icon" custom element with default properties
+defineElement(lottie.loadAnimation);
 import "./style.css";
 
 const Contactpage = ({ requestAquote }) => {
@@ -31,14 +36,27 @@ const Contactpage = ({ requestAquote }) => {
           </div>
           <div className="contact-body col-lg-5 col-sm-6 mb-5">
             <div className="contact-page-left">
-              <h3 className="contact-info-det">Contact info</h3>
+              {/* <h3 className="contact-info-det">
+                <b>Contact info</b>
+              </h3> */}
               <div className="contact-info">
                 <div className="single-map-info" data-aos="fade-up">
-                  <div className="map-info-icon">
-                    <span className="fas fa-map-marker-alt" />
+                  {/* <div className="map-info-icon"> */}
+                  <div className="new-icon">
+                    {/* <span className="fas fa-map-marker-alt" /> */}
+                    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                    <lord-icon
+                      src="https://cdn.lordicon.com/bljgubbm.json"
+                      trigger="loop"
+                      delay="2000"
+                      colors="primary:#242424,secondary:#1976D2"
+                      style={{ width: "70px", height: "70px" }}
+                    ></lord-icon>
                   </div>
                   <div className="map-info-text">
-                    <h3 className="contact-info-head">Head office</h3>
+                    <h3 className="contact-info-head">
+                      <b>Head office</b>
+                    </h3>
                     <p
                       className="email-link"
                       onClick={() => {
@@ -51,11 +69,22 @@ const Contactpage = ({ requestAquote }) => {
                   </div>
                 </div>
                 <div className="single-contact-info" data-aos="fade-up">
-                  <div className="contact-info-icon">
-                    <span className="fas fa-phone-alt" />
+                  {/* <div className="contact-info-icon"> */}
+                  <div className="new-icon">
+                    {/* <span className="fas fa-phone-alt" /> */}
+                    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                    <lord-icon
+                      src="https://cdn.lordicon.com/nnzfcuqw.json"
+                      trigger="loop"
+                      delay="2000"
+                      colors="primary:#242424,secondary:#1976D2"
+                      style={{ width: "70px", height: "70px" }}
+                    ></lord-icon>
                   </div>
                   <div className="contact-info-text">
-                    <h3 className="contact-info-head">Phone</h3>
+                    <h3 className="contact-info-head">
+                      <b>Phone</b>
+                    </h3>
                     <p
                       className="email-link"
                       onClick={() =>
@@ -68,11 +97,22 @@ const Contactpage = ({ requestAquote }) => {
                   </div>
                 </div>
                 <div className="single-contact-info" data-aos="fade-up">
-                  <div className="contact-info-icon">
-                    <span className="fas fa-envelope" />
+                  {/* <div className="contact-info-icon"> */}
+                  <div className="new-icon">
+                    {/* <span className="fas fa-envelope" /> */}
+                    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                    <lord-icon
+                      src="https://cdn.lordicon.com/ozlkyfxg.json"
+                      trigger="loop"
+                      colors="primary:#242424,secondary:#1976D2"
+                      delay="2000"
+                      style={{ width: "70px", height: "70px" }}
+                    ></lord-icon>
                   </div>
                   <div className="contact-info-text">
-                    <h3 className="contact-info-head">Email</h3>
+                    <h3 className="contact-info-head">
+                      <b>Email</b>
+                    </h3>
                     <p
                       className="email-link"
                       onClick={() =>
