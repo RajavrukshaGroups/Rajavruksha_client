@@ -14,8 +14,12 @@ import bg from "../../components/assets/editone.jpg";
 import Tour from "../../components/tour/index";
 import Amenities from "../../components/Amenities/amenities";
 import "../../components/Projects/eco-nest.css";
+import BlurText from "../../utils/BlurText";
 
 function EcoNexts() {
+  const handleAnimationComplete = () => {
+    console.log("Animation completed!");
+  };
   const ecoNestAmenities = [
     "30 feet road",
     "Underground Electric connection",
@@ -57,7 +61,15 @@ function EcoNexts() {
           <div className="col-12 eco-pro">
             <div className="project-details-top-text" data-aos="fade-up">
               <h3 className="discover-title">
-                Discover Your Agricultural Dream:
+                {/* Discover Your Agricultural Dream: */}
+                <BlurText
+                  text="Discover Your Agricultural Dream:"
+                  delay={150}
+                  animateBy="words"
+                  direction="top"
+                  onAnimationComplete={handleAnimationComplete}
+                  className="text-2xl mb-8"
+                />
               </h3>
               <p>
                 Approved by the Kodagu Urban Development Authority(KUDA), Eco

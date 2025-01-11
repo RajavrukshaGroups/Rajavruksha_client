@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 import "../../components/Projects/sylvanStlyle.css";
@@ -9,8 +9,12 @@ import planting_syl from "../../components/assets/planting_syl.png";
 import investment_potential from "../../components/assets/earning_syl.png";
 import planet_earth from "../../components/assets/planet-earth_syl.png";
 import compliance from "../../components/assets/compliance_syl.png";
+import VariableProximity from "../../utils/VariableProximity";
+import SplitText from "../../utils/SplitText";
+import BlurText from "../../utils/BlurText";
 
 function Sylvanretreat() {
+  const containerRef = useRef(null);
   const sylvanAmenities = [
     "Water Supply",
     "Electricity",
@@ -19,6 +23,10 @@ function Sylvanretreat() {
     "Individual water connection",
     "Children's park & Garden",
   ];
+
+  const handleAnimationComplete = () => {
+    console.log("All letters have animated!");
+  };
 
   return (
     <div className="project-details-area pt-4">
@@ -54,7 +62,17 @@ function Sylvanretreat() {
           </div>
           <div className="col-12 mt-4">
             <div className="project-details-top-text" data-aos="fade-up">
-              <p className="syl-title">Discover Your Agricultural Dream:</p>
+              <p className="syl-title">
+                {/* Discover Your Agricultural Dream: */}
+                <BlurText
+                  text="Discover Your Agricultural Dream:"
+                  delay={150}
+                  animateBy="words"
+                  direction="top"
+                  onAnimationComplete={handleAnimationComplete}
+                  className="text-2xl"
+                />
+              </p>
               <p>
                 Escape the hustle and bustle of city life and embark on a
                 journey to a tranquil and fertile oasis. Introducing our
@@ -62,7 +80,15 @@ function Sylvanretreat() {
                 opportunity for you to cultivate your agricultural aspirations.
               </p>
               <p className="syl-title">
-                Agricultural Canvas Ready for Your Vision
+                {/* Agricultural Canvas Ready for Your Vision: */}
+                <BlurText
+                  text="Agricultural Canvas Ready for Your Vision:"
+                  delay={150}
+                  animateBy="words"
+                  direction="top"
+                  onAnimationComplete={handleAnimationComplete}
+                  className="text-2xl"
+                />
               </p>
               <p>
                 These 25 farmland plots offer an invitation to realize your
@@ -73,8 +99,17 @@ function Sylvanretreat() {
                 flourish.
               </p>
               <p style={{ fontWeight: "bold" }} className="syl-title">
-                Key Features:
+                {/* Key Features: */}
+                <BlurText
+                  text="Key Features:"
+                  delay={150}
+                  animateBy="words"
+                  direction="top"
+                  onAnimationComplete={handleAnimationComplete}
+                  className="text-2xl"
+                />
               </p>
+
               <p style={{ display: "flex" }}>
                 <span>
                   <VscDebugBreakpointLog
@@ -88,9 +123,10 @@ function Sylvanretreat() {
                 // }}
                 // className="syl-title"
                 >
-                  <b className="syl-title">Rich Soil and Fertile Land:</b> Our
-                  farmland is renowned for its rich and fertile soil, providing
-                  the ideal foundation for a thriving agricultural venture.
+                  <b className="syl-title">Rich Soil and Fertile Land:</b>
+                  Our farmland is renowned for its rich and fertile soil,
+                  providing the ideal foundation for a thriving agricultural
+                  venture.
                 </span>
               </p>
               <p style={{ display: "flex" }}>
@@ -103,10 +139,10 @@ function Sylvanretreat() {
                 // style={{ fontWeight: "bold", color: "black" }}
                 // className="syl-title"
                 >
-                  <b className="syl-title">Scenic Views:</b> Enjoy breathtaking
-                  vistas of rolling hills and serene landscapes that will
-                  inspire and soothe your soul.
-                </span>{" "}
+                  <b className="syl-title">Scenic Views:</b>
+                  Enjoy breathtaking vistas of rolling hills and serene
+                  landscapes that will inspire and soothe your soul.
+                </span>
               </p>
               <p style={{ display: "flex" }}>
                 <span>
@@ -118,10 +154,10 @@ function Sylvanretreat() {
                 // style={{ fontWeight: "bold", color: "black" }}
                 // className="syl-title"
                 >
-                  <b className="syl-title">Water Resources:</b> Abundant access
-                  to natural water sources, ensuring your crops will flourish
-                  year-round.
-                </span>{" "}
+                  <b className="syl-title">Water Resources:</b>
+                  Abundant access to natural water sources, ensuring your crops
+                  will flourish year-round.
+                </span>
               </p>
               <p style={{ display: "flex" }}>
                 <span>
@@ -133,14 +169,22 @@ function Sylvanretreat() {
                 // style={{ fontWeight: "bold", color: "black" }}
                 // className="syl-title"
                 >
-                  <b className="syl-title">Security:</b> We prioritize your
-                  investment's safety, providing 24/7 security to protect your
-                  agricultural pursuits.
-                </span>{" "}
+                  <b className="syl-title">Security:</b>
+                  We prioritize your investment's safety, providing 24/7
+                  security to protect your agricultural pursuits.
+                </span>
               </p>
             </div>
             <h2 style={{ textAlign: "center" }} className="syl-title">
-              Why Choose Us
+              <BlurText
+                text="Why Choose Us"
+                delay={150}
+                animateBy="words"
+                direction="top"
+                onAnimationComplete={handleAnimationComplete}
+                className="text-1xl mb-1"
+                project="syl-retreat"
+              />
             </h2>
 
             <div className="project-overview">
@@ -152,7 +196,21 @@ function Sylvanretreat() {
                       alt="Expertise in Agriculture"
                       className="syl-img"
                     />
-                    <h5 className="syl-subtitle">Expertise in Agriculture</h5>
+                    {/* <h5 className="syl-subtitle">Expertise in Agriculture</h5> */}
+                    <h5 className="syl-subtitle">
+                      <div ref={containerRef} style={{ position: "relative" }}>
+                        <VariableProximity
+                          label={"Expertise in Agriculture"}
+                          className={"variable-proximity-demo"}
+                          fromFontVariationSettings="'wght' 600, 'opsz' 9"
+                          toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                          containerRef={containerRef}
+                          radius={100}
+                          falloff="linear"
+                        />
+                      </div>
+                    </h5>
+
                     <p>
                       Our team of agricultural experts is ready to assist and
                       advise you in every step of your farming journey.
@@ -167,7 +225,20 @@ function Sylvanretreat() {
                       alt="Project time"
                       className="syl-img"
                     />
-                    <h5 className="syl-subtitle">Investment Potential</h5>
+                    {/* <h5 className="syl-subtitle">Investment Potential</h5> */}
+                    <h5 className="syl-subtitle">
+                      <div ref={containerRef} style={{ position: "relative" }}>
+                        <VariableProximity
+                          label={"Investment Potential"}
+                          className={"variable-proximity-demo"}
+                          fromFontVariationSettings="'wght' 600, 'opsz' 9"
+                          toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                          containerRef={containerRef}
+                          radius={100}
+                          falloff="linear"
+                        />
+                      </div>
+                    </h5>
                     <p>
                       Farmland is not just a dream; it's a sound financial
                       investment with growing demand in the market.
@@ -181,7 +252,20 @@ function Sylvanretreat() {
                       alt="People worked"
                       className="syl-img"
                     />
-                    <h5 className="syl-subtitle">Sustainability</h5>
+                    {/* <h5 className="syl-subtitle">Sustainability</h5> */}
+                    <h5 className="syl-subtitle">
+                      <div ref={containerRef} style={{ position: "relative" }}>
+                        <VariableProximity
+                          label={"Sustainability"}
+                          className={"variable-proximity-demo"}
+                          fromFontVariationSettings="'wght' 600, 'opsz' 9"
+                          toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                          containerRef={containerRef}
+                          radius={100}
+                          falloff="linear"
+                        />
+                      </div>
+                    </h5>
                     <p>
                       We're committed to sustainable farming practices and
                       environmental conservation.
@@ -195,7 +279,20 @@ function Sylvanretreat() {
                       alt="Project cost"
                       className="syl-img"
                     />
-                    <h5 className="syl-subtitle">Legal Compliance</h5>
+                    {/* <h5 className="syl-subtitle">Legal Compliance</h5> */}
+                    <h5 className="syl-subtitle">
+                      <div ref={containerRef} style={{ position: "relative" }}>
+                        <VariableProximity
+                          label={"Legal Compliance"}
+                          className={"variable-proximity-demo"}
+                          fromFontVariationSettings="'wght' 600, 'opsz' 9"
+                          toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                          containerRef={containerRef}
+                          radius={100}
+                          falloff="linear"
+                        />
+                      </div>
+                    </h5>
                     <p>
                       Hassel free process in terms of your documentations that
                       carries from our experts
