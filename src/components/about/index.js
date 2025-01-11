@@ -6,11 +6,15 @@ import { Link } from "react-router-dom";
 import AboutImg from "../../components/assets/about-1.e32a7109.webp";
 import AboutBgImg from "../../components/assets/about-bg-home-page.png";
 import "./style.css";
+import SplitText from "../../utils/blurText";
 
 
 const About = ({ text, readMore }) => {
   const disableContextMenu = (e) => {
     e.preventDefault();
+  };
+  const handleAnimationComplete = () => {
+    console.log('All letters have animated!');
   };
   return (
     <div
@@ -28,15 +32,36 @@ const About = ({ text, readMore }) => {
               data-aos="fade-right"
               data-aos-offset="100"
             >
+                  {/* <SplitText
+                 text="We explore to discover your optimal selection"
+                 className="text-1xl font-semibold text-center"
+                 delay={130}
+                 animationFrom={{opacity: 0, transform: 'translate3d(0,50px,0)' }}
+                 animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+                 easing="easeOutCubic"
+                 threshold={0.2}
+                 rootMargin="-50px"
+                 onLetterAnimationComplete={handleAnimationComplete}
+               /> */}
+              <SplitText
+                  text="We explore to discover your optimal selection"
+                  className="text-1xl font-semibold text-center"
+                  delay={130} // Adjust the delay between animations
+                  animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
+                  animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
+                  easing="easeOutCubic" // Smooth transition effect
+                  threshold={0.2} // Trigger the animation when 20% of the element is visible
+                  rootMargin="-50px" // Offset for triggering animations
+                  onLetterAnimationComplete={handleAnimationComplete}
+                />
               <div className="site-heading">
-                <h2 className="explore-title text-capitalize ">
+                {/* <h2 className="explore-title text-capitalize">
                   We explore to discover your optimal selection
-                </h2>
+                </h2> */}
                 <div>
                   <p>{text}</p>
                 </div>
               </div>
-
               <div
                 className="content"
                 style={{
@@ -44,7 +69,7 @@ const About = ({ text, readMore }) => {
                   justifyContent: "space-between",
                   alignItems: "center",
                 }}
-              >
+                  >
                 <div className="features-list-wrapper">
                   <ul className="features-list">
                     <li>
@@ -94,7 +119,7 @@ const About = ({ text, readMore }) => {
                 <div className="experience-box">
                   <h2 className="experience-years">
                     <span className="counter">
-                      <CountUp start={0} end={6} duration={2} />+
+                      <CountUp start={0} end={6} duration={2} /> +
                     </span>
                   </h2>
                   <p className="experience-text">

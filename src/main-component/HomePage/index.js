@@ -19,8 +19,7 @@ const OngoingProjects = React.lazy(() =>
 );
 
 const HomePage = () => {
-  const description =
-    "Explore prime farmland & plots with Rajavruksha, your expert guide to perfect investments and properties.";
+  const description = "Explore prime farmland & plots with Rajavruksha, your expert guide to perfect investments and properties.";
   const ogTitle = "Rajavruksha - Real Estate Excellence";
   const ogDescription =
     "Welcome to Rajavruksha! Discover premium real estate services, farmlands, and projects tailored for you.";
