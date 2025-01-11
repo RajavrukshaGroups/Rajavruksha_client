@@ -20,12 +20,12 @@ const CareerDetails = () => {
   useEffect(() => {
     const fetchCareerDetails = async () => {
       try {
-        const response = await fetch(
-          `https://servermain.rajavrukshagroup.in/getCareerIndDetails/${id}`
-        );
         // const response = await fetch(
-        //   `http://localhost:4000/getCareerIndDetails/${id}`
+        //   `https://servermain.rajavrukshagroup.in/getCareerIndDetails/${id}`
         // );
+        const response = await fetch(
+          `http://localhost:4000/getCareerIndDetails/${id}`
+        );
 
         if (!response.ok) {
           throw new Error("Failed to fetch career details");

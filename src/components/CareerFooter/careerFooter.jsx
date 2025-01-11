@@ -10,8 +10,8 @@ const CareerFooter = () => {
   useEffect(() => {
     const fetchCareers = async () => {
       try {
-        // const response = await fetch("http://localhost:4000/getCareerDetails");
-        const response = await fetch("https://servermain.rajavrukshagroup.in/getCareerDetails");
+        const response = await fetch("http://localhost:4000/getCareerDetails");
+        // const response = await fetch("https://servermain.rajavrukshagroup.in/getCareerDetails");
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }

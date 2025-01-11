@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../../components/layoutGuide/layoutguide.css";
 import ContactModal from "../Modal/contactModal"; // Adjust the path as necessary
 import EcoNestLayout from "../../components/assets/eco-nest-layout.webp";
+import BlurText from "../../utils/BlurText";
 
 function Layoutguide() {
   const [showModal, setShowModal] = useState(false);
@@ -20,11 +21,23 @@ function Layoutguide() {
     e.preventDefault();
   };
 
+  const handleAnimationComplete = () => {
+    console.log("Animation completed");
+  };
+
   return (
     <div className="layout-container">
       <div className="">
         <h1 className="layout-title">
-          Crafting Exquisite Design : Your Layout Guide
+          {/* Crafting Exquisite Design : Your Layout Guide */}
+          <BlurText
+            text="Crafting Exquisite Design : Your Layout Guide"
+            delay={150}
+            animateBy="words"
+            direction="top"
+            onAnimationComplete={handleAnimationComplete}
+            className="text-2xl mb-8"
+          />
         </h1>
       </div>
       <div>

@@ -1,7 +1,9 @@
 import React from "react";
+import { useRef } from "react";
 import ContactForm from "../ContactFrom";
 import lottie from "lottie-web";
 import { defineElement } from "@lordicon/element";
+import VariableProximity from "../../utils/VariableProximity";
 
 // define "lord-icon" custom element with default properties
 defineElement(lottie.loadAnimation);
@@ -9,6 +11,7 @@ import "./style.css";
 
 const Contactpage = ({ requestAquote }) => {
   let ContactClasss = "container-class";
+  const containerRef = useRef(null);
 
   const handleLinkClick = (type, value) => {
     if (type === "phone") {
@@ -55,7 +58,18 @@ const Contactpage = ({ requestAquote }) => {
                   </div>
                   <div className="map-info-text">
                     <h3 className="contact-info-head">
-                      <b>Head office</b>
+                      {/* <b>Head office</b> */}
+                      <div ref={containerRef} style={{ position: "relative" }}>
+                        <VariableProximity
+                          label={"Head Office"}
+                          className={"variable-proximity-demo"}
+                          fromFontVariationSettings="'wght' 400, 'opsz' 9"
+                          toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                          containerRef={containerRef}
+                          radius={100}
+                          falloff="linear"
+                        />
+                      </div>
                     </h3>
                     <p
                       className="email-link"
@@ -83,7 +97,18 @@ const Contactpage = ({ requestAquote }) => {
                   </div>
                   <div className="contact-info-text">
                     <h3 className="contact-info-head">
-                      <b>Phone</b>
+                      {/* <b>Phone</b> */}
+                      <div ref={containerRef} style={{ position: "relative" }}>
+                        <VariableProximity
+                          label={"Phone"}
+                          className={"variable-proximity-demo"}
+                          fromFontVariationSettings="'wght' 400, 'opsz' 9"
+                          toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                          containerRef={containerRef}
+                          radius={100}
+                          falloff="linear"
+                        />
+                      </div>
                     </h3>
                     <p
                       className="email-link"
@@ -111,7 +136,18 @@ const Contactpage = ({ requestAquote }) => {
                   </div>
                   <div className="contact-info-text">
                     <h3 className="contact-info-head">
-                      <b>Email</b>
+                      {/* <b>Email</b> */}
+                      <div ref={containerRef} style={{ position: "relative" }}>
+                        <VariableProximity
+                          label={"Email"}
+                          className={"variable-proximity-demo"}
+                          fromFontVariationSettings="'wght' 400, 'opsz' 9"
+                          toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                          containerRef={containerRef}
+                          radius={100}
+                          falloff="linear"
+                        />
+                      </div>
                     </h3>
                     <p
                       className="email-link"
@@ -146,7 +182,7 @@ const Contactpage = ({ requestAquote }) => {
             </div>
             <div className="col-lg-6 col-sm-12">
               <div className="crm-box">
-                <h2 className="crm-heading">Solid Performers CRM</h2>
+                <h2 className="crm-heading">Get In Touch</h2>
                 <iframe
                   id="lead-form"
                   src="https://account.solidperformers.com/capture_form_data/MTAxNQ=="
