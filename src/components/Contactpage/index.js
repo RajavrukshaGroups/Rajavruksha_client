@@ -4,8 +4,8 @@ import lottie from "lottie-web";
 import { defineElement } from "@lordicon/element";
 
 // define "lord-icon" custom element with default properties
-defineElement(lottie.loadAnimation);
 import "./style.css";
+defineElement(lottie.loadAnimation);
 
 const Contactpage = ({ requestAquote }) => {
   let ContactClasss = "container-class";
