@@ -7,6 +7,7 @@ import AboutImg from "../../components/assets/about-1.e32a7109.webp";
 import AboutBgImg from "../../components/assets/about-bg-home-page.png";
 import "./style.css";
 
+
 const About = ({ text, readMore }) => {
   const disableContextMenu = (e) => {
     e.preventDefault();
@@ -132,7 +133,6 @@ const About = ({ text, readMore }) => {
                 )}
               </div>
             </div>
-
             <div className="col-lg-6 col-md-12">
               <div
                 className="about-left"

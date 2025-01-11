@@ -66,6 +66,9 @@
     left: 40%;
     top: 33%;
   }
+  .tour-container {
+    max-width: 200%;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .tour-area .container:before {

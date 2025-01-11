@@ -5,19 +5,14 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
+
 import Homepage from "../HomePage";
 import AboutPage from "../AboutPage";
 import ProjectPage from "../ProjectPage";
 import ProjectSinglePage from "../ProjectSinglePage";
 import ServicePage from "../ServicePage";
-import ServiceSinglePage from "../ServiceSinglePage";
-import PortfolioPage from "../PortfolioPage";
-import TeamPage from "../TeamPage";
-import FaqPage from "../FaqPage";
 import ContactPage from "../ContactPage";
 import ErrorPage from "../ErrorPage";
-import BlogPage from "../BlogPage";
-import BlogSinglePage from "../BlogSinglePage";
 import ExperienceSection from "../../components/demo/experienceSection.jsx";
 import SylvanRetreat from "../../main-component/projects/sylvanretreat";
 import Econest from "../projects/eco-nest";
@@ -41,9 +36,7 @@ const RoutesWithLoader = () => {
 
   useEffect(() => {
     console.log("location", location.pathname);
-
     setLoading(true);
-
     const timer = setTimeout(() => {
       setLoading(false);
     }, 3000); // Adjust delay to match your content loading time
@@ -63,14 +56,8 @@ const RoutesWithLoader = () => {
         <Route path="/projects" element={<ProjectPage />} />
         <Route path="/projects-single" element={<ProjectSinglePage />} />
         <Route path="/service" element={<ServicePage />} />
-        <Route path="/service-single" element={<ServiceSinglePage />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
-        <Route path="/team" element={<TeamPage />} />
-        <Route path="/faq" element={<FaqPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/404" element={<ErrorPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog-single" element={<BlogSinglePage />} />
         <Route path="/experienceSection" element={<ExperienceSection />} />
         <Route path="/careers" element={<CareerMainFooterComp />} />
         <Route path="/careerDetails/:id" element={<CareerDetails />} />
@@ -78,7 +65,7 @@ const RoutesWithLoader = () => {
         <Route path="/eco-nest" element={<Econest />} />
         <Route path="/journeySection" element={<JourneySection />} />
         <Route path="/status" element={<Status />} />
-        <Route path="/amenities" element={<Amenities />} />
+        {/* <Route path="/amenities" element={<Amenities />} /> */}
         <Route path="/privacyPolicy" element={<MainPrivacyPolicy />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
@@ -86,20 +73,20 @@ const RoutesWithLoader = () => {
   );
 };
 
-const AllRoute = () => {
-  return (
-    <div>
-      <Router>
-        <FloatingIcons />
-        {/* <TawkMessengerReact
-                    propertyId="66d2d5ab50c10f7a00a26593"
-                    widgetId="1i70srim4"
-                    /> */}
-        <ScrollToTop />
-        <RoutesWithLoader />
-      </Router>
-    </div>
-  );
-};
+      const AllRoute = () => {
+        return (
+          <div>
+            <Router>
+              <FloatingIcons />
+              {/* <TawkMessengerReact
+                          propertyId="66d2d5ab50c10f7a00a26593"
+                          widgetId="1i70srim4"
+                          /> */}
+              <ScrollToTop />
+              <RoutesWithLoader />
+            </Router>
+          </div>
+        );
+      };
 
-export default AllRoute;
+      export default AllRoute;
