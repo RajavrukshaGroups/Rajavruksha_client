@@ -6,8 +6,8 @@ import { defineElement } from "@lordicon/element";
 import VariableProximity from "../../utils/VariableProximity";
 
 // define "lord-icon" custom element with default properties
-defineElement(lottie.loadAnimation);
 import "./style.css";
+defineElement(lottie.loadAnimation);
 
 const Contactpage = ({ requestAquote }) => {
   let ContactClasss = "container-class";
