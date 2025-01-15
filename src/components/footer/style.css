@@ -21,7 +21,6 @@
   box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.1);
 }
 
-
 /* YouTube */
 .social-icons a.youtube {
   background-color: #c4302b;
@@ -33,14 +32,13 @@
   background-color: #c4302b;
 }
 
-
 .social-icons a.linkedin:hover {
   background-color: #ff0000;
 }
 
 /* Facebook */
 .social-icons a.facebook {
-  background-color: #4267B2;
+  background-color: #4267b2;
 }
 
 .social-icons a.facebook:hover {
@@ -49,29 +47,43 @@
 
 /* Instagram */
 .social-icons a.instagram {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
 
 .social-icons a.instagram:hover {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
   background-color: #fff;
 }
 
 /* WhatsApp */
 .social-icons a.whatsapp {
-  background-color: #25D366;
+  background-color: #25d366;
 }
 
 .social-icons a.whatsapp:hover {
-  background-color: #1DA851;
+  background-color: #1da851;
 }
 
 /* Twitter */
 .social-icons .twitter {
-  background-color: #1DA1F2;
+  background-color: #1da1f2;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -83,12 +95,9 @@
 }
 
 .social-icons .twitter:hover {
-  background-color: #1A91DA;
+  background-color: #1a91da;
   transform: scale(1.3);
 }
-
-
-
 
 .footer-area {
   background: #000;
@@ -114,6 +123,25 @@
   margin-bottom: 10px;
 }
 
+.single-footer ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.single-footer ul li {
+  margin-bottom: 10px; 
+  white-space: nowrap; 
+}
+
+.single-footer ul li p {
+  font-size: 16px; /* Adjust text size */
+  color: #ffffff; /* Adjust color to match your design */
+  margin: 0; 
+  line-height: 24px;
+}
+
+
 #footer-head {
   color: #d3b66d;
   font-family: Arial, Helvetica, sans-serif;
@@ -121,15 +149,28 @@
   font-style: normal;
   font-weight: 600;
   letter-spacing: 1px;
+  font-size: 16px;
 }
 .foote-copyright {
   color: white;
 }
 
 .contact-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
+
+.contact-link i {
+  margin-top: 4px; /* Align the icon with the first line of the text */
+}
+
+.contact-link span {
+  line-height: 1.5; /* Adjust line height for better readability */
+}
+
 .contact-link:hover {
   color: #729f28;
 }
@@ -140,6 +181,12 @@
   color: #ffffff;
   font-weight: 500;
   font-size: 16px;
+}
+
+.single-footer li span {
+  display: block; /* Ensure each line is treated as its own block */
+  font-size: 14px; /* Adjust the size as necessary */
+  color: #fff; /* Adjust color to match your design */
 }
 
 .single-footer li:last-child {
@@ -164,6 +211,8 @@
 
 .footer-contact li {
   color: white;
+  font-weight: 500;
+  line-height: 23px;
 }
 
 .newsletter_form form {
@@ -257,7 +306,8 @@
 
 ul.footer-contact {
   padding-top: 20px;
-  margin-top: -21px;
+  margin-top: -19px;
+  margin-left: 4rem;
 }
 
 .copyright {
@@ -320,6 +370,7 @@ ul.footer-contact {
   ul.footer-contact {
     padding-top: 5px;
     margin-top: -21px;
+    margin-left: 0;
   }
   .footer-top {
     background: #0b3d2c;
@@ -348,6 +399,9 @@ ul.footer-contact {
   }
   .social {
     text-align: start;
+  }
+  ul.footer-contact{
+    margin-left: 0rem;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -394,7 +448,7 @@ ul.no-list li {
 .social .facebook {
   background: #3b5998;
 }
-.social .linkedin{
+.social .linkedin {
   background: red;
 }
 

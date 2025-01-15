@@ -232,17 +232,17 @@ const Footer = () => {
                 <p id="footer-head">Office Timings</p>
                 <ul>
                   <li>
-                    <p>Wednesday to Monday :</p>
+                    <p>Wednesday to Monday</p>
                   </li>
                   <li>
                     <p>09:30 am : 06:30 pm</p>
                   </li>
                   <li>
-                    <p style={{ color: "white" }}>Weekly Off:</p>
+                    <p style={{ color: "white" }}>Weekly Off : Tuesday</p>
                   </li>
-                  <li>
+                  {/* <li>
                     <p>Tuesday</p>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -261,6 +261,7 @@ const Footer = () => {
                     handleLinkClick("email", "enquiry@rajavrukshagroup.in")
                   }
                   className="contact-link"
+                  style={{ marginTop: "10px" }}
                 >
                   <i className="fas fa-envelope" /> enquiry@rajavrukshagroup.in
                 </li>
@@ -269,6 +270,7 @@ const Footer = () => {
                     handleLinkClick("map", "Rajavruksha Groups");
                   }}
                   className="contact-link"
+                  style={{ marginTop: "14px" }}
                 >
                   <i className="fas fa-map" /> #35 A, Kowdi, 2nd Floor, 1st Main
                   Road, Chiranjeevi Layout, Hebbal Kempapura, Bengaluru-560024

@@ -40,8 +40,9 @@ function ContactModal({ show, handleClose, onSubmitSuccess }) {
       };
 
       // Perform the POST request to submit the form data
-      //http://localhost:3000/contact
+      //http://localhost:4000/contact
       //https://rajavruksha-server.vercel.app/contact
+      // https://servermain.rajavrukshagroup.in/contact
       fetch("https://servermain.rajavrukshagroup.in/contact", {
         method: "POST",
         headers: {

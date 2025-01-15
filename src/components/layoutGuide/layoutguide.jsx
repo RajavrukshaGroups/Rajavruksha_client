@@ -3,6 +3,8 @@ import "../../components/layoutGuide/layoutguide.css";
 import ContactModal from "../Modal/contactModal"; // Adjust the path as necessary
 import EcoNestLayout from "../../components/assets/eco-nest-layout.webp";
 import BlurText from "../../utils/BlurText";
+import EcoNest_Brochure from "../../components/assets/RRPL_Eco-nest_Brochure2.pdf";
+import Brochure from "../../components/assets/Eco-nest_compressed.pdf"
 
 function Layoutguide() {
   const [showModal, setShowModal] = useState(false);
@@ -11,10 +13,7 @@ function Layoutguide() {
   const handleCloseModal = () => setShowModal(false);
 
   const handleDownloadBrochure = () => {
-    window.open(
-      "https://rajavrukshagroup.in/wp-content/uploads/2024/02/RRPL_Brochure-2.pdf",
-      "_blank"
-    );
+    window.open(EcoNest_Brochure, "_blank");
   };
 
   const disableContextMenu = (e) => {
