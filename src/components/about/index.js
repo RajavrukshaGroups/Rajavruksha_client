@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import AboutImg from "../../components/assets/about-1.e32a7109.webp";
 import AboutBgImg from "../../components/assets/about-bg-home-page.png";
 import "./style.css";
-
+import FadeContent from "../../utils/FadeContent";
 
 const About = ({ text, readMore }) => {
   const disableContextMenu = (e) => {
@@ -28,10 +28,18 @@ const About = ({ text, readMore }) => {
               data-aos="fade-right"
               data-aos-offset="100"
             >
+
               <div className="site-heading">
+              <FadeContent
+                blur={true}
+                duration={1000}
+                easing="ease-out"
+                initialOpacity={0}
+              >
                 <h2 className="explore-title text-capitalize ">
                   We explore to discover your optimal selection
                 </h2>
+                </FadeContent>
                 <div>
                   <p>{text}</p>
                 </div>
@@ -124,7 +132,16 @@ const About = ({ text, readMore }) => {
               >
                 {!readMore && (
                   <div className="vision">
+                      <FadeContent
+                blur={true}
+                duration={1000}
+                easing="ease-out"
+                initialOpacity={0}
+              >
                     <h2>Vision</h2>
+              </FadeContent>
+                    
+                
                     <p>
                       To be the premier agency for sustainable and profitable
                       farm land investments, shaping the future of agriculture.
@@ -141,7 +158,15 @@ const About = ({ text, readMore }) => {
               >
                 {!readMore && (
                   <div className="mission">
+                    <FadeContent
+                blur={true}
+                duration={1000}
+                easing="ease-out"
+                initialOpacity={0}
+              >
+
                     <h2>Mission</h2>
+              </FadeContent>
                     <p>
                       We provide expert real estate services, guiding clients in
                       acquiring, selling, and investing in farm land with a

@@ -3,13 +3,23 @@ import "./journeysection.css";
 import AboutIcon from "../../components/assets/planting (1).png";
 import ResidentIcon from "../../components/assets/residentialfhfg.png";
 import VillaIcon from "../../components/assets/villa.png";
+import FadeContent from "../../utils/FadeContent";
 
 const JourneySection = () => {
   return (
     <section className="journey-section">
+       <FadeContent
+                blur={true}
+                duration={1000}
+                easing="ease-out"
+                initialOpacity={0}
+
+              >
+
       <h2 data-aos="fade-right" data-aos-delay="200">
         Your Journey Begins Here
       </h2>
+              </FadeContent>
       <p className="intro-text" data-aos="fade-right" data-aos-delay="200">
         We guide you in selecting the best property that aligns with your vision
         and goals. With our extensive knowledge and unwavering commitment, we’ll
@@ -23,7 +33,15 @@ const JourneySection = () => {
             <img src={AboutIcon} alt="Managed Farmland Icon" />
           </div>
           <div className="text-wrapper">
+          <FadeContent
+                blur={true}
+                duration={1000}
+                easing="ease-out"
+                initialOpacity={0}
+
+              >
             <h3>Managed Farmland</h3>
+            </FadeContent>
             <p>
               Our expert team orchestrates sustainable, traditional & organic
               practices, nurturing each unit for maximum yield. Dedication and
@@ -37,7 +55,16 @@ const JourneySection = () => {
             <img src={ResidentIcon} alt="Residential Icon" />
           </div>
           <div className="text-wrapper mb-4">
+          <FadeContent
+                blur={true}
+                duration={1000}
+                easing="ease-out"
+                initialOpacity={0}
+
+              >
+
             <h3>Residential Projects</h3>
+            </FadeContent>
             <p>
               An experienced team dedicated to crafting dream homes, blending
               expertise and vision for impeccable residential projects that
@@ -51,7 +78,15 @@ const JourneySection = () => {
             <img src={VillaIcon} alt="Row Villa Projects Icon" />
           </div>
           <div className="text-wrapper">
+          <FadeContent
+                blur={true}
+                duration={1000}
+                easing="ease-out"
+                initialOpacity={0}
+
+              >
             <h3>Row Villa Projects</h3>
+            </FadeContent>
             <p>
               Experience the allure of spacious elegance in our Row Villa
               project, where every residence is a testament to bespoke design,

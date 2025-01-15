@@ -1,5 +1,5 @@
 import { useSprings, animated } from "@react-spring/web";
-import { color } from "framer-motion";
+// import { color } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const SplitText = ({

@@ -1,0 +1,56 @@
+.shiny-text {
+  color: transparent; /* Text color made transparent to rely on the gradient */
+  background: linear-gradient(
+    120deg,
+    rgba(191, 125, 2, 0.9) 40%, /* Lighter transparent white */
+    rgb(193, 147, 60)50%, /* Solid black for better visibility */
+    rgb(193, 147, 60) 60% /* Lighter transparent white */
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: shine 1s linear infinite; /* Adjust animation speed here */
+  /* text-shadow: 1px 2px 4px rgba(201, 179, 14, 0.5);  */
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: -200%;
+  }
+}
+
+
+/* .shiny-text {
+  color: transparent;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.5) 40%, 
+    rgba(0, 0, 0, 1) 50%, 
+    rgba(255, 255, 255, 0.5) 60% 
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: shine 2s linear infinite;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+
+@keyframes shine {
+  0% {
+    background-position: 200%;
+  }
+  100% {
+    background-position: -200%;
+  }
+} */
+
+
+/* .shiny-text.disabled {
+  animation: none;
+} */
