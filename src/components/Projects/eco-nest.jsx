@@ -29,6 +29,10 @@ function EcoNexts() {
     "Individual water connection",
     "Entrance Arch",
   ];
+  const words =
+    " In Coorg embrace, Eco Nest stands tall, Spanning across 2 verdant" +
+    " acres, it enthralls. Thirty plots, each 1200 sqft in size they boast, " +
+    " KUDA’s nod, ensuring dreams aren’t lost.";
   return (
     <div className="project-details-area pt-4">
       <div className="container">
@@ -39,7 +43,7 @@ function EcoNexts() {
             data-aos-delay="200"
             className="col-12"
           >
-            {/* <h3>Theme</h3> */}
+            {/* <TextGenerateEffect words={words} /> */}
             In Coorg embrace, Eco Nest stands tall, Spanning across 2 verdant
             acres, it enthralls. Thirty plots,
             <br />
