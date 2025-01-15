@@ -7,6 +7,7 @@ import AboutImg from "../../components/assets/about-1.e32a7109.webp";
 import AboutBgImg from "../../components/assets/about-bg-home-page.png";
 import "./style.css";
 import FadeContent from "../../utils/FadeContent";
+import ShinyText from "../../utils/shinyButtons";
 
 const About = ({ text, readMore }) => {
   const disableContextMenu = (e) => {
@@ -44,7 +45,6 @@ const About = ({ text, readMore }) => {
                   <p>{text}</p>
                 </div>
               </div>
-
               <div
                 className="content"
                 style={{
@@ -94,7 +94,23 @@ const About = ({ text, readMore }) => {
                   <div className="mobile-read-more-wrapper">
                     <Link to="/about">
                       {!!readMore && (
-                        <button className="read-more-button">READ MORE</button>
+                        // <button className="read-more-button">
+                        // <ShinyText
+                        // text="Read More"
+                        // disabled={false}
+                        // speed={3}
+                        // className="project-button-wrapper"
+                        // >
+                        // </ShinyText>
+                        //   </button>
+                        <button className="read-more-button">
+                          <ShinyText
+                            text="Read More"
+                            disabled={false}
+                            speed={3}
+                            className="project-button-wrapper"
+                          />
+                        </button>
                       )}
                     </Link>
                   </div>
@@ -140,8 +156,6 @@ const About = ({ text, readMore }) => {
               >
                     <h2>Vision</h2>
               </FadeContent>
-                    
-                
                     <p>
                       To be the premier agency for sustainable and profitable
                       farm land investments, shaping the future of agriculture.
@@ -155,7 +169,7 @@ const About = ({ text, readMore }) => {
                 className="about-left"
                 data-aos="fade-left"
                 data-aos-offset="100"
-              >
+                  >
                 {!readMore && (
                   <div className="mission">
                     <FadeContent
@@ -164,8 +178,7 @@ const About = ({ text, readMore }) => {
                 easing="ease-out"
                 initialOpacity={0}
               >
-
-                    <h2>Mission</h2>
+                <h2>Mission</h2>
               </FadeContent>
                     <p>
                       We provide expert real estate services, guiding clients in
