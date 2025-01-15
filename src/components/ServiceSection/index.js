@@ -14,6 +14,7 @@ import villaIcon from "../../components/assets/villa.png";
 import Check from "../../components/assets/check (1).png";
 import Management from "../../components/assets/management (1).png";
 import Plant from "../../components/assets/plant-1-new.png";
+import FadeContent from "../../utils/FadeContent";
 
 import "./style.css";
 
@@ -46,12 +47,19 @@ const ServiceSection = () => {
           ....................
         </span>
       </div>
+      <FadeContent
+                blur={true}
+                duration={900}
+                easing="ease-out"
+                initialOpacity={0}
+              >
       <h1
         className="work-title"
         style={{ textAlign: "center", marginTop: "29px" }}
       >
         Our Working Process
       </h1>
+      </FadeContent>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-3 col-md-6">

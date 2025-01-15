@@ -7,6 +7,7 @@ import partnerImg4 from "../../img/partner-4.png";
 import partnerImg5 from "../../img/partner-5.png";
 import partnerImg6 from "../../img/partner-6.png";
 import partnerImg7 from "../../img/partner-7.png";
+import FadeContent from "../../utils/FadeContent";
 
 import "./style.css";
 
@@ -17,7 +18,15 @@ const Partners = () => {
     <div className="row">
       {/* Left side content */}
       <div  className="col-lg-4 d-flex justify-content-start align-items-center" style={{textAlign:'center'}}>
+      <FadeContent
+                blur={true}
+                duration={1000}
+                easing="ease-out"
+                initialOpacity={0}
+              >
         <h1>Your Journey Begins Here</h1>
+        </FadeContent>
+
       </div>
       {/* Right side content */}
       <div className="col-lg-4 d-flex justify-content-start align-items-center" >

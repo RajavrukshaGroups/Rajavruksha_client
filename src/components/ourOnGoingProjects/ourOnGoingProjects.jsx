@@ -4,15 +4,25 @@ import "./ourOnGoingProjects.css";
 import bgImg from "../../components/assets/on_going_project_syl.jpg";
 // import SylRetreatHomePage from "../../components/assets/Sylan retreat_Banner1.webp";
 import SylRetreatHomePage from "../../components/assets/Sylan retreat_Banner1.webp";
-
+import StarBorder from "../../utils/shinyButtons";
 import React from "react";
+import ShinyText from "../../utils/shinyButtons";
+import FadeContent from "../../utils/FadeContent";
 const OngoingProjects = () => {
   const disableContextMenu = (e) => {
     e.preventDefault();
   };
   return (
-    <div className="projects-container-new">
+    <div className="projects-container-new"> 
+        <FadeContent
+                blur={true}
+                duration={600}
+                easing="ease-out"
+                initialOpacity={0}
+              >
+
       <h1 className="projects-title">Our Ongoing Projects</h1>
+              </FadeContent>
       <div className="project-card">
         <div
           className="project-image-container"
@@ -26,15 +36,43 @@ const OngoingProjects = () => {
             className="project-image"
           />
         </div>
-        <div className="project-content">
+        <div className="project-content" >
+        <FadeContent
+                blur={true}
+                duration={900}
+                easing="ease-out"
+                initialOpacity={0}
+              >
           <h2 className="project-subtitle syl-retreat-title">Sylvan Retreat</h2>
+          </FadeContent>
           <p className="project-description">
             Farmland is not just a dream; it's a sound financial investment with
             growing demand in the market.
           </p>
+            {/* <Link to="/sylvan-retreat">
+                <button className="project-button">Read More</button>
+              </Link> */}
+
+              <StarBorder
+                as="button"
+                className="custom-class"
+                color="cyan"
+                speed="5s"
+              >
+              {/* <Link to="/sylvan-retreat">
+                <button className="project-button">Read More</button>
+              </Link> */}
+          </StarBorder>
           <Link to="/sylvan-retreat">
-            <button className="project-button">Read More</button>
-          </Link>
+  <button className="project-button">
+    <ShinyText
+      text="Read More"
+      disabled={false}
+      speed={3}
+      className="project-button-wrapper"
+    />
+  </button>
+</Link>
         </div>
       </div>
     </div>
