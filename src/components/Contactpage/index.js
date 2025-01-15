@@ -164,7 +164,7 @@ const Contactpage = ({ requestAquote }) => {
             </div>
           </div>
 
-          <div className="row iframe-container">
+          <div className="row iframe-container location-address">
             <div className="col-lg-6 col-sm-12">
               <div className="contact-page-right">
                 <iframe
