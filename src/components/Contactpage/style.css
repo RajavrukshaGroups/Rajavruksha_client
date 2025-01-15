@@ -15,10 +15,6 @@
   height: 557px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
   opacity: 0.7;
-
-
-
-
 }
 @media (max-width: 425px) {
   .crm-box {
@@ -107,7 +103,7 @@
   transform: rotate(45deg);
 }
 
-.new-icon{
+.new-icon {
   margin-right: 2rem;
 }
 
@@ -281,7 +277,7 @@
   color: rgb(25, 118, 210);
 }
 
-@media (max-width: 425px) {
+@media (max-width: 400px) {
   .contact-page-right iframe {
     padding-top: 0px;
     /* width: 100%; */
@@ -303,10 +299,44 @@
   .map-info-text p {
     font-size: 13px;
     line-height: 24px;
+    /* letter-spacing: 2px; */
+  }
+  .location-address {
+    margin-top: -8rem;
   }
 }
 
-@media (min-width: 426px) and (max-width: 768px) {
+@media (min-width: 401px) and (max-width: 430px) {
+  .contact-page-right iframe {
+    padding-top: 0px;
+    /* width: 100%; */
+  }
+  .map-info-icon {
+    border: 3px solid black;
+    width: 129px;
+    height: 50%;
+    transform: rotate(-45deg);
+    margin-left: -5px;
+  }
+  .contact-info {
+    margin-left: -61px;
+    margin-right: 40px;
+  }
+  .contact-info-det {
+    margin-left: -69px;
+  }
+  .map-info-text p {
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 1px;
+  }
+  .location-address {
+    margin-top: -8rem;
+    margin-left: 0rem;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 768px) {
   .map-info-icon {
     border: 3px solid black;
     /* width: 70%; */
