@@ -1,4 +1,3 @@
-import React from "react";
 import { useRef } from "react";
 import ContactForm from "../ContactFrom";
 import lottie from "lottie-web";

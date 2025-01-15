@@ -1,4 +1,4 @@
-import React from "react";
+import { useRef } from "react";
 import CountUp from "react-countup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
@@ -8,10 +8,19 @@ import AboutBgImg from "../../components/assets/about-bg-home-page.png";
 import "./style.css";
 import FadeContent from "../../utils/FadeContent";
 import ShinyText from "../../utils/shinyButtons";
+import BlurText from "../../utils/BlurText";
+import VariableProximity from "../../utils/VariableProximity";
+
+
 
 const About = ({ text, readMore }) => {
   const disableContextMenu = (e) => {
     e.preventDefault();
+  };
+    const containerRef = useRef(null);
+  
+  const handleAnimationComplete = () => {
+    console.log("All letters have animated!");
   };
   return (
     <div
@@ -92,17 +101,23 @@ const About = ({ text, readMore }) => {
                     </li>
                   </ul>
                   <div className="mobile-read-more-wrapper">
-                    <Link to="/about">
+                  <Link to="/about">
+                        {!!readMore && (
+                          <button className="read-more-button">
+                            <ShinyText
+                              text="Read More"
+                              disabled={false}
+                              speed={3}
+                              className="project-button-wrapper"
+                            />
+                          </button>
+                        )}
+                      </Link>
+
+                    {/* <Link to="/about">
                       {!!readMore && (
-                        // <button className="read-more-button">
-                        // <ShinyText
-                        // text="Read More"
-                        // disabled={false}
-                        // speed={3}
-                        // className="project-button-wrapper"
-                        // >
-                        // </ShinyText>
-                        //   </button>
+
+                        
                         <button className="read-more-button">
                           <ShinyText
                             text="Read More"
@@ -112,7 +127,7 @@ const About = ({ text, readMore }) => {
                           />
                         </button>
                       )}
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
                 <div className="experience-box">
@@ -148,14 +163,37 @@ const About = ({ text, readMore }) => {
               >
                 {!readMore && (
                   <div className="vision">
-                      <FadeContent
-                blur={true}
-                duration={1000}
-                easing="ease-out"
-                initialOpacity={0}
-              >
-                    <h2>Vision</h2>
-              </FadeContent>
+                     {/* <VariableProximity
+                                              label={"Head Office"}
+                                              className={"variable-proximity-demo"}
+                                              fromFontVariationSettings="'wght' 400, 'opsz' 9"
+                                              toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                                              containerRef={containerRef}
+                                              radius={100}
+                                              falloff="linear"
+                                            /> */}
+             {/* <BlurText
+                  text="Discover Your Agricultural Dream:"
+                  delay={150}
+                  animateBy="words"
+                  direction="top"
+                  onAnimationComplete={handleAnimationComplete}
+                  className="text-2xl"
+                /> */}
+                
+                    <h2 ref={containerRef} style={{ position: "relative" }}>
+                        <div ref={containerRef} style={{ position: "relative" }}>
+                           <VariableProximity
+                             label={"Vision"}
+                             className={"variable-proximity-demo"}
+                             fromFontVariationSettings="'wght' 800, 'opsz' 9"
+                             toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                             containerRef={containerRef}
+                             radius={100}
+                             falloff="linear"
+                           />
+                         </div>
+                    </h2>
                     <p>
                       To be the premier agency for sustainable and profitable
                       farm land investments, shaping the future of agriculture.
@@ -178,7 +216,19 @@ const About = ({ text, readMore }) => {
                 easing="ease-out"
                 initialOpacity={0}
               >
-                <h2>Mission</h2>
+                <h2>
+                <div ref={containerRef} style={{ position: "relative" }}>
+                           <VariableProximity
+                             label={"Mission"}
+                             className={"variable-proximity-demo"}
+                             fromFontVariationSettings="'wght' 800, 'opsz' 9"
+                             toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                             containerRef={containerRef}
+                             radius={100}
+                             falloff="linear"
+                           />
+                         </div>
+                </h2>
               </FadeContent>
                     <p>
                       We provide expert real estate services, guiding clients in

@@ -1,11 +1,13 @@
-import React from "react";
+import { useRef } from "react";
 import "./journeysection.css";
 import AboutIcon from "../../components/assets/planting (1).png";
 import ResidentIcon from "../../components/assets/residentialfhfg.png";
 import VillaIcon from "../../components/assets/villa.png";
 import FadeContent from "../../utils/FadeContent";
+import VariableProximity from "../../utils/VariableProximity";
 
 const JourneySection = () => {
+    const containerRef = useRef(null);
   return (
     <section className="journey-section">
        <FadeContent
@@ -40,7 +42,20 @@ const JourneySection = () => {
                 initialOpacity={0}
 
               >
-            <h3>Managed Farmland</h3>
+                <h3>
+                  <div ref={containerRef} style={{ position: "relative" }}>
+                    <VariableProximity
+                      label={"Managed Farmland"}
+                      className={"variable-proximity-demo variable-proximity-underline underline-text"}
+                      fromFontVariationSettings="'wght' 550, 'opsz' 9"
+                      toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                      containerRef={containerRef}
+                      radius={100}
+                      falloff="linear"
+                    />
+                  </div>
+                </h3>
+
             </FadeContent>
             <p>
               Our expert team orchestrates sustainable, traditional & organic
@@ -63,7 +78,21 @@ const JourneySection = () => {
 
               >
 
-            <h3>Residential Projects</h3>
+            {/* <h3>Residential Projects</h3> */}
+                   <h3>
+                  <div ref={containerRef} style={{ position: "relative" }}>
+                    <VariableProximity
+                      label={"Residential Projects"}
+                      className={"variable-proximity-demo variable-proximity-underline underline-text"}
+                      fromFontVariationSettings="'wght' 550, 'opsz' 9"
+                      toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                      containerRef={containerRef}
+                      radius={100}
+                      falloff="linear"
+                    />
+                  </div>
+                </h3>
+
             </FadeContent>
             <p>
               An experienced team dedicated to crafting dream homes, blending
@@ -85,7 +114,21 @@ const JourneySection = () => {
                 initialOpacity={0}
 
               >
-            <h3>Row Villa Projects</h3>
+            {/* <h3>Row Villa Projects</h3> */}
+            <h3>
+                  <div ref={containerRef} style={{ position: "relative" }}>
+                    <VariableProximity
+                      label={"Row Villa Projects"}
+                      className={"variable-proximity-demo variable-proximity-underline underline-text"}
+                      fromFontVariationSettings="'wght' 550, 'opsz' 9"
+                      toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                      containerRef={containerRef}
+                      radius={100}
+                      falloff="linear"
+                    />
+                  </div>
+                </h3>
+
             </FadeContent>
             <p>
               Experience the allure of spacious elegance in our Row Villa

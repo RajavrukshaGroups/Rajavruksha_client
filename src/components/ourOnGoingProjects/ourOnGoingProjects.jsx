@@ -64,6 +64,17 @@ const OngoingProjects = () => {
               </Link> */}
           </StarBorder>
             <Link to="/sylvan-retreat">
+              <button className="project-button">
+                <ShinyText
+                  text="Read More"
+                  disabled={false}
+                  speed={3}
+                  className="project-button-wrapper"
+                  gradient="linear-gradient(120deg, orange 40%, #ff8c00 50%, #ff8c00 60%)"
+                />
+              </button>
+            </Link>
+            {/* <Link to="/sylvan-retreat">
             <button className="project-button">
                 <ShinyText
                   text="Read More"
@@ -73,16 +84,8 @@ const OngoingProjects = () => {
                   gradient="linear-gradient(120deg, orange 40%, #ff8c00 50%, #ff8c00 60%)"
                 />
               </button>
-            {/* <button className="project-button">
-              <ShinyText
-                text="Read More"
-                disabled={false}
-                speed={3}
-                className="project-button-wrapper"
-                gradient="linear-gradient(120deg, orange 40%, #ff8c00 50%, #ff8c00 60%)"
-                />
-              </button> */}
-            </Link>
+           
+            </Link> */}
         </div>
       </div>
     </div>
