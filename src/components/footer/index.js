@@ -30,7 +30,7 @@ const Footer = () => {
                   <br />
                   that aligns with your vision and goals
                 </p>
-                <div className="single-footer">
+                <div className="single-footer connect">
                   <p id="footer-connect">Connect With Us</p>
 
                   {/* <div class="social">

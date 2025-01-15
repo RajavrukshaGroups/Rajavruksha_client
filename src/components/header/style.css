@@ -45,6 +45,8 @@
   padding: 0 0px;
   align-items: center;
   justify-content: start;
+  margin-top: 16px;
+  margin-left: -7px;
 }
 
 .fab {
@@ -260,6 +262,10 @@
   /* Adjust the breakpoint as needed */
   .header-action {
     display: none; /* Hides the entire container */
+  }
+  .wrapper-footer {
+    margin-top: 1px;
+    margin-left: -7px;
   }
 }
 
