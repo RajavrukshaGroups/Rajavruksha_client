@@ -19,6 +19,8 @@
 
 
 .shiny-text {
+  font-size: 1rem;
+  font-weight: 600;
   color: transparent; 
   background: linear-gradient(
     120deg,
