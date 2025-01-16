@@ -1,11 +1,9 @@
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
+import "./style.css"
 
-export const ContainerScroll = ({
-  titleComponent,
-  children
-}) => {
+export const ContainerScroll = ({ titleComponent, children }) => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -32,57 +30,53 @@ export const ContainerScroll = ({
   const translate = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
   return (
-    (<div
+    <div
       // className="h-[50rem] md:h-[62rem] flex items-center justify-center relative p-2 md:p-10 mb-[-150px] md:mb-[-150px]"
-   className="h-[50rem] md:h-[62rem] flex items-center justify-center relative p-2 md:p-10 mb-[-180px] md:mb-[-50px]"
-      ref={containerRef}>
+      className="h-[50rem] flex items-center justify-center relative p-2 md:p-10 mb-[-180px] md:mb-[-130px]"
+      ref={containerRef}
+    >
       <div
         className="py-1 md:py-0 w-full relative"
         style={{
           perspective: "1000px",
-        }}>
+        }}
+      >
         <Header translate={translate} titleComponent={titleComponent} />
         <Card rotate={rotate} translate={translate} scale={scale}>
           {children}
         </Card>
       </div>
-    </div>)
+    </div>
   );
 };
 
-export const Header = ({
-  translate,
-  titleComponent
-}) => {
+export const Header = ({ translate, titleComponent }) => {
   return (
-    (<motion.div
+    <motion.div
       style={{
         translateY: translate,
       }}
-      className="div max-w-5xl mx-auto text-center">
+      className="div max-w-5xl mx-auto text-center"
+    >
       {titleComponent}
-    </motion.div>)
+    </motion.div>
   );
 };
 
-export const Card = ({
-  rotate,
-  scale,
-  children
-}) => {
+export const Card = ({ rotate, scale, children }) => {
   return (
-    (<motion.div
+    <motion.div
       style={{
         rotateX: rotate,
         scale,
         boxShadow:
           "0 0 #0000004d, 0 0px 2px #0000004a, 0 0px 0px #00000042, 0 4px 40px #00000026, 0 9px 0px #0000000a, 0 0px 0px #00000003",
       }}
-      className="max-w-5xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full border-4 border-[#6C6C6C] p-2 md:p-6 bg-[#222222] rounded-[30px] shadow-2xl">
-      <div
-        className=" h-full w-full  overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 md:rounded-2xl md:p-4 ">
+      className="syl-retreat max-w-3xl -mt-5 mx-auto h-[10rem] md:h-[25rem] sm:h-[500px] w-full border-4 border-[#6C6C6C] p-2 md:p-6 bg-[#222222] rounded-[30px] shadow-2xl"
+    >
+      <div className=" h-full w-full overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 md:rounded-2xl md:p-4 ">
         {children}
       </div>
-    </motion.div>)
+    </motion.div>
   );
 };
