@@ -372,7 +372,8 @@ ul.footer-contact {
   }
   ul.footer-contact {
     padding-top: 5px;
-    margin-top: -21px;
+    /* margin-top: -21px; */
+    margin-top: 7px;
     margin-left: 0;
   }
   .footer-top {
@@ -388,6 +389,12 @@ ul.footer-contact {
 
   .single-footer p br {
     display: none;
+  }
+  .footer-det{
+    margin-bottom: 1rem;
+  }
+  .quick-link{
+    margin-top: 3rem;
   }
 }
 @media (max-width: 384px) {

@@ -200,7 +200,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-lg-2 col-sm-6 order-lg-2 order-3">
-              <div className="single-footer">
+              <div className="single-footer quick-link">
                 <p id="footer-head">Quick Links</p>
                 <ul className="footer_carousel unordered-list">
                   <li className="unorderedlistlink">
