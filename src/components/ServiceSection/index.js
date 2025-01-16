@@ -23,7 +23,7 @@ const ServiceSection = () => {
     e.preventDefault();
   };
   return (
-    <section className="service-area ">
+    <section className="service-area -mt-10">
       <div
         className="service-area-container"
         // style={{
