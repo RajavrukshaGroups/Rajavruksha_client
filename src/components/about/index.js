@@ -195,8 +195,19 @@ const About = ({ text, readMore }) => {
                          </div>
                     </h2>
                     <p>
-                      To be the premier agency for sustainable and profitable
-                      farm land investments, shaping the future of agriculture.
+                    <div ref={containerRef} style={{ position: "relative" }}>
+                           <VariableProximity
+                             label={"To be the premier agency for sustainable and profitable farm land investments, shaping the future of agriculture."}
+                             className={"variable-proximity-demo"}
+                             fromFontVariationSettings="'wght' 350, 'opsz' 9"
+                             toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                             containerRef={containerRef}
+                             radius={100}
+                             falloff="linear"
+                           />
+                         </div>
+                      {/* To be the premier agency for sustainable and profitable
+                      farm land investments, shaping the future of agriculture. */}
                     </p>
                   </div>
                 )}
@@ -231,9 +242,20 @@ const About = ({ text, readMore }) => {
                 </h2>
               </FadeContent>
                     <p>
-                      We provide expert real estate services, guiding clients in
+                    <div ref={containerRef} style={{ position: "relative" }}>
+                           <VariableProximity
+                             label={"We provide expert real estate services, guiding clients in acquiring, selling, and investing in farm land with a focus on sustainability and long-term growth."}
+                             className={"variable-proximity-demo"}
+                             fromFontVariationSettings="'wght' 350, 'opsz' 9"
+                             toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                             containerRef={containerRef}
+                             radius={100}
+                             falloff="linear"
+                           />
+                         </div>
+                      {/* We provide expert real estate services, guiding clients in
                       acquiring, selling, and investing in farm land with a
-                      focus on sustainability and long-term growth.
+                      focus on sustainability and long-term growth. */}
                     </p>
                   </div>
                 )}

@@ -29,6 +29,7 @@ import Loader from "../../components/Loader/loader.jsx";
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 import MainTermsCondition from "../TermsConditions/index.js";
 import CareerDetails from "../careers/careerDetails.jsx";
+import  HeroScrollDemo  from "../../components/BlogList/index.js";
 
 const RoutesWithLoader = () => {
   const [loading, setLoading] = useState(false);
@@ -67,6 +68,7 @@ const RoutesWithLoader = () => {
         <Route path="/status" element={<Status />} />
         {/* <Route path="/amenities" element={<Amenities />} /> */}
         <Route path="/privacyPolicy" element={<MainPrivacyPolicy />} />
+        <Route path="/aceternity" element={<HeroScrollDemo />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>

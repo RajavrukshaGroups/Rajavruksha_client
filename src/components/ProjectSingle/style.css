@@ -90,7 +90,7 @@
 	/* Stack Tour and Amenities vertically */
 	.col-lg-6, .col-lg-4 {
 	  width: 100%; /* Full width on mobile */
-	  margin-bottom: 20px; /* Add space between components */
+	  margin-bottom: -29px; /* Add space between components */
 	}
   
 	/* Adjust project-overview-box for mobile */

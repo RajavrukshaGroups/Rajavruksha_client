@@ -58,10 +58,21 @@ const JourneySection = () => {
 
             </FadeContent>
             <p>
+            <VariableProximity
+                 label={"Our expert team orchestrates sustainable, traditional & organic practices, nurturing each unit for maximum yield. Dedication and expertise converge in managing farmland for enduring prosperity."}
+                 className={"variable-proximity-demo"}
+                 fromFontVariationSettings="'wght' 400, 'opsz' 9"
+                 toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                 containerRef={containerRef}
+                 radius={100}
+                 falloff="linear"
+               />
+            </p>
+            {/* <p>
               Our expert team orchestrates sustainable, traditional & organic
               practices, nurturing each unit for maximum yield. Dedication and
               expertise converge in managing farmland for enduring prosperity.
-            </p>
+            </p> */}
           </div>
         </div>
 
@@ -95,10 +106,21 @@ const JourneySection = () => {
 
             </FadeContent>
             <p>
+            <VariableProximity
+                 label={"An experienced team dedicated to crafting dream homes, blending expertise and vision for impeccable residential projects that resonate with comfort and luxury."}
+                 className={"variable-proximity-demo"}
+                 fromFontVariationSettings="'wght' 400, 'opsz' 9"
+                 toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                 containerRef={containerRef}
+                 radius={100}
+                 falloff="linear"
+               />
+            </p>
+            {/* <p>
               An experienced team dedicated to crafting dream homes, blending
               expertise and vision for impeccable residential projects that
               resonate with comfort and luxury.
-            </p>
+            </p> */}
           </div>
         </div>
 
@@ -128,13 +150,23 @@ const JourneySection = () => {
                     />
                   </div>
                 </h3>
-
             </FadeContent>
-            <p>
+            {/* <p>
               Experience the allure of spacious elegance in our Row Villa
               project, where every residence is a testament to bespoke design,
               offering a harmonious blend of lavishness, style, and personalized
               living.
+            </p> */}
+            <p>
+            <VariableProximity
+                 label={"Experience the allure of spacious elegance in our Row Villa project, where every residence is a testament to bespoke design,offering a harmonious blend of lavishness, style, and personalized living."}
+                 className={"variable-proximity-demo"}
+                 fromFontVariationSettings="'wght' 400, 'opsz' 9"
+                 toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                 containerRef={containerRef}
+                 radius={100}
+                 falloff="linear"
+               />
             </p>
           </div>
         </div>
