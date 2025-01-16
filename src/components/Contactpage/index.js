@@ -6,6 +6,7 @@ import VariableProximity from "../../utils/VariableProximity";
 
 // define "lord-icon" custom element with default properties
 import "./style.css";
+import { SignupFormDemo } from "../SignUpForm/SignUpFormDemo";
 defineElement(lottie.loadAnimation);
 
 const Contactpage = ({ requestAquote }) => {
@@ -34,6 +35,7 @@ const Contactpage = ({ requestAquote }) => {
                 <h2 className="section-title">Request a Quote</h2>
               </div> */}
               <ContactForm ContactClasss={ContactClasss} />
+              {/* <SignupFormDemo/> */}
             </div>
           </div>
           <div className="contact-body col-lg-5 col-sm-6 mb-5">

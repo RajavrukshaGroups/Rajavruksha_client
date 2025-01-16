@@ -6,6 +6,7 @@ import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "../../components/ErrorBoundary/errorBoundary.js";
 import Loader from "../../components/Loader/loader.jsx";
 import "../AboutPage/loading.css";
+import { InfiniteMovingCardsDemo } from "../../components/InfiniteMovingCardsDemo/InfiniteMovingCardsDemo.jsx";
 const Hero = React.lazy(() => import("../../components/hero"));
 const About = React.lazy(() => import("../../components/about"));
 const Container = React.lazy(() => import("../Status/status.jsx"));
@@ -62,6 +63,7 @@ const HomePage = () => {
         <About text={""} readMore="read more" />
         <OngoingProjects />
         <ServiceSection />
+        {/* <InfiniteMovingCardsDemo/> */}
         <Testimonial />
         <Footer />
       </Suspense>
