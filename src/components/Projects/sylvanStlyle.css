@@ -278,6 +278,14 @@
     margin-top: 3rem !important;
   }
 }
+@media (max-width: 1399px) {
+  /* .yt-iframe {
+   
+    height: 1600px;
+    background-color: transparent;
+    border: none;
+  } */
+}
 @media (max-width: 575px) {
   .projects-page-area .col-md-5:nth-child(2n + 2) {
     -webkit-transform: translateY(0px);
@@ -288,6 +296,23 @@
   }
   .projects-page-area {
     padding-bottom: 70px;
+  }
+}
+@media (min-width: 1400px) {
+  .yt-iframe {
+    width: 119%;
+    height:65%;
+    /* max-width: 1200px; */
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 118%;
+    height: 72%;
+    background-color: transparent;
+    border: none; */
+  }
+  .syl-desc-new {
+    margin-top: -16rem !important;
   }
 }
 
@@ -344,6 +369,12 @@
     margin-left: -125px;
   }
 }
+
+/* @media (max-width: 1399px) {
+  .project-overview-box {
+    height: 280px;
+  }
+} */
 
 ul {
   list-style-type: square; /* Changes bullets to squares */

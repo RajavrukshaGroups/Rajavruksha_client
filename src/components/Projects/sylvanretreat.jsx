@@ -33,11 +33,10 @@ function Sylvanretreat() {
       <div className="container">
         <div className="row">
           <div
-            style={{ color: "black" }}
+            style={{ color: "black"}}
             data-aos="fade-right"
             data-aos-delay="200"
-            className="col-12"
-          >
+            className="col-12">
             {/* <h3>Theme</h3> */}
             The theme of Sylvan Retreat is to create a harmonious and immersive
             living experience that seamlessly <br />
@@ -46,17 +45,18 @@ function Sylvanretreat() {
             urban life, the project aims to celebrate the beauty of nature.
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12 yt-video">
-            <iframe
-              className="yt-iframe"
-              width="600"
-              height="460"
-              src="https://www.youtube.com/embed/xz14d8sd7Nc?si=qN_2EKLPU8t0heb0"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+          <iframe
+                className="yt-iframe"
+                width="600"
+                height="460"
+                src="https://www.youtube.com/embed/xz14d8sd7Nc?autoplay=1&loop=1&playlist=xz14d8sd7Nc&mute=1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                >
+              </iframe>
             {/* <Tour /> */}
           </div>
           <div
