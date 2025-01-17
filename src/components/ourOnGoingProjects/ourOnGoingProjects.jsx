@@ -5,7 +5,7 @@ import bgImg from "../../components/assets/on_going_project_syl.jpg";
 // import SylRetreatHomePage from "../../components/assets/Sylan retreat_Banner1.webp";
 import SylRetreatHomePage from "../../components/assets/Sylan retreat_Banner1.webp";
 import StarBorder from "../../utils/shinyButtons";
-import React from "react";
+import React from "react" ;
 import ShinyText from "../../utils/shinyButtons";
 import FadeContent from "../../utils/FadeContent";
 import Images from "../../components/assets/Sylan retreat_Banner1.webp";
