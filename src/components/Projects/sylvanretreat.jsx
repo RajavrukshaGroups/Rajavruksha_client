@@ -45,11 +45,19 @@ function Sylvanretreat() {
             away from the hustle and bustle of <br />
             urban life, the project aims to celebrate the beauty of nature.
           </div>
-          <div
-            className="col-lg-6 col-md-12 col-sm-12"
-            style={{ height: "500px" }}
-          >
-            <Tour />
+          <div className="col-lg-6 col-md-12 col-sm-12 yt-video">
+            <iframe
+              className="yt-iframe"
+              width="600"
+              height="460"
+              src="https://www.youtube.com/embed/xz14d8sd7Nc?si=qN_2EKLPU8t0heb0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            {/* <Tour /> */}
           </div>
           <div
             className="col-lg-4 col-md-12 col-sm-12 syl-amenities"
@@ -60,7 +68,7 @@ function Sylvanretreat() {
               projectType={"sylvan-retreat"}
             />
           </div>
-          <div className="col-12 mt-4">
+          <div className="col-12 mt-1 syl-desc-new">
             <div className="project-details-top-text" data-aos="fade-up">
               <p className="syl-title">
                 {/* Discover Your Agricultural Dream: */}

@@ -92,7 +92,7 @@ class TestimonialNewSlider extends Component {
       <div className="testimonial-area" data-aos="fade-up">
         <div className="containerr gal-cont">
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-lg-12 gal-title-new">
               <h2
                 style={{ textAlign: "center", lineHeight: "45px" }}
                 className="gallery-title"

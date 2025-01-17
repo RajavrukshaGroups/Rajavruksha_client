@@ -71,6 +71,9 @@
   .testimonial-new-slider .slick-dots {
     bottom: -20px;
   }
+  .gal-title-new{
+    margin-top: 4rem;
+  }
 }
 
 @media (max-width: 430px) {
