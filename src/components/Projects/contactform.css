@@ -73,6 +73,7 @@
   .contact-image-container {
     width: 383px;
     margin-left: -122px;
+    margin-top: 3rem;
   }
 
   .contact-new-form {
@@ -285,6 +286,7 @@
   }
   .eco-nest-container {
     margin-left: -13%;
+    margin-top: 44px;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {

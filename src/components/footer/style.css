@@ -115,6 +115,9 @@
   font-style: normal;
   font-weight: 600;
   letter-spacing: 1px;
+  margin-bottom: -5px;
+  margin-top: -9px;
+  /* margin-top: -0.4rem; */
   /* margin-left: 115px; */
 }
 
@@ -390,10 +393,10 @@ ul.footer-contact {
   .single-footer p br {
     display: none;
   }
-  .footer-det{
+  .footer-det {
     margin-bottom: 1rem;
   }
-  .quick-link{
+  .quick-link {
     margin-top: 3rem;
   }
 }
@@ -417,6 +420,13 @@ ul.footer-contact {
 @media (min-width: 768px) and (max-width: 991px) {
   .social {
     text-align: start;
+  }
+}
+
+@media (min-width: 1640px) {
+  #footer-connect {
+    margin-bottom: -26px;
+    margin-top: -12px;
   }
 }
 

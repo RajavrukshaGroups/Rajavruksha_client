@@ -155,7 +155,7 @@ const About = ({ text, readMore }) => {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-6 col-md-12">
+            <div className="col-lg-6 col-md-12 vision-new">
               <div
                 className="about-left"
                 data-aos="fade-right"
@@ -213,7 +213,7 @@ const About = ({ text, readMore }) => {
                 )}
               </div>
             </div>
-            <div className="col-lg-6 col-md-12">
+            <div className="col-lg-6 col-md-12 mission-new">
               <div
                 className="about-left"
                 data-aos="fade-left"
