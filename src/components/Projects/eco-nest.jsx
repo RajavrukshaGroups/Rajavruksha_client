@@ -15,6 +15,7 @@ import Tour from "../../components/tour/index";
 import Amenities from "../../components/Amenities/amenities";
 import "../../components/Projects/eco-nest.css";
 import BlurText from "../../utils/BlurText";
+import { ThreeDCardDemo } from "../3d-Cards/ThreeDCardDemo";
 
 function EcoNexts() {
   const handleAnimationComplete = () => {
@@ -54,10 +55,11 @@ function EcoNexts() {
             className="col-lg-6 col-md-12 col-sm-12"
             style={{ height: "500px" }}
           >
-            <Tour />
+            {/* <Tour /> */}
+            <ThreeDCardDemo />
           </div>
           <div
-            className="col-lg-4 col-md-12 col-sm-12 syl-amenities"
+            className="col-lg-4 col-md-12 col-sm-12 syl-amenities eco-amenities"
             style={{ height: "500px" }}
           >
             <Amenities amenities={ecoNestAmenities} projectType="eco-nest" />
