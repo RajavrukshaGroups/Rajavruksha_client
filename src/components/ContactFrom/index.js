@@ -32,7 +32,7 @@ const ContactForm = ({ status }) => {
   });
 
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-  const filter = new Filter(); // Initialize the bad-words filter
+  const filter = new Filter();
 
   const changeHandler = (e) => {
     const { name, value, type, checked } = e.target;
@@ -162,7 +162,7 @@ const ContactForm = ({ status }) => {
               width: {
                 xs: "50%",
                 sm: "80%",
-                md: "80%", // For screens 960px and larger (Desktop)
+                md: "80%",
               },
             },
           }}
@@ -288,13 +288,10 @@ const ContactForm = ({ status }) => {
             </Grid>
           </Grid>
 
-          {/* Add the reCAPTCHA here */}
           <div className="recaptcha-container">
             <Grid container spacing={2} style={{ justifyContent: "center" }}>
               <Grid item xs={12}>
                 <ReCAPTCHA
-                  // sitekey="6Lem4Y8qAAAAAP5GA-KEiS_3fBdJQxuhFL6IqHxV"
-                  // sitekey="6LcZ6o8qAAAAAILBQNMf-b1YNb4a9YvCPKeog3CS"
                   sitekey="6Lf165EqAAAAAGMB2fjKkFOvkFPTXrgoOoa4lXs9"
                   onChange={handleCaptcha}
                 />

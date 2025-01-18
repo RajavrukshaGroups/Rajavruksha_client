@@ -1,16 +1,9 @@
 /* ===================== CONTACT ======================*/
-/* new styles are going here */
 
 .contact-page-new-area {
   padding: 78px 76px 2px 123px;
 }
-/* .contact-image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  overflow: hidden;
-} */
+
 .contact-image-container {
   height: auto;
   max-height: 739px;
@@ -31,12 +24,12 @@
 }
 
 .eco-nest-container {
-  text-align: center; /* Center-aligns the content */
+  text-align: center;
 }
 
 .eco-nest-route {
   height: 200px;
-  margin: 0 auto 10px auto; /* Center image and reduce top/bottom spacing */
+  margin: 0 auto 10px auto;
   display: block;
   pointer-events: none;
   user-select: none;
@@ -44,7 +37,7 @@
 }
 
 .eco-nest-text {
-  margin-top: 10px; /* Space between the image and paragraph */
+  margin-top: 10px;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
@@ -62,12 +55,11 @@
   }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .contact-image {
-    width: 90%; /* Slight padding for smaller screens */
-    max-width: 100%; /* Ensure it doesn't overflow */
-    height: auto; /* Maintain aspect ratio */
+    width: 90%;
+    max-width: 100%;
+    height: auto;
   }
 
   .contact-image-container {
@@ -83,7 +75,6 @@
     padding: 20px;
   }
 }
-/* new styles are end here */
 
 .single-contact-info-new {
   display: -webkit-box;
@@ -130,7 +121,6 @@
 }
 
 .contact-new-form {
-  /* padding: 10px 0px 10px 14px; */
   padding: 20px 30px;
   width: 98%;
   margin: auto;
@@ -138,44 +128,32 @@
   height: auto;
   background-color: #edf2f5;
   position: relative;
-  /* background-image: url('https://www.shutterstock.com/image-photo/sundappled-forest-dense-green-canopy-260nw-2498121251.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
-  /* padding: 53px 261px; */
-  /* margin-bottom: 100px; */
   z-index: 1;
-  /* background-color: #02050b; */
-  /* filter: brightness(40%); */
 }
 
 .eco-nest-contact {
   padding: 20px 30px;
-  /* width: 200%; */
   width: 100%;
   margin: auto;
   border-radius: 40px;
   height: auto;
   background-color: #edf2f5;
   position: relative;
-  /* background-image: url('https://www.shutterstock.com/image-photo/sundappled-forest-dense-green-canopy-260nw-2498121251.jpg'); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
-  /* padding: 53px 261px; */
-  /* margin-bottom: 100px; */
   z-index: 1;
-  /* background-color: #02050b; */
-  /* filter: brightness(40%); */
 }
 .eco-nest-contact:before {
   position: absolute;
   content: "";
   width: 100%;
   height: 100%;
-  /* background: #02050b; */
   opacity: 0.7;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
   left: 0;
@@ -189,8 +167,6 @@
 
 .eco-nest-contact .section-new-title {
   color: #fff;
-  /* font-size: 50px;
-	margin-bottom: 30px; */
 }
 
 .eco-nest-contact input {
@@ -227,8 +203,6 @@
 
 .contact-new-form .section-new-title {
   color: #fff;
-  /* font-size: 50px;
-	margin-bottom: 30px; */
 }
 
 .contact-new-form input {
@@ -256,27 +230,22 @@
   height: 450px;
 }
 
-/*Responsive*/
 @media (max-width: 767px) {
   .contact-new-form {
-    /* padding: 30px; */
     margin-left: -106px;
     width: 22rem;
     min-height: 500px;
     max-height: 1000px;
     margin-top: -58px;
     border-radius: 0px;
-    /* height: 671px; */
   }
   .eco-nest-contact {
-    /* padding: 30px; */
     margin-left: -106px;
     width: 22rem;
     min-height: 500px;
     max-height: 1000px;
     margin-top: -58px;
     border-radius: 0px;
-    /* height: 671px; */
   }
   .single-contact-info-new {
     padding-left: 20px;
@@ -312,11 +281,6 @@
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-
-/* .contact-image-container {
-  width: 383px;
-  margin-left: -122px;
-} */
 
 .contact-form-new-action button:hover {
   background: transparent;

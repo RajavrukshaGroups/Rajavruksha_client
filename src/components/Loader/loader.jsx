@@ -1,7 +1,6 @@
 import React from "react";
-import { Circles, Oval } from "react-loader-spinner";
+import { Oval } from "react-loader-spinner";
 import RRPL_logo from "../../components/assets/RRPL_loader-removebg-new.png";
-import loader_video from "../../components/assets/loader.mp4";
 import "./loader.css";
 
 const Loader = ({ color = "#4fa94d", secondaryColor = "#4fa94d", logo }) => {

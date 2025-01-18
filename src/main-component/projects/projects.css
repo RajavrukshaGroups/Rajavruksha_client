@@ -8,13 +8,13 @@
 }
 
 .flex-container > div {
-  flex: 1; /* Each item takes up equal space */
-  min-width: 300px; /* Ensure items don't shrink too much */
+  flex: 1;
+  min-width: 300px;
 }
 
 @media (max-width: 768px) {
   .flex-container {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
   }
 }
 

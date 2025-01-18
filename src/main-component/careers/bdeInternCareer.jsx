@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import Header from "../../components/header";
 import PageTitle from "../../components/pagetitle";
-import bg from "../../components/assets/bde_intern.webp";
 import Footer from "../../components/footer/index.js";
 import BdeInternCareer from "../../components/careers/bdeIntCareer.jsx";
 import career_desktop from "../../components/assets/career_desktop.jpg";

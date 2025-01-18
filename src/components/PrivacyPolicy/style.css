@@ -49,9 +49,7 @@
 }
 
 .para-text span {
-  /* text-decoration: underline; */
   font-weight: bold !important;
-  /* opacity: 0.7; */
 }
 
 @media (max-width: 768px) {

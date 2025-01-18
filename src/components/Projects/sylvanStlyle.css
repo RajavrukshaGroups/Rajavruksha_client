@@ -7,10 +7,6 @@
   padding: 40px 0;
 }
 
-/* .syl-amenities {
-  margin-left: -3rem;
-} */
-
 .yt-video {
   margin-top: 3rem !important;
   position: relative;
@@ -32,16 +28,6 @@
   margin-top: -12rem !important;
 }
 
-/* .project-overview-box {
-  text-align: center;
-  margin: 15px 0 30px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-} */
-
 .project-overview-box {
   display: flex;
   text-align: center;
@@ -53,8 +39,8 @@
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
-  justify-content: space-between; /* Ensure even spacing between content */
-  height: 100%; /* Ensure boxes are uniform in size */
+  justify-content: space-between;
+  height: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -78,7 +64,6 @@
   margin: 0;
   font-style: normal;
   font-weight: 600;
-  /* letter-spacing: 1px; */
 }
 
 .syl-subtitle {
@@ -99,10 +84,6 @@
   margin-bottom: 15px;
 }
 
-/* .project-overview-box h5 {
-    font-size: 22px;
-} */
-
 .project-overview-box p {
   margin: 10px 0;
   font-weight: 500;
@@ -110,7 +91,6 @@
   font-size: 14px;
 }
 
-/* Adjust layout for mobile screens */
 @media (max-width: 576px) {
   .project-overview-box {
     margin: 0 auto;
@@ -232,15 +212,12 @@
   text-align: center;
   margin: 15px 0;
   height: 250px;
-  /* gap: 30px; */
 }
 
 .details-box {
-  /* margin-right: 15px;   */
   margin-top: 30px;
 }
 
-/*Responsive*/
 @media (max-width: 767px) {
   .project-box p {
     font-size: 14px;
@@ -350,6 +327,6 @@
 }
 
 ul {
-  list-style-type: square; /* Changes bullets to squares */
-  list-style-position: inside; /* Places bullets inside the list item */
+  list-style-type: square;
+  list-style-position: inside;
 }

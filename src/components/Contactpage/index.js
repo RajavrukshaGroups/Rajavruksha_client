@@ -3,8 +3,6 @@ import ContactForm from "../ContactFrom";
 import lottie from "lottie-web";
 import { defineElement } from "@lordicon/element";
 import VariableProximity from "../../utils/VariableProximity";
-
-// define "lord-icon" custom element with default properties
 import "./style.css";
 import { SignupFormDemo } from "../SignUpForm/SignUpFormDemo";
 defineElement(lottie.loadAnimation);
@@ -22,7 +20,7 @@ const Contactpage = ({ requestAquote }) => {
       const googleMapsUrl = `https://www.google.com/maps?q=${encodeURIComponent(
         value
       )}`;
-      window.open(googleMapsUrl, "_blank"); // Open map in a new tab
+      window.open(googleMapsUrl, "_blank");
     }
   };
   return (
@@ -31,23 +29,14 @@ const Contactpage = ({ requestAquote }) => {
         <div className="row align-items-center">
           <div className="col-lg-6 col-sm-6">
             <div className="contact-form responsive-contact-formcontact">
-              {/* <div className="site-heading" data-aos="fade-up" >
-                <h2 className="section-title">Request a Quote</h2>
-              </div> */}
               <ContactForm ContactClasss={ContactClasss} />
-              {/* <SignupFormDemo/> */}
             </div>
           </div>
           <div className="contact-body col-lg-5 col-sm-6 mb-5">
             <div className="contact-page-left">
-              {/* <h3 className="contact-info-det">
-                <b>Contact info</b>
-              </h3> */}
               <div className="contact-info">
                 <div className="single-map-info" data-aos="fade-up">
-                  {/* <div className="map-info-icon"> */}
                   <div className="new-icon">
-                    {/* <span className="fas fa-map-marker-alt" /> */}
                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                     <lord-icon
                       src="https://cdn.lordicon.com/bljgubbm.json"
@@ -59,7 +48,6 @@ const Contactpage = ({ requestAquote }) => {
                   </div>
                   <div className="map-info-text">
                     <h3 className="contact-info-head">
-                      {/* <b>Head office</b> */}
                       <div ref={containerRef} style={{ position: "relative" }}>
                         <VariableProximity
                           label={"Head Office"}
@@ -84,9 +72,7 @@ const Contactpage = ({ requestAquote }) => {
                   </div>
                 </div>
                 <div className="single-contact-info" data-aos="fade-up">
-                  {/* <div className="contact-info-icon"> */}
                   <div className="new-icon">
-                    {/* <span className="fas fa-phone-alt" /> */}
                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                     <lord-icon
                       src="https://cdn.lordicon.com/nnzfcuqw.json"
@@ -98,7 +84,6 @@ const Contactpage = ({ requestAquote }) => {
                   </div>
                   <div className="contact-info-text">
                     <h3 className="contact-info-head">
-                      {/* <b>Phone</b> */}
                       <div ref={containerRef} style={{ position: "relative" }}>
                         <VariableProximity
                           label={"Phone"}
@@ -119,13 +104,10 @@ const Contactpage = ({ requestAquote }) => {
                     >
                       +91 8549 955 955
                     </p>
-                    {/* <p>(+09) 123 4567 89</p> */}
                   </div>
                 </div>
                 <div className="single-contact-info" data-aos="fade-up">
-                  {/* <div className="contact-info-icon"> */}
                   <div className="new-icon">
-                    {/* <span className="fas fa-envelope" /> */}
                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                     <lord-icon
                       src="https://cdn.lordicon.com/ozlkyfxg.json"
@@ -137,7 +119,6 @@ const Contactpage = ({ requestAquote }) => {
                   </div>
                   <div className="contact-info-text">
                     <h3 className="contact-info-head">
-                      {/* <b>Email</b> */}
                       <div ref={containerRef} style={{ position: "relative" }}>
                         <VariableProximity
                           label={"Email"}
@@ -158,7 +139,6 @@ const Contactpage = ({ requestAquote }) => {
                     >
                       enquiry@rajavrukshagroup.in
                     </p>
-                    {/* <p>support@company.com</p> */}
                   </div>
                 </div>
               </div>
@@ -181,7 +161,7 @@ const Contactpage = ({ requestAquote }) => {
                 </iframe>
               </div>
             </div>
-            <div className="col-lg-6 col-sm-12">
+            <div className="col-lg-6 col-sm-12 crm-form">
               <div className="crm-box">
                 <h2 className="crm-heading">Get In Touch</h2>
                 <iframe

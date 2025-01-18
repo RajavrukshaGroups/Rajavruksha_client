@@ -2,11 +2,8 @@ import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
 import { Helmet } from "react-helmet";
 import { updateMetaTags } from "../../utils/updateMetaTags.js";
-import { ErrorBoundary } from "react-error-boundary";
-import ErrorFallback from "../../components/ErrorBoundary/errorBoundary.js";
 import Loader from "../../components/Loader/loader.jsx";
 import "../AboutPage/loading.css";
-import { InfiniteMovingCardsDemo } from "../../components/InfiniteMovingCardsDemo/InfiniteMovingCardsDemo.jsx";
 const Hero = React.lazy(() => import("../../components/hero"));
 const About = React.lazy(() => import("../../components/about"));
 const Container = React.lazy(() => import("../Status/status.jsx"));
@@ -20,7 +17,8 @@ const OngoingProjects = React.lazy(() =>
 );
 
 const HomePage = () => {
-  const description = "Explore prime farmland & plots with Rajavruksha, your expert guide to perfect investments and properties.";
+  const description =
+    "Explore prime farmland & plots with Rajavruksha, your expert guide to perfect investments and properties.";
   const ogTitle = "Rajavruksha - Real Estate Excellence";
   const ogDescription =
     "Welcome to Rajavruksha! Discover premium real estate services, farmlands, and projects tailored for you.";
@@ -63,7 +61,6 @@ const HomePage = () => {
         <About text={""} readMore="read more" />
         <OngoingProjects />
         <ServiceSection />
-        {/* <InfiniteMovingCardsDemo/> */}
         <Testimonial />
         <Footer />
       </Suspense>

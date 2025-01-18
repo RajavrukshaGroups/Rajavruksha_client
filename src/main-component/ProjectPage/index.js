@@ -2,7 +2,7 @@ import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
 import bg from "../../components/assets/new_project.webp";
 import { Helmet } from "react-helmet";
-import { updateMetaTags } from "../../utils/updateMetaTags"; // Import the updateMetaTags function
+import { updateMetaTags } from "../../utils/updateMetaTags";
 import "../AboutPage/loading.css";
 import Loader from "../../components/Loader/loader";
 
@@ -20,7 +20,6 @@ const ProjectPage = () => {
   const title = "Our Projects - Explore Premium Farmland and Real Estate";
 
   useEffect(() => {
-    // Use updateMetaTags to update meta tags dynamically
     updateMetaTags({
       title,
       description,

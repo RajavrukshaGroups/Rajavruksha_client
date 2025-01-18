@@ -1,5 +1,13 @@
-/* .shiny-text {
+.shiny-text {
+  font-size: 1rem;
+  font-weight: 600;
   color: transparent;
+  background: linear-gradient(
+    120deg,
+    rgba(248, 218, 163, 0.9) 40%,
+    rgb(255, 255, 255) 50%,
+    rgb(255, 255, 255) 60%
+  );
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -15,58 +23,4 @@
   100% {
     background-position: -200%;
   }
-} */
-
-
-.shiny-text {
-  font-size: 1rem;
-  font-weight: 600;
-  color: transparent; 
-  background: linear-gradient(
-    120deg,
-    rgba(248, 218, 163, 0.9) 40%, 
-    rgb(255, 255, 255)50%, 
-    rgb(255, 255, 255) 60% 
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  animation: shine 1s linear infinite; 
 }
-
-@keyframes shine {
-  0% {
-    background-position: 200%;
-  }
-  100% {
-    background-position: -200%;
-  }
-}
-
-
-/* .shiny-text {
-  color: transparent; 
-  background: linear-gradient(
-    120deg,
-    rgba(191, 125, 2, 0.9) 40%,
-    rgb(193, 147, 60)50%, 
-    rgb(193, 147, 60) 60%
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  animation: shine 1s linear infinite; 
-} */
-
-/* @keyframes shine {
-  0% {
-    background-position: 200%;
-  }
-  100% {
-    background-position: -200%;
-  }
-} */
