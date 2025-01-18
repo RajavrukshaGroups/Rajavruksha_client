@@ -1,8 +1,8 @@
 import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
 import bg from "../../components/assets/Sylan_retreat_new_Banner.webp";
-import { Helmet } from "react-helmet"; // Import Helmet for SEO
-import { updateMetaTags } from "../../utils/updateMetaTags"; // Import the updateMetaTags function
+import { Helmet } from "react-helmet";
+import { updateMetaTags } from "../../utils/updateMetaTags";
 import "../AboutPage/loading.css";
 import Loader from "../../components/Loader/loader";
 
@@ -31,7 +31,6 @@ function Sylvanretreats() {
   const ogUrl = "https://rajavrukshagroup.in/sylvan-retreat";
 
   useEffect(() => {
-    // Use updateMetaTags to dynamically set the meta tags for this page
     updateMetaTags({
       title,
       description,

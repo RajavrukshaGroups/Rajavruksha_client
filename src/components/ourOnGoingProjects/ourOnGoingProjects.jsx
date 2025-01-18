@@ -1,11 +1,6 @@
-// import React from 'react';
 import { Link } from "react-router-dom";
 import "./ourOnGoingProjects.css";
-import bgImg from "../../components/assets/on_going_project_syl.jpg";
-// import SylRetreatHomePage from "../../components/assets/Sylan retreat_Banner1.webp";
-import SylRetreatHomePage from "../../components/assets/Sylan retreat_Banner1.webp";
-import StarBorder from "../../utils/shinyButtons";
-import React from "react" ;
+import React from "react";
 import ShinyText from "../../utils/shinyButtons";
 import FadeContent from "../../utils/FadeContent";
 import Images from "../../components/assets/Sylan retreat_Banner1.webp";
@@ -13,21 +8,9 @@ import { ContainerScroll } from "../ui/container-scroll-animation.jsx";
 import { MovingBorderDemo } from "../MovingBorder/MovingBorderDemo";
 
 const OngoingProjects = () => {
-  const disableContextMenu = (e) => {
-    e.preventDefault();
-  };
   return (
     <div className="projects-container-new -mt-40 responsive">
-      {/* <FadeContent
-                blur={true}
-                duration={600}
-                easing="ease-out"
-                initialOpacity={0}
-              >
-      <h1 className="projects-title">Our Ongoing Projects</h1>
-              </FadeContent> */}
-      {/* <div className="project-card"> */}
-      <div className="flex flex-col overflow-hidden">
+      <div className="flex flex-col overflow-hidden animate-threeD-container">
         <ContainerScroll
           titleComponent={
             <>
@@ -39,12 +22,6 @@ const OngoingProjects = () => {
               >
                 <h1 className="projects-title">Our Ongoing Projects</h1>
               </FadeContent>
-              {/* <h1 className="text-4xl font-semibold text-black dark:text-white">
-              Unleash the power of <br />
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                Scroll Animations
-              </span>
-            </h1> */}
             </>
           }
         >
@@ -53,7 +30,7 @@ const OngoingProjects = () => {
             alt="hero"
             height={720}
             width={1400}
-            className="mx-auto rounded-2xl object-cover h-full object-left-top"
+            className="mx-auto rounded-2xl object-cover h-full object-left-top animate-threeD"
             draggable={false}
           />
         </ContainerScroll>
@@ -87,7 +64,6 @@ const OngoingProjects = () => {
           </button>
         </Link>
       </div>
-      {/* </div> */}
     </div>
   );
 };

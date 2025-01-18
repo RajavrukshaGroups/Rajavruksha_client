@@ -66,12 +66,11 @@
   margin: auto;
 }
 
-/* Responsive */
 @media (max-width: 991px) {
   .testimonial-new-slider .slick-dots {
     bottom: -20px;
   }
-  .gal-title-new{
+  .gal-title-new {
     margin-top: 4rem;
   }
 }

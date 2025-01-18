@@ -1,6 +1,5 @@
 /* ===================== FOOTER ======================*/
 
-/* Common Styles for Header and Footer Social Media Icons */
 .social-icons {
   display: flex;
   gap: 15px;
@@ -12,7 +11,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 50px; /* Matches the first code's size */
+  width: 50px;
   height: 50px;
   border-radius: 50%;
   text-decoration: none;
@@ -21,7 +20,6 @@
   box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.1);
 }
 
-/* YouTube */
 .social-icons a.youtube {
   background-color: #c4302b;
 }
@@ -36,7 +34,6 @@
   background-color: #ff0000;
 }
 
-/* Facebook */
 .social-icons a.facebook {
   background-color: #4267b2;
 }
@@ -45,7 +42,6 @@
   background-color: #365899;
 }
 
-/* Instagram */
 .social-icons a.instagram {
   background: radial-gradient(
     circle at 30% 107%,
@@ -117,8 +113,6 @@
   letter-spacing: 1px;
   margin-bottom: -5px;
   margin-top: -9px;
-  /* margin-top: -0.4rem; */
-  /* margin-left: 115px; */
 }
 
 .single-footer h3 {
@@ -126,12 +120,8 @@
   margin-bottom: 10px;
 }
 
-/* .connect {
-  margin-top: -6px;
-} */
-
 .single-footer ul {
-  list-style: none; /* Remove bullet points */
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -142,8 +132,8 @@
 }
 
 .single-footer ul li p {
-  font-size: 16px; /* Adjust text size */
-  color: #ffffff; /* Adjust color to match your design */
+  font-size: 16px;
+  color: #ffffff;
   margin: 0;
   line-height: 24px;
 }
@@ -170,11 +160,11 @@
 }
 
 .contact-link i {
-  margin-top: 4px; /* Align the icon with the first line of the text */
+  margin-top: 4px;
 }
 
 .contact-link span {
-  line-height: 1.5; /* Adjust line height for better readability */
+  line-height: 1.5;
 }
 
 .contact-link:hover {
@@ -190,9 +180,9 @@
 }
 
 .single-footer li span {
-  display: block; /* Ensure each line is treated as its own block */
-  font-size: 14px; /* Adjust the size as necessary */
-  color: #fff; /* Adjust color to match your design */
+  display: block;
+  font-size: 14px;
+  color: #fff;
 }
 
 .single-footer li:last-child {
@@ -368,14 +358,12 @@ ul.footer-contact {
   margin: auto;
 }
 
-/*Responsive*/
 @media (max-width: 767px) {
   .single-footer {
     margin: 17px 0;
   }
   ul.footer-contact {
     padding-top: 5px;
-    /* margin-top: -21px; */
     margin-top: 7px;
     margin-left: 0;
   }
@@ -386,9 +374,6 @@ ul.footer-contact {
   .social {
     text-align: start;
   }
-  /* #footer-connect {
-    margin-left: 5px;
-  } */
 
   .single-footer p br {
     display: none;
@@ -430,15 +415,6 @@ ul.footer-contact {
   }
 }
 
-/* social media icons */
-
-/* .social {
-  padding-top: 10px;
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  text-align: start;
-} */
 .social a {
   color: transparent;
 }

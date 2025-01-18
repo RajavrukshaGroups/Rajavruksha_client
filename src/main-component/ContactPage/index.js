@@ -1,7 +1,7 @@
 import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
 import { Helmet } from "react-helmet";
-import { updateMetaTags } from "../../utils/updateMetaTags"; // Import the updateMetaTags function
+import { updateMetaTags } from "../../utils/updateMetaTags";
 import contact_us from "../../components/assets/Contact_us_new.webp";
 import "../AboutPage/loading.css";
 import Loader from "../../components/Loader/loader";
@@ -20,7 +20,6 @@ const ContactPage = () => {
   const ogUrl = "https://rajavrukshagroup.in/contact";
 
   useEffect(() => {
-    // Use updateMetaTags to update meta tags dynamically
     updateMetaTags({
       title,
       description,

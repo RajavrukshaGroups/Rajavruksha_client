@@ -6,10 +6,6 @@ const TermsConditions = () => {
     <div>
       <div className="row"></div>
       <div className="introduction">
-        {/* <p className="para-heading">
-          Effective Date :{" "}
-          <span style={{ fontStyle: "italic" }}>January 01 2025</span>{" "}
-        </p> */}
         <p className="para-text">
           Welcome to Rajavruksha Realtors Pvt. Ltd. By accessing or using our
           website and services, you agree to comply with and be bound by the

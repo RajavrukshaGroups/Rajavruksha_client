@@ -1,16 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-import serviceImg1 from "../../img/service-bg-1.png";
-import serviceImg2 from "../../img/service-bg-2.jpg";
-import serviceImg3 from "../../components/assets/demo.jpg";
-import serviceIcon1 from "../../img/service-icon-1.png";
-import serviceIcon2 from "../../img/service-icon-2.png";
-import serviceIcon3 from "../../img/service-icon-3.png";
 import targetIcon from "../../components/assets/focus (1).png";
 import identification from "../../components/assets/document.png";
-import residential from "../../components/assets/residential.png";
-import villaIcon from "../../components/assets/villa.png";
 import Check from "../../components/assets/check (1).png";
 import Management from "../../components/assets/management (1).png";
 import Plant from "../../components/assets/plant-1-new.png";
@@ -26,39 +16,28 @@ const ServiceSection = () => {
     <section className="service-area -mt-10">
       <div
         className="service-area-container"
-        // style={{
-        //   justifyContent: "center",
-        //   alignItems: "center",
-        //   margin: "auto",
-        //   display: "flex",
-        // }}
         onContextMenu={disableContextMenu}
       >
         <span style={{ marginRight: "15px", color: "#c6993e" }}>
           ....................
         </span>{" "}
-        <img
-          style={{ width: "40px", height: "40px" }}
-          // src="https://rajavrukshagroup.in/wp-content/uploads/2023/11/plant-1.png"
-          src={Plant}
-          alt=""
-        />{" "}
+        <img style={{ width: "40px", height: "40px" }} src={Plant} alt="" />{" "}
         <span style={{ marginLeft: "15px", color: "#c6993e" }}>
           ....................
         </span>
       </div>
       <FadeContent
-                blur={true}
-                duration={900}
-                easing="ease-out"
-                initialOpacity={0}
-              >
-      <h1
-        className="work-title"
-        style={{ textAlign: "center", marginTop: "29px" }}
+        blur={true}
+        duration={900}
+        easing="ease-out"
+        initialOpacity={0}
       >
-        Our Working Process
-      </h1>
+        <h1
+          className="work-title"
+          style={{ textAlign: "center", marginTop: "29px" }}
+        >
+          Our Working Process
+        </h1>
       </FadeContent>
       <div className="container">
         <div className="row justify-content-center">
@@ -80,8 +59,12 @@ const ServiceSection = () => {
                   STEP 01{" "}
                 </div>
               </div>
-              <div className="service-icon" >
-                <img src={targetIcon} alt="img" onContextMenu={disableContextMenu}/>
+              <div className="service-icon">
+                <img
+                  src={targetIcon}
+                  alt="img"
+                  onContextMenu={disableContextMenu}
+                />
               </div>
               <div className="service-text">
                 <p className="service-steps">Aim on Independent Assessments</p>
@@ -146,7 +129,6 @@ const ServiceSection = () => {
                 </div>
               </div>
               <div className="service-icon">
-                {/* <img src={serviceIcon2} alt="img" /> */}
                 <img src={Check} alt="img" />
               </div>
               <div className="service-text">
@@ -161,7 +143,6 @@ const ServiceSection = () => {
                   <br />
                 </p>
               </div>
-              {/* <img src={serviceImg3} alt="img" /> */}
             </div>
           </div>
           <div className="col-lg-3 col-md-6">
@@ -183,7 +164,6 @@ const ServiceSection = () => {
                 </div>
               </div>
               <div className="service-icon">
-                {/* <img src={serviceIcon3} alt="img" /> */}
                 <img src={Management} alt="img" />
               </div>
               <div className="service-text">
@@ -196,7 +176,6 @@ const ServiceSection = () => {
                   retains and appreciates its value.
                 </p>
               </div>
-              {/* <img src={serviceImg3} alt="img" /> */}
             </div>
           </div>
         </div>

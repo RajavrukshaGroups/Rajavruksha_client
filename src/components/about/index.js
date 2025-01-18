@@ -11,14 +11,12 @@ import ShinyText from "../../utils/shinyButtons";
 import BlurText from "../../utils/BlurText";
 import VariableProximity from "../../utils/VariableProximity";
 
-
-
 const About = ({ text, readMore }) => {
   const disableContextMenu = (e) => {
     e.preventDefault();
   };
-    const containerRef = useRef(null);
-  
+  const containerRef = useRef(null);
+
   const handleAnimationComplete = () => {
     console.log("All letters have animated!");
   };
@@ -38,17 +36,16 @@ const About = ({ text, readMore }) => {
               data-aos="fade-right"
               data-aos-offset="100"
             >
-
               <div className="site-heading">
-              <FadeContent
-                blur={true}
-                duration={1000}
-                easing="ease-out"
-                initialOpacity={0}
-              >
-                <h2 className="explore-title text-capitalize ">
-                  We explore to discover your optimal selection
-                </h2>
+                <FadeContent
+                  blur={true}
+                  duration={1000}
+                  easing="ease-out"
+                  initialOpacity={0}
+                >
+                  <h2 className="explore-title text-capitalize ">
+                    We explore to discover your optimal selection
+                  </h2>
                 </FadeContent>
                 <div>
                   <p>{text}</p>
@@ -101,23 +98,8 @@ const About = ({ text, readMore }) => {
                     </li>
                   </ul>
                   <div className="mobile-read-more-wrapper">
-                  <Link to="/about">
-                        {!!readMore && (
-                          <button className="read-more-button">
-                            <ShinyText
-                              text="Read More"
-                              disabled={false}
-                              speed={3}
-                              className="project-button-wrapper"
-                            />
-                          </button>
-                        )}
-                      </Link>
-
-                    {/* <Link to="/about">
+                    <Link to="/about">
                       {!!readMore && (
-
-                        
                         <button className="read-more-button">
                           <ShinyText
                             text="Read More"
@@ -127,7 +109,7 @@ const About = ({ text, readMore }) => {
                           />
                         </button>
                       )}
-                    </Link> */}
+                    </Link>
                   </div>
                 </div>
                 <div className="experience-box">
@@ -163,51 +145,33 @@ const About = ({ text, readMore }) => {
               >
                 {!readMore && (
                   <div className="vision">
-                     {/* <VariableProximity
-                                              label={"Head Office"}
-                                              className={"variable-proximity-demo"}
-                                              fromFontVariationSettings="'wght' 400, 'opsz' 9"
-                                              toFontVariationSettings="'wght' 1000, 'opsz' 40"
-                                              containerRef={containerRef}
-                                              radius={100}
-                                              falloff="linear"
-                                            /> */}
-             {/* <BlurText
-                  text="Discover Your Agricultural Dream:"
-                  delay={150}
-                  animateBy="words"
-                  direction="top"
-                  onAnimationComplete={handleAnimationComplete}
-                  className="text-2xl"
-                /> */}
-                
                     <h2 ref={containerRef} style={{ position: "relative" }}>
-                        <div ref={containerRef} style={{ position: "relative" }}>
-                           <VariableProximity
-                             label={"Vision"}
-                             className={"variable-proximity-demo"}
-                             fromFontVariationSettings="'wght' 800, 'opsz' 9"
-                             toFontVariationSettings="'wght' 1000, 'opsz' 40"
-                             containerRef={containerRef}
-                             radius={100}
-                             falloff="linear"
-                           />
-                         </div>
+                      <div ref={containerRef} style={{ position: "relative" }}>
+                        <VariableProximity
+                          label={"Vision"}
+                          className={"variable-proximity-demo"}
+                          fromFontVariationSettings="'wght' 800, 'opsz' 9"
+                          toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                          containerRef={containerRef}
+                          radius={100}
+                          falloff="linear"
+                        />
+                      </div>
                     </h2>
                     <p>
-                    <div ref={containerRef} style={{ position: "relative" }}>
-                           <VariableProximity
-                             label={"To be the premier agency for sustainable and profitable farm land investments, shaping the future of agriculture."}
-                             className={"variable-proximity-demo"}
-                             fromFontVariationSettings="'wght' 350, 'opsz' 9"
-                             toFontVariationSettings="'wght' 1000, 'opsz' 40"
-                             containerRef={containerRef}
-                             radius={100}
-                             falloff="linear"
-                           />
-                         </div>
-                      {/* To be the premier agency for sustainable and profitable
-                      farm land investments, shaping the future of agriculture. */}
+                      <div ref={containerRef} style={{ position: "relative" }}>
+                        <VariableProximity
+                          label={
+                            "To be the premier agency for sustainable and profitable farm land investments, shaping the future of agriculture."
+                          }
+                          className={"variable-proximity-demo"}
+                          fromFontVariationSettings="'wght' 350, 'opsz' 9"
+                          toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                          containerRef={containerRef}
+                          radius={100}
+                          falloff="linear"
+                        />
+                      </div>
                     </p>
                   </div>
                 )}
@@ -218,44 +182,46 @@ const About = ({ text, readMore }) => {
                 className="about-left"
                 data-aos="fade-left"
                 data-aos-offset="100"
-                  >
+              >
                 {!readMore && (
                   <div className="mission">
                     <FadeContent
-                blur={true}
-                duration={1000}
-                easing="ease-out"
-                initialOpacity={0}
-              >
-                <h2>
-                <div ref={containerRef} style={{ position: "relative" }}>
-                           <VariableProximity
-                             label={"Mission"}
-                             className={"variable-proximity-demo"}
-                             fromFontVariationSettings="'wght' 800, 'opsz' 9"
-                             toFontVariationSettings="'wght' 1000, 'opsz' 40"
-                             containerRef={containerRef}
-                             radius={100}
-                             falloff="linear"
-                           />
-                         </div>
-                </h2>
-              </FadeContent>
+                      blur={true}
+                      duration={1000}
+                      easing="ease-out"
+                      initialOpacity={0}
+                    >
+                      <h2>
+                        <div
+                          ref={containerRef}
+                          style={{ position: "relative" }}
+                        >
+                          <VariableProximity
+                            label={"Mission"}
+                            className={"variable-proximity-demo"}
+                            fromFontVariationSettings="'wght' 800, 'opsz' 9"
+                            toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                            containerRef={containerRef}
+                            radius={100}
+                            falloff="linear"
+                          />
+                        </div>
+                      </h2>
+                    </FadeContent>
                     <p>
-                    <div ref={containerRef} style={{ position: "relative" }}>
-                           <VariableProximity
-                             label={"We provide expert real estate services, guiding clients in acquiring, selling, and investing in farm land with a focus on sustainability and long-term growth."}
-                             className={"variable-proximity-demo"}
-                             fromFontVariationSettings="'wght' 350, 'opsz' 9"
-                             toFontVariationSettings="'wght' 1000, 'opsz' 40"
-                             containerRef={containerRef}
-                             radius={100}
-                             falloff="linear"
-                           />
-                         </div>
-                      {/* We provide expert real estate services, guiding clients in
-                      acquiring, selling, and investing in farm land with a
-                      focus on sustainability and long-term growth. */}
+                      <div ref={containerRef} style={{ position: "relative" }}>
+                        <VariableProximity
+                          label={
+                            "We provide expert real estate services, guiding clients in acquiring, selling, and investing in farm land with a focus on sustainability and long-term growth."
+                          }
+                          className={"variable-proximity-demo"}
+                          fromFontVariationSettings="'wght' 350, 'opsz' 9"
+                          toFontVariationSettings="'wght' 1000, 'opsz' 40"
+                          containerRef={containerRef}
+                          radius={100}
+                          falloff="linear"
+                        />
+                      </div>
                     </p>
                   </div>
                 )}

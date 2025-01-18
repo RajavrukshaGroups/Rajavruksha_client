@@ -24,7 +24,6 @@
 }
 
 .tour-inn {
-  /* position: relative; */
   width: 50%;
 }
 
@@ -56,7 +55,7 @@
   left: 47%;
   top: 45%;
 }
-/*Responsive*/
+
 @media (max-width: 767px) {
   .tour-area .container:before {
     top: 90px;

@@ -9,7 +9,6 @@ function ContactModal({ show, handleClose, onSubmitSuccess }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [errors, setErrors] = useState({});
-  const [successMessage, setSuccessMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
   const validateForm = () => {
@@ -39,9 +38,7 @@ function ContactModal({ show, handleClose, onSubmitSuccess }) {
         isModal: true,
       };
 
-      // Perform the POST request to submit the form data
       //http://localhost:4000/contact
-      //https://rajavruksha-server.vercel.app/contact
       // https://servermain.rajavrukshagroup.in/contact
       fetch("https://servermain.rajavrukshagroup.in/contact", {
         method: "POST",
@@ -57,14 +54,14 @@ function ContactModal({ show, handleClose, onSubmitSuccess }) {
           setName("");
           setEmail("");
           alert("Your message has been submitted successfully!");
-          onSubmitSuccess(); // Trigger the download action
-          handleClose(); // Close the modal
+          onSubmitSuccess();
+          handleClose();
         })
         .catch((error) => {
           console.error("Error submitting form:", error);
           alert("An error occurred. Please try again.");
           handleClose();
-          setIsLoading(false); // Stop the loader even on error
+          setIsLoading(false);
         });
 
       setErrors({});
@@ -74,17 +71,11 @@ function ContactModal({ show, handleClose, onSubmitSuccess }) {
   return (
     <>
       {isLoading && <Loader logo={false} />}{" "}
-      {/* Show loader during form submission */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton className="modal-header">
           <Modal.Title className="modal-title">Contact Form</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {/* {successMessage && (
-            <div className="alert alert-success" role="alert">
-              {successMessage}
-            </div>
-          )} */}
           <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>Enter Name</Form.Label>

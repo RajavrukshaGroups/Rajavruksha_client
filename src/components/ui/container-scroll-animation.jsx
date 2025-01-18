@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion } from "framer-motion";
-import "./style.css"
+import "./style.css";
 
 export const ContainerScroll = ({ titleComponent, children }) => {
   const containerRef = useRef(null);
@@ -31,7 +31,6 @@ export const ContainerScroll = ({ titleComponent, children }) => {
 
   return (
     <div
-      // className="h-[50rem] md:h-[62rem] flex items-center justify-center relative p-2 md:p-10 mb-[-150px] md:mb-[-150px]"
       className="h-[50rem] flex items-center justify-center relative p-2 md:p-10 mb-[-180px] md:mb-[-130px]"
       ref={containerRef}
     >

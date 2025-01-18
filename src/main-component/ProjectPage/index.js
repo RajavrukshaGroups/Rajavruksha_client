@@ -2,7 +2,7 @@ import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
 import bg from "../../components/assets/new_project.webp";
 import { Helmet } from "react-helmet";
-import { updateMetaTags } from "../../utils/updateMetaTags"; // Import the updateMetaTags function
+import { updateMetaTags } from "../../utils/updateMetaTags";
 import "../AboutPage/loading.css";
 import Loader from "../../components/Loader/loader";
 
@@ -20,7 +20,6 @@ const ProjectPage = () => {
   const title = "Our Projects - Explore Premium Farmland and Real Estate";
 
   useEffect(() => {
-    // Use updateMetaTags to update meta tags dynamically
     updateMetaTags({
       title,
       description,
@@ -42,10 +41,12 @@ const ProjectPage = () => {
           content="https://rajavrukshagroup.in/wp-content/uploads/2024/05/RRPL-Horizontal_Final.png"
         />
         <meta property="og:url" content={ogUrl} />
+
         {/* <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Rajavruksha Projects" />
         <meta name="twitter:description" content="Explore Rajavruksha's top real estate and farmland projects." />
         <meta name="twitter:image" content="https://rajavrukshagroup.in/wp-content/uploads/2024/05/RRPL-Horizontal_Final.png" /> */}
+     
       </Helmet>
       <Header />
       <Suspense

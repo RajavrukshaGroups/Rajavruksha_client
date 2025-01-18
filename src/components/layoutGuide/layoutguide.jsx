@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import "../../components/layoutGuide/layoutguide.css";
-import ContactModal from "../Modal/contactModal"; // Adjust the path as necessary
+import ContactModal from "../Modal/contactModal";
 import EcoNestLayout from "../../components/assets/eco-nest-layout.webp";
 import BlurText from "../../utils/BlurText";
 import EcoNest_Brochure from "../../components/assets/RRPL_Eco-nest_Brochure2.pdf";
-import Brochure from "../../components/assets/Eco-nest_compressed.pdf"
-
 function Layoutguide() {
   const [showModal, setShowModal] = useState(false);
 
@@ -28,7 +26,6 @@ function Layoutguide() {
     <div className="layout-container">
       <div className="">
         <h1 className="layout-title">
-          {/* Crafting Exquisite Design : Your Layout Guide */}
           <BlurText
             text="Crafting Exquisite Design : Your Layout Guide"
             delay={150}
@@ -45,16 +42,8 @@ function Layoutguide() {
         </button>
       </div>
       <div className="layout-image" onContextMenu={disableContextMenu}>
-        <img
-          width="80%"
-          height="50%"
-          // src="https://rajavrukshagroup.in/wp-content/uploads/2024/02/l-plan-NEW-1-2000x2048.jpg"
-          src={EcoNestLayout}
-          alt="layout-image"
-        />
+        <img width="80%" height="50%" src={EcoNestLayout} alt="layout-image" />
       </div>
-
-      {/* Modal Component */}
       {showModal && (
         <ContactModal
           show={showModal}
