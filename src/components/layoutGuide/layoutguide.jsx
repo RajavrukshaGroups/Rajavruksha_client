@@ -8,6 +8,7 @@ import { CardBody, CardContainer, CardItem } from "../3d-Cards/3d-card";
 import EcoNest_Brochure from "../../components/assets/RRPL_Eco-nest_Brochure2.pdf";
 // import Link from "next/link";
 import BlurText from "../../utils/BlurText";
+//sss
  function Layoutguide() {
   const [showModal, setShowModal] = useState(false);
     const handleOpenModal = () => setShowModal(true);
