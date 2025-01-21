@@ -35,7 +35,8 @@ module.exports = {
       xl: "1280px",
     }
   },
-  plugins: [addVariablesForColors],
+  plugins: [addVariablesForColors,
+      require('daisyui'),],
 };
 
 function addVariablesForColors({
