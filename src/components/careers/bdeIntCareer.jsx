@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Loader from "../Loader/loader";
 import "./jobCareer.css";
 import ReCAPTCHA from "react-google-recaptcha";
+import { ErrorMessage,SuccessMessage } from "../../utils/toastify";
 
 const BdeInternCareer = () => {
   const [formData, setFormData] = useState({
@@ -71,7 +72,7 @@ const BdeInternCareer = () => {
     if (!formData.file) formErrors.file = "Please upload a file.";
     setErrors(formErrors);
     if (!captchaVerified) {
-      alert("Please complete the reCAPTCHA.");
+      Error("Please complete the reCAPTCHA.");
       return;
     }
     if (Object.keys(formErrors).length === 0) {
@@ -96,7 +97,7 @@ const BdeInternCareer = () => {
         if (response.ok) {
           const data = await response.json();
           console.log("Form submitted successfully", data);
-          alert("Form Submitted Successfully");
+          SuccessMessage("Form Submitted Successfully");
           setFormData({
             name: "",
             email: "",
@@ -106,11 +107,11 @@ const BdeInternCareer = () => {
           fileInputRef.current.value = null;
         } else {
           console.error("Form submission failed", response.statusText);
-          alert("form submission failed.Please try again.");
+          ErrorMessage("form submission failed.Please try again.");
         }
       } catch (error) {
         console.error("An error occurred during form submission", error);
-        alert("An error occurred.Please try again.");
+        ErrorMessage("An error occurred.Please try again.");
         setFormData({
           name: "",
           email: "",

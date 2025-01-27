@@ -5,9 +5,15 @@ import { Button, Grid, FormHelperText } from "@mui/material";
 import Loader from "../Loader/loader";
 import { Filter } from "bad-words";
 import ReCAPTCHA from "react-google-recaptcha";
+// import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./style.css";
+import "../../toastStyles.css";
+import { ToastContainer, toast } from 'react-toastify';
+import { ErrorMessage,SuccessMessage } from "../../utils/toastify";
 
 const ContactForm = ({ status }) => {
+  const notify = () => toast("Wow so easy!");
   const [isLoading, setIsLoading] = useState(false);
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const [showFullConsentText, setShowFullConsentText] = useState(false);
@@ -21,7 +27,7 @@ const ContactForm = ({ status }) => {
     consent: false,
   });
 
-  const [error, setError] = useState({
+  const [ error, setError] = useState({
     name: "",
     email: "",
     subject: "",
@@ -68,6 +74,7 @@ const ContactForm = ({ status }) => {
     let formErrors = { ...error };
 
     if (formData.name === "") formErrors.name = "Please enter name";
+    // if (formData.name === "") formErrors.name("Please enter name");
     if (formData.email === "") {
       formErrors.email = "Please enter email";
     } else if (!emailRegex.test(formData.email)) {
@@ -82,12 +89,11 @@ const ContactForm = ({ status }) => {
       formErrors.phone_no = "Phone number must be exactly 10 digits";
     }
     if (!captchaVerified) {
-      alert("Please complete the reCAPTCHA.");
+      ErrorMessage("Please complete the reCAPTCHA.");
       return;
     }
     if (formData.consent === false)
       formErrors.consent = "You must agree to the terms and conditions.";
-
     setError(formErrors);
 
     const hasErrors = Object.values(formErrors).some((err) => err !== "");
@@ -117,7 +123,7 @@ const ContactForm = ({ status }) => {
       );
 
       if (response.ok) {
-        alert("Your message has been sent successfully!");
+        SuccessMessage("Your message has been sent successfully!");
 
         setFormData({
           name: "",
@@ -139,11 +145,11 @@ const ContactForm = ({ status }) => {
           consent: false,
         });
       } else {
-        alert("There was an error sending the message.");
+        ErrorMessage("There was an error sending the message.");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("There was a problem with the server.");
+      ErrorMessage("There was a problem with the server.");
     } finally {
       setIsLoading(false);
     }
@@ -151,20 +157,7 @@ const ContactForm = ({ status }) => {
 
   return (
     <>
-         {/* <div role="alert" className="alert">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              className="stroke-info h-6 w-6 shrink-0">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <span>12 unread messages. Tap to see.</span>
-          </div> */}
+       
 
     <div className="contact-form-height">
       {!!isLoading && (

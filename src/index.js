@@ -7,6 +7,8 @@ import "./css/all.min.css";
 import TagManager from "react-gtm-module";
 import { HelmetProvider } from "react-helmet-async";
 import App from "./main-component/App/App";
+import { ToastContainer, toast } from "react-toastify";
+
 
 const tagManagerArgs = {
   // gtmId: "GTM-5F6Z2H5J",

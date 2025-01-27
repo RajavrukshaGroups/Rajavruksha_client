@@ -148,7 +148,7 @@ const Contactpage = ({ requestAquote }) => {
           <div className="row iframe-container location-address">
             <div className="col-lg-6 col-sm-12">
               <div className="contact-page-right">
-                <iframe
+                {/* <iframe
                   width="100%"
                   height="600"
                   frameBorder="0"
@@ -158,7 +158,12 @@ const Contactpage = ({ requestAquote }) => {
                   src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=X-Factor%20Coworkspaces%2035a,%201st%20Cross%20Rd,%20Chiranjeevi%20Layout,%20Hebbal%20Kempapura,%20Bengaluru,%20Karnataka%20560024+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 >
                   <a href="https://www.gps.ie/">gps systems</a>
-                </iframe>
+                </iframe> */}
+
+            <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=35A, Kowdi, 2nd floor, 1st Main Rd, Chiranjeevi Layout, Hebbal Kempapura,, Bangalore, India, Karnataka&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            <a href="https://www.gps.ie/">gps systems</a>
+            </iframe>
+
               </div>
             </div>
             <div className="col-lg-6 col-sm-12 crm-form">

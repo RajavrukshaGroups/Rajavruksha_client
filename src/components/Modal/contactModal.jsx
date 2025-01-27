@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import "./contactmodal.css";
 import Loader from "../Loader/loader";
+import { SuccessMessage,ErrorMessage } from "../../utils/toastify";
 
 function ContactModal({ show, handleClose, onSubmitSuccess }) {
   const [name, setName] = useState("");
@@ -53,13 +54,13 @@ function ContactModal({ show, handleClose, onSubmitSuccess }) {
           setIsLoading(false);
           setName("");
           setEmail("");
-          alert("Your message has been submitted successfully!");
+          SuccessMessage("Your message has been submitted successfully!");
           onSubmitSuccess();
           handleClose();
         })
         .catch((error) => {
           console.error("Error submitting form:", error);
-          alert("An error occurred. Please try again.");
+          ErrorMessage("An error occurred. Please try again.");
           handleClose();
           setIsLoading(false);
         });

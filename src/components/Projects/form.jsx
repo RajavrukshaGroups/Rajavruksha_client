@@ -1,6 +1,7 @@
 
 
 import React, { useState } from "react";
+import { SuccessMessage,ErrorMessage } from "../../utils/toastify";
 
 const FormContact = () => {
   const [formData, setFormData] = useState({
@@ -72,7 +73,7 @@ const FormContact = () => {
       });
 
       if (response.ok) {
-        alert("Your message has been sent successfully!");
+        SuccessMessage("Your message has been sent successfully!");
         setFormData({
           name: "",
           lastname: "",
@@ -90,11 +91,11 @@ const FormContact = () => {
           phone_no: "",
         });
       } else {
-        alert("There was an error sending the message.");
+        ErrorMessage("There was an error sending the message.");
       }
     } catch (err) {
       console.error("Error:", err);
-      alert("There was a problem with the server.");
+      ErrorMessage("There was a problem with the server.");
     }
   };
   

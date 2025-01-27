@@ -5,7 +5,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-
+import { ToastContainer, toast } from 'react-toastify';
 import Homepage from "../HomePage";
 import AboutPage from "../AboutPage";
 import ProjectPage from "../ProjectPage";
@@ -23,7 +23,7 @@ import Amenities from "../../components/Amenities/amenities.jsx";
 import BdeInternCareerMain from "../careers/bdeInternCareer.jsx";
 import ScrollToTop from "../../utils/utils.js";
 import MainPrivacyPolicy from "../PrivacyPolicy/index.js";
-import CareerMainFooterComp from "../CareerMainFooter/index.js";
+import CareerMainFooterComp from "../CareerMainFooter/index.js"; 
 import FloatingIcons from "../../components/FloatingIcons/FloatingIcons.jsx";
 import Loader from "../../components/Loader/loader.jsx";
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
@@ -33,7 +33,7 @@ import  HeroScrollDemo  from "../../components/BlogList/index.js";
 
 const RoutesWithLoader = () => {
   const [loading, setLoading] = useState(false);
-  const location = useLocation();
+  const location = useLocation();  
 
   useEffect(() => {
     console.log("location", location.pathname);
@@ -51,6 +51,7 @@ const RoutesWithLoader = () => {
         <Loader logo={true} color="#C1933C" secondaryColor="#C1933C" />
       )} */}
       <Routes>
+        {/* <Route path="/toatify" element={<ToastContainer />} /> */}
         <Route path="/" element={<Homepage />} />
         <Route path="/home" element={<Homepage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -76,19 +77,22 @@ const RoutesWithLoader = () => {
 };
 
       const AllRoute = () => {
+        // const notify = () => toast("Wow so easy!");
         return (
+          <>
           <div>
-            <Router>
               <FloatingIcons />
+            <Router>
+            {/* <button onClick={notify}>Notify!</button> */}
               {/* <TawkMessengerReact
                           propertyId="66d2d5ab50c10f7a00a26593"
                           widgetId="1i70srim4"
                           /> */}
-              <ScrollToTop />
-              <RoutesWithLoader />
+                  <ScrollToTop />
+                  <RoutesWithLoader />
             </Router>
           </div>
+           </>
         );
       };
-
       export default AllRoute;
