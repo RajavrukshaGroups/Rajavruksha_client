@@ -1,9 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
-import serviceImg3 from "../../components/assets/demo.jpg";
-import serviceIcon2 from "../../img/service-icon-2.png";
-import serviceIcon3 from "../../img/service-icon-3.png";
 import targetIcon from "../../components/assets/focus (1).png";
 import identification from "../../components/assets/document.png";
 import Check from "../../components/assets/check (1).png";
