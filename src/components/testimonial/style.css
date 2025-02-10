@@ -6,7 +6,9 @@
 .testimonial-area .site-heading {
   text-align: center;
   margin-bottom: 50px;
+  margin-top: -4rem !important;
 }
+
 
 .single-testimonial {
   height: 295px;
@@ -47,13 +49,10 @@
 }
 
 .testimonial-author h4 {
-  /* margin: 0;
-  letter-spacing: 3px; */
   margin-bottom: 5px;
 }
 
 .testimonial-author p {
-  /* margin: 0; */
   margin-top: 0;
 }
 
@@ -102,20 +101,17 @@
   font-weight: 600;
 }
 
-/*Responsive*/
 @media (max-width: 991px) {
   .testimonial-area .site-heading {
     margin-bottom: 1px;
   }
   .tetimonial-slider .slick-dots {
-    /* bottom: 0; */
     bottom: -23px;
   }
 }
 
 @media (max-width: 767px) {
   .testimonial-title {
-    /* font-size: 36px; */
     font-size: 29px;
     line-height: 44px;
   }

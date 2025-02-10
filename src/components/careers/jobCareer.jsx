@@ -1,10 +1,9 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import Loader from "../Loader/loader";
 import "./jobCareer.css";
-import { faL } from "@fortawesome/free-solid-svg-icons";
 import ReCAPTCHA from "react-google-recaptcha";
-import BlurText from "../../utils/BlurText";
 import SplitText from "../../utils/SplitText";
+import { ErrorMessage,SuccessMessage } from "../../utils/toastify";
 
 const CareerForm = ({ careerDetails }) => {
   const [formData, setFormData] = useState({
@@ -26,7 +25,6 @@ const CareerForm = ({ careerDetails }) => {
   const handleCaptcha = (value) => {
     if (value) {
       setCaptchaVerified(true);
-      // setCaptchaVerified(false);
     }
   };
 
@@ -72,7 +70,7 @@ const CareerForm = ({ careerDetails }) => {
     }
     if (!formData.file) formErrors.file = "Please upload a file.";
     if (!captchaVerified) {
-      alert("Please complete the reCAPTCHA.");
+      ErrorMessage("Please complete the reCAPTCHA.");
       return;
     }
     setErrors(formErrors);
@@ -99,7 +97,7 @@ const CareerForm = ({ careerDetails }) => {
         if (response.ok) {
           const data = await response.json();
           console.log("Form submitted successfully", data);
-          alert("Form Submitted Successfully");
+          SuccessMessage("Form Submitted Successfully");
           setFormData({
             name: "",
             email: "",
@@ -109,11 +107,11 @@ const CareerForm = ({ careerDetails }) => {
           fileInputRef.current.value = null;
         } else {
           console.error("Form submission failed", response.statusText);
-          alert("form submission failed.Please try again.");
+          ErrorMessage("form submission failed.Please try again.");
         }
       } catch (error) {
         console.error("An error occurred during form submission", error);
-        alert("An error occurred.Please try again.");
+        ErrorMessage("An error occurred.Please try again.");
         setFormData({
           name: "",
           email: "",
@@ -135,123 +133,30 @@ const CareerForm = ({ careerDetails }) => {
     <section className="containers">
       {isLoading && <Loader logo={false} />}
       <div className="job-description" data-aos="fade-right">
-        <h2 className="text-capitalize">
-          {/* {careerDetails?.title} */}
-          <SplitText
-            text={careerDetails?.title}
-            className="text-2xl font-semibold text-center"
-            delay={50}
-            animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-            animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-            easing="easeOutCubic"
-            threshold={0.2}
-            rootMargin="-50px"
-            onLetterAnimationComplete={handleAnimationComplete}
-          />
-        </h2>
+        <h2 className="text-capitalize">{careerDetails?.title}</h2>
         <h4>Job Role Description</h4>
-        {/* <BlurText
-          text="Job Role Description"
-          delay={50}
-          animateBy="words"
-          direction="top"
-          onAnimationComplete={handleAnimationComplete}
-          className="text-2xl mb-8"
-        /> */}
         <p>{careerDetails?.description}</p>
         <h4>Qualifications</h4>
-        {/* <BlurText
-          text="Qualifications"
-          delay={150}
-          animateBy="words"
-          direction="top"
-          onAnimationComplete={handleAnimationComplete}
-          className="text-2xl mb-8"
-        /> */}
         <p>{careerDetails.qualifications}</p>
         <h4>Skills</h4>
-        {/* <BlurText
-          text="Skills"
-          delay={150}
-          animateBy="words"
-          direction="top"
-          onAnimationComplete={handleAnimationComplete}
-          className="text-2xl mb-8"
-        /> */}
         <ul className="list-methods">
           {careerDetails?.skills?.map((skill, index) => (
             <li key={index}>{skill}</li>
           ))}
         </ul>
         <h4>Age</h4>
-        {/* <BlurText
-          text="Age"
-          delay={150}
-          animateBy="words"
-          direction="top"
-          onAnimationComplete={handleAnimationComplete}
-          className="text-2xl mb-8"
-        /> */}
         <p>{careerDetails?.age}</p>
         <h4>Experience</h4>
-        {/* <BlurText
-          text="Experience"
-          delay={150}
-          animateBy="words"
-          direction="top"
-          onAnimationComplete={handleAnimationComplete}
-          className="text-2xl mb-8"
-        /> */}
         <p>{careerDetails?.experience}</p>
         <h4>Salary</h4>
-        {/* <BlurText
-          text="Salary"
-          delay={150}
-          animateBy="words"
-          direction="top"
-          onAnimationComplete={handleAnimationComplete}
-          className="text-2xl mb-8"
-        /> */}
         <p>{careerDetails?.salary}</p>
         <h4>Timings</h4>
-        {/* <BlurText
-          text="Timings"
-          delay={150}
-          animateBy="words"
-          direction="top"
-          onAnimationComplete={handleAnimationComplete}
-          className="text-2xl mb-8"
-        /> */}
         <p>{careerDetails?.timings}</p>
         <h4>Job Category</h4>
-        {/* <BlurText
-          text="Job Category"
-          delay={150}
-          animateBy="words"
-          direction="top"
-          onAnimationComplete={handleAnimationComplete}
-          className="text-2xl mb-8"
-        /> */}
         <p>{careerDetails?.category}</p>
         <h4>Job Type</h4>
-        {/* <BlurText
-          text="Job Type"
-          delay={150}
-          animateBy="words"
-          direction="top"
-          onAnimationComplete={handleAnimationComplete}
-          className="text-2xl mb-8"
-        /> */}
         <p>{careerDetails?.jobType}</p>
         <h4>Location</h4>
-        {/* <BlurText
-          text="Location"
-          delay={150}
-          animateBy="words"
-          direction="top"
-          onAnimationComplete={handleAnimationComplete}
-          className="text-2xl mb-8"
-        /> */}
         <p>{careerDetails?.location}</p>
       </div>
       <form

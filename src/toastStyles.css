@@ -1,0 +1,26 @@
+/* .Toastify__toast-container {
+    margin: 0 !important;
+    padding: 0 !important;
+  } */
+  .custom-toast {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Custom styling for ToastContainer */
+.custom-toast-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 9999; /* To ensure it stays above other elements */
+  }
+  
+  .Toastify__toast-container {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .Toastify__toast {
+    margin: 0;
+    padding: 0;
+  }
+  

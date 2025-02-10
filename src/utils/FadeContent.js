@@ -36,6 +36,7 @@ const FadeContent = ({
         opacity: inView ? 1 : initialOpacity,
         transition: `opacity ${duration}ms ${easing}, filter ${duration}ms ${easing}`,
         filter: blur ? (inView ? 'blur(0px)' : 'blur(10px)') : 'none',
+        // marginTop:"-100px"
       }}
     >
       {children}

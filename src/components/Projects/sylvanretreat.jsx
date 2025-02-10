@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
 import { VscDebugBreakpointLog } from "react-icons/vsc";
 import "../../components/Projects/sylvanStlyle.css";
-
 import Tour from "../../components/tour/index";
 import Amenities from "../../components/Amenities/amenities";
 import planting_syl from "../../components/assets/planting_syl.png";
@@ -10,7 +8,6 @@ import investment_potential from "../../components/assets/earning_syl.png";
 import planet_earth from "../../components/assets/planet-earth_syl.png";
 import compliance from "../../components/assets/compliance_syl.png";
 import VariableProximity from "../../utils/VariableProximity";
-import SplitText from "../../utils/SplitText";
 import BlurText from "../../utils/BlurText";
 
 function Sylvanretreat() {
@@ -33,23 +30,31 @@ function Sylvanretreat() {
       <div className="container">
         <div className="row">
           <div
-            style={{ color: "black" }}
+            style={{ color: "black"}}
             data-aos="fade-right"
             data-aos-delay="200"
             className="col-12"
           >
-            {/* <h3>Theme</h3> */}
             The theme of Sylvan Retreat is to create a harmonious and immersive
             living experience that seamlessly <br />
             integrates with the natural surroundings. Envisioned as a sanctuary
             away from the hustle and bustle of <br />
             urban life, the project aims to celebrate the beauty of nature.
           </div>
-          <div
-            className="col-lg-6 col-md-12 col-sm-12"
-            style={{ height: "500px" }}
-          >
-            <Tour />
+          <div className="col-lg-6 col-md-12 col-sm-12 yt-video">
+          <iframe
+                className="yt-iframe"
+                width="600"
+                height="460"
+                src="https://www.youtube.com/embed/xz14d8sd7Nc?autoplay=1&loop=1&playlist=xz14d8sd7Nc&mute=1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                >
+              </iframe>
+            {/* <Tour /> */}
           </div>
           <div
             className="col-lg-4 col-md-12 col-sm-12 syl-amenities"
@@ -60,10 +65,9 @@ function Sylvanretreat() {
               projectType={"sylvan-retreat"}
             />
           </div>
-          <div className="col-12 mt-4">
+          <div className="col-12 mt-1 syl-desc-new">
             <div className="project-details-top-text" data-aos="fade-up">
               <p className="syl-title">
-                {/* Discover Your Agricultural Dream: */}
                 <BlurText
                   text="Discover Your Agricultural Dream:"
                   delay={150}
@@ -80,7 +84,6 @@ function Sylvanretreat() {
                 opportunity for you to cultivate your agricultural aspirations.
               </p>
               <p className="syl-title">
-                {/* Agricultural Canvas Ready for Your Vision: */}
                 <BlurText
                   text="Agricultural Canvas Ready for Your Vision:"
                   delay={150}
@@ -99,7 +102,6 @@ function Sylvanretreat() {
                 flourish.
               </p>
               <p style={{ fontWeight: "bold" }} className="syl-title">
-                {/* Key Features: */}
                 <BlurText
                   text="Key Features:"
                   delay={150}
@@ -116,13 +118,7 @@ function Sylvanretreat() {
                     style={{ width: "20px", height: "29px" }}
                   />
                 </span>{" "}
-                <span
-                // style={{
-                //   fontWeight: "bold",
-                //   color: "black",
-                // }}
-                // className="syl-title"
-                >
+                <span>
                   <b className="syl-title">Rich Soil and Fertile Land:</b>
                   Our farmland is renowned for its rich and fertile soil,
                   providing the ideal foundation for a thriving agricultural
@@ -135,10 +131,7 @@ function Sylvanretreat() {
                     style={{ width: "20px", height: "29px" }}
                   />
                 </span>{" "}
-                <span
-                // style={{ fontWeight: "bold", color: "black" }}
-                // className="syl-title"
-                >
+                <span>
                   <b className="syl-title">Scenic Views:</b>
                   Enjoy breathtaking vistas of rolling hills and serene
                   landscapes that will inspire and soothe your soul.
@@ -150,10 +143,7 @@ function Sylvanretreat() {
                     style={{ width: "20px", height: "29px" }}
                   />
                 </span>{" "}
-                <span
-                // style={{ fontWeight: "bold", color: "black" }}
-                // className="syl-title"
-                >
+                <span>
                   <b className="syl-title">Water Resources:</b>
                   Abundant access to natural water sources, ensuring your crops
                   will flourish year-round.
@@ -165,10 +155,7 @@ function Sylvanretreat() {
                     style={{ width: "20px", height: "29px" }}
                   />
                 </span>{" "}
-                <span
-                // style={{ fontWeight: "bold", color: "black" }}
-                // className="syl-title"
-                >
+                <span>
                   <b className="syl-title">Security:</b>
                   We prioritize your investment's safety, providing 24/7
                   security to protect your agricultural pursuits.
@@ -196,7 +183,6 @@ function Sylvanretreat() {
                       alt="Expertise in Agriculture"
                       className="syl-img"
                     />
-                    {/* <h5 className="syl-subtitle">Expertise in Agriculture</h5> */}
                     <h5 className="syl-subtitle">
                       <div ref={containerRef} style={{ position: "relative" }}>
                         <VariableProximity
@@ -225,7 +211,6 @@ function Sylvanretreat() {
                       alt="Project time"
                       className="syl-img"
                     />
-                    {/* <h5 className="syl-subtitle">Investment Potential</h5> */}
                     <h5 className="syl-subtitle">
                       <div ref={containerRef} style={{ position: "relative" }}>
                         <VariableProximity
@@ -252,7 +237,6 @@ function Sylvanretreat() {
                       alt="People worked"
                       className="syl-img"
                     />
-                    {/* <h5 className="syl-subtitle">Sustainability</h5> */}
                     <h5 className="syl-subtitle">
                       <div ref={containerRef} style={{ position: "relative" }}>
                         <VariableProximity
@@ -279,7 +263,6 @@ function Sylvanretreat() {
                       alt="Project cost"
                       className="syl-img"
                     />
-                    {/* <h5 className="syl-subtitle">Legal Compliance</h5> */}
                     <h5 className="syl-subtitle">
                       <div ref={containerRef} style={{ position: "relative" }}>
                         <VariableProximity

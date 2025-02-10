@@ -1,26 +1,20 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-// import { useHistory } from "react-router-dom";
 import { Link, useNavigate } from "react-router-dom";
-
 import ecoNext from "../../components/assets/ecoproject.jpg";
-// import EconextProject from "../../components/assets/project_picture.jpg";
 import SylRetreatImg from "../../components/assets/Sylvan_retreat_single_banner_img.webp";
 import EcoNestImg from "../../components/assets/eco-nest_pro_det_img.webp";
-
+import PlumeriaImg from "../../components/assets/plumeria1.webp";
 import "./style.css";
 
 const ProjectList = () => {
   const navigate = useNavigate();
-  // const history = useHistory();
- 
   const handleProjectClick = (project) => {
     if (project === "Sylvan Retreat") {
-      // history.push("/sylvan-retreat");
       navigate("/sylvan-retreat");
     } else if (project === "Eco Nest") {
-      // history.push("/eco-nest");
       navigate("/eco-nest");
+    } else if (project === "Plumeria") {
+      navigate("/plumeria");
     }
   };
   return (
@@ -42,21 +36,19 @@ const ProjectList = () => {
                   className="project-box"
                   onClick={() => handleProjectClick("Sylvan Retreat")}
                 >
-                  
                   <img
                     src={SylRetreatImg}
                     alt="img"
                     style={{
-                      userSelect:'none',
+                      userSelect: "none",
                       height: "600px",
-                      width: "100%", // Ensures the image takes the full width of the card
-                      objectFit: "cover", // Makes the image fit within the card without distortion
-                      borderRadius: "8px", // Optional: Adds rounded corners for a polished look
+                      width: "100%",
+                      objectFit: "cover",
+                      borderRadius: "8px",
                     }}
                   />
                   <h3 className="syl-retreat-title text-capitalize">
                     Sylvan Retreat
-                    {/* <br /> IN PARIS */}
                   </h3>
                   <p>Nature's Beauty Celebration</p>
                   <div className="project-zoom">
@@ -79,7 +71,6 @@ const ProjectList = () => {
                       <circle stroke="#ffffff" cx={12} cy={12} r={3} />
                     </svg>
                   </div>
-                  {/* </Link> */}
                 </div>
               </div>
               <div className="col-md-5 col-sm-6 mb-5 project-box-div">
@@ -88,22 +79,59 @@ const ProjectList = () => {
                   onClick={() => handleProjectClick("Eco Nest", ecoNext)}
                 >
                   <Link to="/projects-single">
-                    {/* <img src={ecoNext} alt="img" /> */}
                     <img
                       src={EcoNestImg}
                       alt="img"
                       style={{
                         height: "600px",
-                        width: "100%", 
+                        width: "100%",
                         objectFit: "cover",
                         borderRadius: "8px",
                       }}
                     />
-                    <h3>
-                      Eco Nest
-                      {/* <br /> IN BAHRAIN */}
-                    </h3>
+                    <h3>Eco Nest</h3>
                     <p>Eco Acres </p>
+                    <div className="project-zoom">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width={24}
+                        height={24}
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="feather feather-eye"
+                      >
+                        <path
+                          stroke="#ffffff"
+                          d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"
+                        />
+                        <circle stroke="#ffffff" cx={12} cy={12} r={3} />
+                      </svg>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              <div className="col-md-5 col-sm-6 mb-5 plumeria">
+                <div
+                  className="project-box"
+                  onClick={() => handleProjectClick("Plumeria")}
+                >
+                  <Link to="/projects-single">
+                    <img
+                      src={PlumeriaImg}
+                      alt="img"
+                      style={{
+                        height: "600px",
+                        width: "100%",
+                        objectFit: "cover",
+                        borderRadius: "8px",
+                      }}
+                    />
+                    <h3>Plumeria</h3>
+                    <p>Residential Plots </p>
                     <div className="project-zoom">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

@@ -510,6 +510,12 @@ video {
     max-width: 640px;
   }
 }
+@media (min-width: 640px) {
+
+  .container {
+    max-width: 640px;
+  }
+}
 
 @media (min-width: 768px) {
 

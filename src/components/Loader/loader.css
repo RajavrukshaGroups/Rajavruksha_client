@@ -15,12 +15,7 @@
 }
 
 .loader-default-bg {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Slightly transparent background */
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .spinner-with-logo {
@@ -31,11 +26,11 @@
 }
 
 .loader-logo {
-  width: 60px; /* Adjust size of the logo */
+  width: 60px;
   height: auto;
-  z-index: 2; /* Ensure the logo is above the spinner */
+  z-index: 2;
 }
 
 .Oval {
-  z-index: 1; /* Spinner below the logo */
+  z-index: 1;
 }

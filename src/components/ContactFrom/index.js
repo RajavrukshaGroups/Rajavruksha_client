@@ -5,9 +5,15 @@ import { Button, Grid, FormHelperText } from "@mui/material";
 import Loader from "../Loader/loader";
 import { Filter } from "bad-words";
 import ReCAPTCHA from "react-google-recaptcha";
+// import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./style.css";
+import "../../toastStyles.css";
+import { ToastContainer, toast } from 'react-toastify';
+import { ErrorMessage,SuccessMessage } from "../../utils/toastify";
 
 const ContactForm = ({ status }) => {
+  const notify = () => toast("Wow so easy!");
   const [isLoading, setIsLoading] = useState(false);
   const [captchaVerified, setCaptchaVerified] = useState(false);
   const [showFullConsentText, setShowFullConsentText] = useState(false);
@@ -21,7 +27,7 @@ const ContactForm = ({ status }) => {
     consent: false,
   });
 
-  const [error, setError] = useState({
+  const [ error, setError] = useState({
     name: "",
     email: "",
     subject: "",
@@ -32,7 +38,7 @@ const ContactForm = ({ status }) => {
   });
 
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-  const filter = new Filter(); // Initialize the bad-words filter
+  const filter = new Filter();
 
   const changeHandler = (e) => {
     const { name, value, type, checked } = e.target;
@@ -68,6 +74,7 @@ const ContactForm = ({ status }) => {
     let formErrors = { ...error };
 
     if (formData.name === "") formErrors.name = "Please enter name";
+    // if (formData.name === "") formErrors.name("Please enter name");
     if (formData.email === "") {
       formErrors.email = "Please enter email";
     } else if (!emailRegex.test(formData.email)) {
@@ -82,12 +89,11 @@ const ContactForm = ({ status }) => {
       formErrors.phone_no = "Phone number must be exactly 10 digits";
     }
     if (!captchaVerified) {
-      alert("Please complete the reCAPTCHA.");
+      ErrorMessage("Please complete the reCAPTCHA.");
       return;
     }
     if (formData.consent === false)
       formErrors.consent = "You must agree to the terms and conditions.";
-
     setError(formErrors);
 
     const hasErrors = Object.values(formErrors).some((err) => err !== "");
@@ -117,7 +123,7 @@ const ContactForm = ({ status }) => {
       );
 
       if (response.ok) {
-        alert("Your message has been sent successfully!");
+        SuccessMessage("Your message has been sent successfully!");
 
         setFormData({
           name: "",
@@ -139,21 +145,27 @@ const ContactForm = ({ status }) => {
           consent: false,
         });
       } else {
-        alert("There was an error sending the message.");
+        ErrorMessage("There was an error sending the message.");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("There was a problem with the server.");
+      ErrorMessage("There was a problem with the server.");
     } finally {
       setIsLoading(false);
     }
   };
 
   return (
+    <>
+       
+
     <div className="contact-form-height">
       {!!isLoading && (
         <Loader color="#80c1d1" secondaryColor="#80c1d1" logo={false} />
       )}
+
+         
+
       <form onSubmit={submitHandler}>
         <Box
           component="form"
@@ -162,7 +174,7 @@ const ContactForm = ({ status }) => {
               width: {
                 xs: "50%",
                 sm: "80%",
-                md: "80%", // For screens 960px and larger (Desktop)
+                md: "80%",
               },
             },
           }}
@@ -288,13 +300,10 @@ const ContactForm = ({ status }) => {
             </Grid>
           </Grid>
 
-          {/* Add the reCAPTCHA here */}
           <div className="recaptcha-container">
             <Grid container spacing={2} style={{ justifyContent: "center" }}>
               <Grid item xs={12}>
                 <ReCAPTCHA
-                  // sitekey="6Lem4Y8qAAAAAP5GA-KEiS_3fBdJQxuhFL6IqHxV"
-                  // sitekey="6LcZ6o8qAAAAAILBQNMf-b1YNb4a9YvCPKeog3CS"
                   sitekey="6Lf165EqAAAAAGMB2fjKkFOvkFPTXrgoOoa4lXs9"
                   onChange={handleCaptcha}
                 />
@@ -363,6 +372,8 @@ const ContactForm = ({ status }) => {
         </div>
       </form>
     </div>
+    </>
+
   );
 };
 

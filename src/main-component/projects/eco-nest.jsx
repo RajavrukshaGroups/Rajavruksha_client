@@ -1,8 +1,8 @@
 import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
 import bg from "../../components/assets/eco_nest_img.webp";
-import { Helmet } from "react-helmet"; // Import Helmet for SEO
-import { updateMetaTags } from "../../utils/updateMetaTags"; // Import the updateMetaTags function
+import { Helmet } from "react-helmet";
+import { updateMetaTags } from "../../utils/updateMetaTags";
 import "../AboutPage/loading.css";
 import Loader from "../../components/Loader/loader";
 
@@ -26,7 +26,6 @@ function Econext() {
   const ogUrl = "https://rajavrukshagroup.in/eco-nest";
 
   useEffect(() => {
-    // Use updateMetaTags to dynamically set the meta tags for this page
     updateMetaTags({
       title,
       description,

@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+  .syl-retreat {
+    height: 400px !important;
+  }
+}
+@media (max-width: 1496) {
+  .syl-retreat {
+    height: 600px !important;
+  }
+}

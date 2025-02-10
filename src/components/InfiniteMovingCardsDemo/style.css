@@ -1,0 +1,9 @@
+.inf-card {
+  margin-top: -2.5rem !important;
+}
+
+@media(max-width:820px){
+    .inf-card{
+        margin-top: 0rem !important;
+    }
+}

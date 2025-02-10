@@ -9,11 +9,15 @@ const AmenitiesCard = ({ amenities, projectType }) => {
       ? "520px"
       : projectType === "sylvan-retreat"
       ? "465px"
+      : projectType === "plumeria"
+      ? "445px"
       : "500px";
   return (
     <section
       data-aos="fade-left"
-      className="amenities-card mt-5"
+      className={`amenities-card mt-5 ${
+        projectType === "eco-nest" ? "eco-nest-card" : ""
+      }`}
       style={{ height: cardHeight }}
     >
       <div className="card-header" style={{ borderRadius: "30px" }}>

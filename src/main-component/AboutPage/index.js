@@ -12,8 +12,6 @@ const Animation = React.lazy(() =>
   import("../../components/reactIcons/journeySection")
 );
 const Footer = React.lazy(() => import("../../components/footer"));
-
-// Description text for the About page
 const aboutText = `
   At Rajavruksha, we truly appreciate the wonders of nature and understand 
   the tranquility it can bring to one's existence. Our purpose is to turn 

@@ -52,7 +52,6 @@ class Hero extends Component {
             <div className="slide">
               <div
                 className="hero-slide-item"
-                // style={{ backgroundImage: `url(${field})` }}
                 style={{
                   backgroundImage: `url(${HomePageImg})`,
                 }}
@@ -90,7 +89,6 @@ class Hero extends Component {
             <div className="slide">
               <div
                 className="hero-slide-item"
-                // style={{ backgroundImage: `url(${field})` }}
                 style={{
                   backgroundImage: `url(${HomePageImg})`,
                 }}

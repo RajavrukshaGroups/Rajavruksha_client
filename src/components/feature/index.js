@@ -1,15 +1,7 @@
 import React from "react";
-
-import Icon1 from "../../img/logo01-1.png";
-import Icon2 from "../../img/logo02-1.png";
-import Icon3 from "../../img/logo03-1.png";
-import img1 from "../../img/about-3.png";
-import img2 from "../../img/about-4.png";
 import AboutIcon from "../../components/assets/planting (1).png";
 import ResidentIcon from "../../components/assets/residentialfhfg.png";
 import VillaIcon from "../../components/assets/villa.png";
-import first from "../../components/assets/slidehome.jpg";
-
 import "./style.css";
 
 const Feature = () => {

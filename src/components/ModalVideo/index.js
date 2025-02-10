@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import ModalVideo from "react-modal-video";
 import "react-modal-video/css/modal-video.css";
+import { SuccessMessage,ErrorMessage } from "../../utils/toastify";
 
 const VideoModal = ({ videoId }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,7 @@ const VideoModal = ({ videoId }) => {
   };
 
   const handleError = () => {
-    alert("An error occurred. Please check if the video is available.");
+    ErrorMessage("An error occurred. Please check if the video is available.");
   };
 
   return (

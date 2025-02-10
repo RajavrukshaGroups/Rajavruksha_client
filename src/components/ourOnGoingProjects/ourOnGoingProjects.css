@@ -1,7 +1,6 @@
 .projects-container-new {
-  min-height: 100vh;
-  background: #e9f2ea;
-  /* background: #ebf1ec; */
+  min-height: 0vh;
+  background: white;
   padding: 2rem;
   font-family: Arial, sans-serif;
 }
@@ -16,14 +15,10 @@
 }
 
 .project-card {
-  padding: 27px 65px 4px 65px;
-  /* padding: 19px 25px 4px 22px; */
+  padding: 0px 65px 4px 0px;
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  /* box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 -1px 2px rgba(0, 0, 0, 0.05);
   max-width: 1079px;
   margin: 0 auto;
 }
@@ -63,23 +58,10 @@
   margin-bottom: 0.5rem;
 }
 
-.project-button {
-  background-color: #558b2f;
-  color: white;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 35px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.project-button:hover {
-  background-color: #33691e;
-}
-
 @media (max-width: 768px) {
+  .animate-threeD{
+  padding: 9px;
+ }
   .project-card {
     padding: 27px 23px 4px 23px;
   }
@@ -87,7 +69,9 @@
     min-height: 68vh;
   }
   .projects-title {
-    font-size: 2rem;
+  margin-bottom: -4rem;
+
+    font-size: 29px;
   }
 
   .project-subtitle {
@@ -98,25 +82,34 @@
     height: 300px;
   }
 }
-/* Target tablets in landscape orientation */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .projects-container-new {
     min-height: 71vh;
   }
+
 }
 
-/* Target tablets in portrait orientation */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .projects-container-new {
     min-height: 61vh;
   }
   }
 
-
-  /* For screens with a resolution of 2560px width (27-inch monitors) */
 @media (min-width: 2560px) and (max-width: 2719px) {
   .projects-container-new {
     min-height: 61vh;
    
   }
 }
+
+@media (max-width: 1496px) {
+  .responsive{
+     margin-top: -130px;
+  }
+  }
+  @media screen and (max-width: 1366px) and (max-height: 768px) {
+   
+ .threed-img{
+  padding: 9px;
+ }
+  }

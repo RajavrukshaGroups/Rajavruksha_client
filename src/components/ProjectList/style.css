@@ -1,10 +1,13 @@
-/* ===================== PROJECT ======================*/
 .projects-area {
   padding-bottom: 70px;
 }
 .project-box-container {
   margin-left: 7.5rem;
   margin-right: 7.5rem;
+}
+
+.plumeria{
+  margin-left: 15rem;
 }
 
 .project-box a {
@@ -133,6 +136,10 @@
   .project-box-div {
     margin-left: 0px;
   }
+  .plumeria{
+    margin-left: 0rem;
+    margin-top: -3rem;
+  }
   .project-box p {
     font-size: 14px;
     left: -110px;
@@ -240,10 +247,6 @@
   }
 }
 
-/* ===================================== */
-
-/* responsiveness for tablet screen devices */
-/* Target tablets in landscape orientation */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .project-box-container {
     margin-left: 0.5rem;
@@ -251,7 +254,6 @@
   }
 }
 
-/* Target tablets in portrait orientation */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .project-box-container {
     margin-left: 0.5rem;

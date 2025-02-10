@@ -1,6 +1,5 @@
 .discover-title {
   font-family: Arial, Helvetica, sans-serif;
-  /* font-weight: normal; */
   color: #000000;
   margin-bottom: 10px;
   font-style: normal;
@@ -8,9 +7,16 @@
   letter-spacing: 0px;
 }
 
+.eco-pro {
+  margin-top: 7rem !important;
+}
+
 @media (max-width: 768px) {
   .eco-pro {
-    margin-top: 45px;
+    margin-top: 110px;
+  }
+  .eco-amenities {
+    margin-top: 5rem;
   }
 }
 

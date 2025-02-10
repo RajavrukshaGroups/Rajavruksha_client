@@ -1,13 +1,10 @@
 /* ===================== HEADER ======================*/
-/* ===================== new social media design start here ======================*/
-/* Just for the pen to look nice */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-/* relevant code for the icons starts here */
 .x-logo {
   align-items: center;
   margin: auto;
-  width: 27px; /* Adjust size as needed */
+  width: 27px;
   height: 27px;
   transition: transform 0.5s ease;
 }
@@ -17,7 +14,7 @@
 }
 
 .bg-ico:hover .social {
-  transform: scale(1.3); /* Enlarges the icon */
+  transform: scale(1.3);
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
   transition: all ease 0.5s;
 }
@@ -45,6 +42,8 @@
   padding: 0 0px;
   align-items: center;
   justify-content: start;
+  margin-top: 16px;
+  margin-left: -7px;
 }
 
 .fab {
@@ -108,9 +107,9 @@
 .bg-ico {
   display: flex;
   background-color: #fff;
-  width: 50px; /* Adjusted width */
-  height: 50px; /* Adjusted height */
-  line-height: 60px; /* Matches the height for alignment */
+  width: 50px;
+  height: 50px;
+  line-height: 60px;
   margin: 0 5px;
   text-align: center;
   position: relative;
@@ -176,9 +175,6 @@
   transform: scale(1.3);
 }
 
-/* ===================== new social media design end here ======================*/
-/* ===================== HEADER ======================*/
-
 .social-icons {
   display: flex;
   gap: 15px;
@@ -197,7 +193,6 @@
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-/* WhatsApp */
 .social-icons a.whatsapp {
   background-color: #25d366;
 }
@@ -206,7 +201,6 @@
   background-color: #1da851;
 }
 
-/* YouTube */
 .social-icons a.youtube {
   background-color: #ff0000;
 }
@@ -216,18 +210,15 @@
   background-color: white;
 }
 
-/* Facebook */
 .social-icons a.facebook {
   background-color: #1877f2;
 }
 
 .social-icons a.facebook:hover {
-  /* background-color: #145dbf; */
   background-color: white;
   color: #1877f2;
 }
 
-/* Instagram */
 .social-icons a.instagram {
   background-color: #e1306c;
   background: radial-gradient(
@@ -257,9 +248,12 @@
   .wrapper {
     display: none;
   }
-  /* Adjust the breakpoint as needed */
   .header-action {
-    display: none; /* Hides the entire container */
+    display: none;
+  }
+  .wrapper-footer {
+    margin-top: 1px;
+    margin-left: -7px;
   }
 }
 
@@ -415,12 +409,10 @@
 }
 
 .mainmenu ul li ul {
-  /* padding: 30px; */
   margin: -24px;
   left: 23px;
   position: absolute;
   top: 120%;
-  /* left: 0; */
   width: 200px;
   background: #fff;
   padding: 0;
@@ -636,7 +628,6 @@
   justify-content: center;
 }
 
-/* Responsive */
 @media (max-width: 991px) {
   .responsiveMenu {
     display: block;
@@ -718,7 +709,6 @@
   }
 }
 
-/* Target tablets in landscape orientation */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .header {
     z-index: 99;
@@ -727,7 +717,6 @@
   }
 }
 
-/* Target tablets in portrait orientation */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .header {
     z-index: 99;

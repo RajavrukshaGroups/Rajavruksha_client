@@ -5,7 +5,7 @@ import {
   Route,
   useLocation,
 } from "react-router-dom";
-
+import { ToastContainer, toast } from 'react-toastify';
 import Homepage from "../HomePage";
 import AboutPage from "../AboutPage";
 import ProjectPage from "../ProjectPage";
@@ -15,6 +15,7 @@ import ContactPage from "../ContactPage";
 import ErrorPage from "../ErrorPage";
 import ExperienceSection from "../../components/demo/experienceSection.jsx";
 import SylvanRetreat from "../../main-component/projects/sylvanretreat";
+import PlumeriaMain from "../../main-component/projects/plumeria.jsx"
 import Econest from "../projects/eco-nest";
 import JourneySection from "../../components/reactIcons/journeySection.jsx";
 import Status from "../Status/status.jsx";
@@ -23,16 +24,17 @@ import Amenities from "../../components/Amenities/amenities.jsx";
 import BdeInternCareerMain from "../careers/bdeInternCareer.jsx";
 import ScrollToTop from "../../utils/utils.js";
 import MainPrivacyPolicy from "../PrivacyPolicy/index.js";
-import CareerMainFooterComp from "../CareerMainFooter/index.js";
+import CareerMainFooterComp from "../CareerMainFooter/index.js"; 
 import FloatingIcons from "../../components/FloatingIcons/FloatingIcons.jsx";
 import Loader from "../../components/Loader/loader.jsx";
 import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 import MainTermsCondition from "../TermsConditions/index.js";
 import CareerDetails from "../careers/careerDetails.jsx";
+import  HeroScrollDemo  from "../../components/BlogList/index.js";
 
 const RoutesWithLoader = () => {
   const [loading, setLoading] = useState(false);
-  const location = useLocation();
+  const location = useLocation();  
 
   useEffect(() => {
     console.log("location", location.pathname);
@@ -50,6 +52,7 @@ const RoutesWithLoader = () => {
         <Loader logo={true} color="#C1933C" secondaryColor="#C1933C" />
       )} */}
       <Routes>
+        {/* <Route path="/toatify" element={<ToastContainer />} /> */}
         <Route path="/" element={<Homepage />} />
         <Route path="/home" element={<Homepage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -63,10 +66,12 @@ const RoutesWithLoader = () => {
         <Route path="/careerDetails/:id" element={<CareerDetails />} />
         <Route path="/sylvan-retreat" element={<SylvanRetreat />} />
         <Route path="/eco-nest" element={<Econest />} />
+        <Route path="/plumeria" element={<PlumeriaMain />} />
         <Route path="/journeySection" element={<JourneySection />} />
         <Route path="/status" element={<Status />} />
         {/* <Route path="/amenities" element={<Amenities />} /> */}
         <Route path="/privacyPolicy" element={<MainPrivacyPolicy />} />
+        <Route path="/aceternity" element={<HeroScrollDemo />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
@@ -74,19 +79,22 @@ const RoutesWithLoader = () => {
 };
 
       const AllRoute = () => {
+        // const notify = () => toast("Wow so easy!");
         return (
+          <>
           <div>
-            <Router>
               <FloatingIcons />
+            <Router>
+            {/* <button onClick={notify}>Notify!</button> */}
               {/* <TawkMessengerReact
                           propertyId="66d2d5ab50c10f7a00a26593"
                           widgetId="1i70srim4"
                           /> */}
-              <ScrollToTop />
-              <RoutesWithLoader />
+                  <ScrollToTop />
+                  <RoutesWithLoader />
             </Router>
           </div>
+           </>
         );
       };
-
       export default AllRoute;

@@ -9,6 +9,7 @@ import testimonial3 from "../../img/testimonial-3.png";
 import icon from "../../img/gridicons_quote.svg";
 
 import "./style.css";
+import { InfiniteMovingCardsDemo } from "../InfiniteMovingCardsDemo/InfiniteMovingCardsDemo";
 
 class Testimonial extends Component {
   constructor(props) {
@@ -68,43 +69,44 @@ class Testimonial extends Component {
     };
     const customerFeedback = [
       {
-        name: 'Smitha',
-        telling: 'Choosing Rajavruksha for our farm investment was a wise decision. Professionalism and trustworthiness set them apart.',
-        proffession:'Property Manager'
-      
+        name: "Smitha",
+        telling:
+          "Choosing Rajavruksha for our farm investment was a wise decision. Professionalism and trustworthiness set them apart.",
+        proffession: "Property Manager",
       },
       {
-        name: 'Suresh N',
-        telling: 'Our experience with Rajavruksha was outstanding. Their dedicated team ensured a smooth journey to our farm ownership.',
-        proffession:'Property Consultant'
-
+        name: "Suresh N",
+        telling:
+          "Our experience with Rajavruksha was outstanding. Their dedicated team ensured a smooth journey to our farm ownership.",
+        proffession: "Property Consultant",
       },
       {
-        name: 'Manasa V',
-        telling: 'Rajavruksha made our dream of owning a farm a reality. Their transparent dealings and commitment stood out.',
-        proffession:'Real Estate Investor'
+        name: "Manasa V",
+        telling:
+          "Rajavruksha made our dream of owning a farm a reality. Their transparent dealings and commitment stood out.",
+        proffession: "Real Estate Investor",
       },
       {
-        name: 'Roshan Kumar',
-        telling: 'Exceptional service and integrity define Rajavruksha. The process of buying our farm was seamless and gratifying.',
-        proffession:'Land Surveyor'
+        name: "Roshan Kumar",
+        telling:
+          "Exceptional service and integrity define Rajavruksha. The process of buying our farm was seamless and gratifying.",
+        proffession: "Land Surveyor",
       },
     ];
-    
-
 
     return (
-      <div   className="testimonial-area pb-5" data-aos="fade-up">
+      <div className="testimonial-area new-test pb-5" data-aos="fade-up">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
               <div className="site-heading">
                 <h3 className="testimonial-subtitle">Hear From</h3>
-                <h2  className="testimonial-title">Our Happy Customers !</h2>
+                <h2 className="testimonial-title">Our Happy Customers !</h2>
               </div>
+              <InfiniteMovingCardsDemo />
             </div>
           </div>
-          <div className="row">
+          {/* <div className="row">
             <div className="col-lg-12">
           <div className="tetimonial-slider">
                 <Slider ref={(c) => (this.slider = c)} {...settings}>
@@ -119,7 +121,6 @@ class Testimonial extends Component {
                           </p>
                         </div>
                         <div className="testimonial-meta">
-                          {/* <img src={testimonial1} alt="img" /> */}
                           <div className="testimonial-author">
                             <p className="author-name">{value.name}</p>
                             <p>{value.proffession}</p>
@@ -132,7 +133,7 @@ class Testimonial extends Component {
                 </Slider>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     );

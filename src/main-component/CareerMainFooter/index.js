@@ -1,9 +1,8 @@
 import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
-import bg from "../../components/assets/career_page.webp";
 import career_desktop from "../../components/assets/career_desktop_new.webp";
 import { Helmet } from "react-helmet";
-import { updateMetaTags } from "../../utils/updateMetaTags"; // Import the updateMetaTags function
+import { updateMetaTags } from "../../utils/updateMetaTags";
 import "../AboutPage/loading.css";
 import Loader from "../../components/Loader/loader";
 
@@ -23,7 +22,6 @@ const CareerMainFooterComp = () => {
   const title = "Current Openings - Join Rajavruksha Group";
 
   useEffect(() => {
-    // Use updateMetaTags to update meta tags dynamically
     updateMetaTags({
       title,
       description,

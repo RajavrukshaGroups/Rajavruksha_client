@@ -2,8 +2,6 @@ import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
 import { Helmet } from "react-helmet";
 import { updateMetaTags } from "../../utils/updateMetaTags.js";
-import { ErrorBoundary } from "react-error-boundary";
-import ErrorFallback from "../../components/ErrorBoundary/errorBoundary.js";
 import Loader from "../../components/Loader/loader.jsx";
 import "../AboutPage/loading.css";
 const Hero = React.lazy(() => import("../../components/hero"));
