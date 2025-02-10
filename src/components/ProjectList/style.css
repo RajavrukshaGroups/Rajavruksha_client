@@ -6,6 +6,10 @@
   margin-right: 7.5rem;
 }
 
+.plumeria{
+  margin-left: 15rem;
+}
+
 .project-box a {
   display: block;
 }
@@ -131,6 +135,10 @@
   }
   .project-box-div {
     margin-left: 0px;
+  }
+  .plumeria{
+    margin-left: 0rem;
+    margin-top: -3rem;
   }
   .project-box p {
     font-size: 14px;
