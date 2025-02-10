@@ -1,16 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import serviceImg1 from "../../img/service-bg-1.png";
-import serviceImg2 from "../../img/service-bg-2.jpg";
 import serviceImg3 from "../../components/assets/demo.jpg";
-import serviceIcon1 from "../../img/service-icon-1.png";
 import serviceIcon2 from "../../img/service-icon-2.png";
 import serviceIcon3 from "../../img/service-icon-3.png";
 import targetIcon from "../../components/assets/focus (1).png";
 import identification from "../../components/assets/document.png";
-import residential from "../../components/assets/residential.png";
-import villaIcon from "../../components/assets/villa.png";
 import Check from "../../components/assets/check (1).png";
 import Management from "../../components/assets/management (1).png";
 import Plant from "../../components/assets/plant-1-new.png";
@@ -25,12 +20,6 @@ const ServiceSection = () => {
     <section className="service-area ">
       <div
         className="service-area-container"
-        // style={{
-        //   justifyContent: "center",
-        //   alignItems: "center",
-        //   margin: "auto",
-        //   display: "flex",
-        // }}
         onContextMenu={disableContextMenu}
       >
         <span style={{ marginRight: "15px", color: "#c6993e" }}>
