@@ -9,6 +9,8 @@ const AmenitiesCard = ({ amenities, projectType }) => {
       ? "520px"
       : projectType === "sylvan-retreat"
       ? "465px"
+      : projectType === "plumeria"
+      ? "445px"
       : "500px";
   return (
     <section

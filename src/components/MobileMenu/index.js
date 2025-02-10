@@ -32,6 +32,11 @@ const MobileMenu = () => {
           title: "Eco-Nest",
           link: "/eco-nest",
         },
+        {
+          id: 33,
+          title: "Plumeria",
+          link: "/plumeria",
+        },
       ],
     },
     {
@@ -55,7 +60,7 @@ const MobileMenu = () => {
       try {
         const response = await fetch(
           "https://servermain.rajavrukshagroup.in/getCareerDetails"
-          // "http://localhost:4000/getCareerDetails"
+          // "http://localhost:4010/getCareerDetails"
         );
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -145,4 +150,3 @@ const MobileMenu = () => {
 };
 
 export default MobileMenu;
-

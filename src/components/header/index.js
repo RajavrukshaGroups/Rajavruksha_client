@@ -19,7 +19,7 @@ const Header = () => {
         const response = await fetch(
           "https://servermain.rajavrukshagroup.in/getCareerDetails"
         );
-        // const response = await fetch("http://localhost:4000/getCareerDetails");
+        // const response = await fetch("http://localhost:4010/getCareerDetails");
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -62,6 +62,9 @@ const Header = () => {
                         </li>
                         <li>
                           <Link to="/eco-nest">Eco-nest</Link>
+                        </li>
+                        <li>
+                          <Link to="/plumeria">Plumeria</Link>
                         </li>
                       </ul>
                     </li>

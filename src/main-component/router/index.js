@@ -15,6 +15,7 @@ import ContactPage from "../ContactPage";
 import ErrorPage from "../ErrorPage";
 import ExperienceSection from "../../components/demo/experienceSection.jsx";
 import SylvanRetreat from "../../main-component/projects/sylvanretreat";
+import PlumeriaMain from "../../main-component/projects/plumeria.jsx"
 import Econest from "../projects/eco-nest";
 import JourneySection from "../../components/reactIcons/journeySection.jsx";
 import Status from "../Status/status.jsx";
@@ -65,6 +66,7 @@ const RoutesWithLoader = () => {
         <Route path="/careerDetails/:id" element={<CareerDetails />} />
         <Route path="/sylvan-retreat" element={<SylvanRetreat />} />
         <Route path="/eco-nest" element={<Econest />} />
+        <Route path="/plumeria" element={<PlumeriaMain />} />
         <Route path="/journeySection" element={<JourneySection />} />
         <Route path="/status" element={<Status />} />
         {/* <Route path="/amenities" element={<Amenities />} /> */}

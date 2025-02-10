@@ -1,0 +1,130 @@
+.project-details {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically for better mobile layout */
+  align-items: center;
+  gap: 1.5rem; /* Reduce spacing on smaller screens */
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.project-name {
+  font-size: 1.8rem; /* Adjust font size for smaller screens */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project-desc {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.project-desc p {
+  font-size: 1rem;
+  color: black;
+  text-align: left;
+  width: 100%;
+}
+
+.location-benefits {
+  width: 100%;
+  text-align: left;
+}
+
+.location-benefits p {
+  font-weight: bold;
+}
+
+.location-benefits ul {
+  padding-left: 1rem;
+}
+
+.plumeria-amenities {
+  width: 100%;
+}
+
+.demo-layout {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.plumeria-plan-map {
+  display: flex;
+  align-items: center;
+  margin-top: -3rem;
+}
+
+.plumeria-route img {
+  width: 100%;
+  height: auto;
+}
+.plumeria-route {
+  margin-right: 2rem;
+}
+
+@media (max-width: 430px) {
+  .project-desc {
+    display: block;
+  }
+  .location-benefits {
+    display: block;
+  }
+  .plumeria-amenities {
+    display: block;
+    flex: none !important;
+    max-width: 90% !important;
+    margin-left: 20px !important;
+    margin-top: -4rem !important;
+  }
+  .plumeria-plan-map {
+    display: block;
+    margin-top: -2rem;
+    margin: 1rem;
+  }
+  .demo-layout {
+    width: 83%;
+  }
+  .plumeria-route {
+    width: 85%;
+    margin: auto;
+  }
+  .plumeria-contact {
+    margin-left: 0.1rem !important;
+  }
+  .benefits {
+    margin-top: -25px !important;
+  }
+}
+
+@media (min-width: 1390px) and (max-width: 1600px) {
+  .plumeria-amenities {
+    margin-right: -6rem;
+  }
+  .plumeria-plan-map {
+    max-width: 98% !important;
+  }
+  .demo-layout {
+    padding-right: 8rem !important;
+  }
+}
+
+@media (min-width: 1960px) and (max-width: 2570px) {
+  .project-details {
+    margin-left: 20% !important;
+  }
+  .plumeria-plan-map {
+    margin-right: 5rem;
+  }
+  .demo-layout {
+    width: 90%;
+  }
+  .plumeria-route {
+    margin-right: 21rem;
+  }
+  .project-desc {
+    margin-left: -5rem;
+  }
+}
