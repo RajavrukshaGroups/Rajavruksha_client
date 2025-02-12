@@ -77,6 +77,7 @@ function Sylvanretreats() {
           pagesub={"Project Details"}
           pageImg={bg}
           project_page_syl={"Sylvan-Retreat"}
+          PageTitle="Sylvan-Retreat"
         />
         <Sylvanretreat />
         <ContactUs projectTitle={"Sylvan-Retreat"} />

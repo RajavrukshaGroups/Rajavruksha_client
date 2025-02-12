@@ -6,6 +6,7 @@ import Header from "../../components/header";
 import bg from "../../components/assets/plumeria3.webp";
 // import Amenities from "../../components/Amenities/amenities";
 import Plumeria_map from "../../components/assets/plumeria_map.jpg";
+// import RollingGallery from "../../utils/plumeriaGallery/plumeriagallery";
 // import ContactUs from "../../components/Projects/contactform";
 // import ThreeDCardDemo from "./plumeria3dDemo"
 import { Helmet } from "react-helmet";
@@ -13,6 +14,9 @@ import "../AboutPage/loading.css";
 import "./pro-plumeria.css";
 import Loader from "../../components/Loader/loader";
 import { updateMetaTags } from "../../utils/updateMetaTags";
+// import PlumeriaAmenities from "../../components/Amenities/plumeria";
+import FadeContent from "../../utils/FadeContent";
+// import PlumeriaOveriew from "../../components/overview/plumeria/plumeriaOverview";
 
 const PageTitle = React.lazy(() => import("../../components/pagetitle"));
 const Plumeria = React.lazy(() => import("../../components/Projects/plumeria"));
@@ -24,6 +28,9 @@ const Amenities = React.lazy(() =>
   import("../../components/Amenities/amenities")
 );
 const ThreeDCardDemo = React.lazy(() => import("./plumeria3dDemo"));
+const RollingGallery=React.lazy(()=>import("../../utils/plumeriaGallery/plumeriagallery"));
+const PlumeriaAmenities=React.lazy(()=>import("../../components/Amenities/plumeria"));
+const PlumeriaOveriew=React.lazy(()=>import("../../components/overview/plumeria/plumeriaOverview"));
 const PlumeriaMain = () => {
   const title = "Plumeria - Residential Plots in North Bangalore";
   const description =
@@ -78,7 +85,16 @@ const PlumeriaMain = () => {
           PageTitle="Plumeria"
         />
         <div>
-          <h1 className="project-name">Welcome To Plumeria</h1>
+          <h1 className="project-name">
+            <FadeContent
+              blur={true}
+              duration={1000}
+              easing="ease-out"
+              initialOpacity={0}
+            >
+              Exclusive Premium Plots
+            </FadeContent>
+          </h1>
         </div>
         <div className="project-details">
           <div className="plumeria-layout">
@@ -91,9 +107,9 @@ const PlumeriaMain = () => {
                 a vibrant community, Plumeria provides the perfect balance of
                 luxury and tranquility, making it an ideal place to call home.
               </p>
-              <div className="location-benefits">
+              {/* <div className="location-benefits">
                 <p class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                  Benefits of the location:
+                  Why Plumeria:
                 </p>
                 <ul class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
                   <li class="flex items-center mb-2">
@@ -169,29 +185,29 @@ const PlumeriaMain = () => {
                     Recreational spots like parks and entertainment zones.{" "}
                   </li>
                 </ul>
-              </div>
+              </div> */}
+              <PlumeriaOveriew />
             </div>
 
-            <div className="plumeria-amenities">
+            {/* <div className="plumeria-amenities">
               <Amenities amenities={plumeriaAmenities} projectType="plumeria" />
-            </div>
+            </div> */}
+            {/* <div className="plumeria-overview">Project Overview</div> */}
           </div>
+        </div>
+        <div>
+          <PlumeriaAmenities />
         </div>
         <div className="plumeria-plan-map">
           <div className="demo-layout">
-            <ThreeDCardDemo />
-          </div>
-          <div className="plumeria-route">
-            <img src={Plumeria_map} alt="plumeria_map" />
+            {/* <ThreeDCardDemo /> */}
+            <RollingGallery autoplay={true} pauseOnHover={true} />
           </div>
         </div>
         <Plumeria />
-        <div className="row">
-          <div
-            className="plumeria-contact col-lg-12 col-sm-12 mb-5"
-            style={{ marginLeft: "20%" }}
-          >
-            <ContactUs />
+        <div className="plumeria-contact-map row">
+          <div className="plumeria-contact col-lg-12 col-sm-12 mb-5">
+            <ContactUs projectPlumeria={"Plumeria"} />
           </div>
         </div>
         <Footer />

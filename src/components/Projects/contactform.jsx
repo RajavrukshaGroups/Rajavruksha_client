@@ -3,7 +3,8 @@ import "../../components/Projects/contactform.css";
 import ContactForm from "../../components/ContactFrom";
 import Map from "../../components/assets/Map.jpg";
 import EcoNestBarScan from "../../components/assets/Econest_Location.png";
-const ContactUs = ({ projectTitle, page, contact_page_title }) => {
+import Plumeria from "../../components/assets/plumeria_map.jpg"
+const ContactUs = ({ projectTitle, page, contact_page_title,projectPlumeria }) => {
   const status = "project";
   const disableContextMenu = (e) => {
     e.preventDefault();
@@ -27,6 +28,18 @@ const ContactUs = ({ projectTitle, page, contact_page_title }) => {
               <div className="contact-image-container">
                 <img
                   src={Map}
+                  alt="Contact"
+                  className="contact-image"
+                  onContextMenu={disableContextMenu}
+                />
+              </div>
+            </div>
+          )}
+           {!!projectPlumeria && (
+            <div className="col-lg-6 col-sm-6">
+              <div className="contact-image-container">
+                <img
+                  src={Plumeria}
                   alt="Contact"
                   className="contact-image"
                   onContextMenu={disableContextMenu}

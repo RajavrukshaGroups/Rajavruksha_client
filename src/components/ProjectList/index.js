@@ -4,6 +4,9 @@ import ecoNext from "../../components/assets/ecoproject.jpg";
 import SylRetreatImg from "../../components/assets/Sylvan_retreat_single_banner_img.webp";
 import EcoNestImg from "../../components/assets/eco-nest_pro_det_img.webp";
 import PlumeriaImg from "../../components/assets/plumeria1.webp";
+import Sylvan_logo from "../../components/assets/Sylvan-official-logo.png";
+import EcoNest_logo from "../../components/assets/Econest-official-logo.png";
+import Plumeria_logo from "../../components/assets/Plumeria_text.png";
 import "./style.css";
 
 const ProjectList = () => {
@@ -47,9 +50,7 @@ const ProjectList = () => {
                       borderRadius: "8px",
                     }}
                   />
-                  <h3 className="syl-retreat-title text-capitalize">
-                    Sylvan Retreat
-                  </h3>
+                  <img src={Sylvan_logo} alt="Sylvan Retreat Logo" className="project-logo" />
                   <p>Nature's Beauty Celebration</p>
                   <div className="project-zoom">
                     <svg
@@ -89,7 +90,7 @@ const ProjectList = () => {
                         borderRadius: "8px",
                       }}
                     />
-                    <h3>Eco Nest</h3>
+                    <img src={EcoNest_logo} alt="Eco Nest Logo" className="econest-project-logo" />
                     <p>Eco Acres </p>
                     <div className="project-zoom">
                       <svg
@@ -130,7 +131,7 @@ const ProjectList = () => {
                         borderRadius: "8px",
                       }}
                     />
-                    <h3>Plumeria</h3>
+                    <img src={Plumeria_logo} alt="Plumeria Logo" className="plumeria-project-logo" />
                     <p>Residential Plots </p>
                     <div className="project-zoom">
                       <svg

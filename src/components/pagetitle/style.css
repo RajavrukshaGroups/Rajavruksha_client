@@ -53,6 +53,41 @@
   padding-left: 60px;
 }
 
+/* .plumeria-text-img{
+  height: 15px;
+  width: 15px;
+} */
+
+.plum-img-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 100px;
+  margin: auto;
+  margin-top: -3rem;
+}
+
+.sylvan-img-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 100px;
+  margin: auto;
+  margin-top: -3rem;
+}
+
+.econest-img-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 100px;
+  margin: auto;
+  margin-top: -3rem;
+}
+
 .breadcrumb-inn h1 {
   color: #fff;
   font-size: 75px;
@@ -127,6 +162,16 @@
     text-align: center;
     margin-left: -60px;
     display: block;
+  }
+  .plum-img-text {
+    margin-left: -60px;
+  }
+  .sylvan-img-text {
+    margin-left: -60px;
+    width: 362px;
+  }
+  .econest-img-text{
+    width: 200px;
   }
 }
 @media (max-width: 991px) {
