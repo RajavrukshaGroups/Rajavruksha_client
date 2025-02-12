@@ -4,7 +4,7 @@
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   color: black;
-  font-size: 18px;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
 }
@@ -67,5 +67,8 @@
   .key-highlight-comp {
     width: 85% !important;
     margin-left: 2rem;
+  }
+  .key-highlights {
+    margin-top: -5rem;
   }
 }

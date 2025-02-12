@@ -8,7 +8,7 @@
 }
 
 .project-name {
-  font-size: 1.8rem; /* Adjust font size for smaller screens */
+  font-size: 2.5rem; /* Adjust font size for smaller screens */
   font-weight: bold;
   text-align: center;
   margin-bottom: 1rem;
@@ -20,6 +20,7 @@
   flex-direction: column;
   align-items: center;
   padding: 1rem;
+  margin-top: -3rem;
 }
 
 .project-desc p {
@@ -45,6 +46,10 @@
 .plumeria-amenities {
   width: 100%;
 }
+
+/* .plumeria-overview{
+  width: 100%;
+} */
 
 .demo-layout {
   width: 100%;
@@ -96,6 +101,12 @@
   }
   .benefits {
     margin-top: -25px !important;
+  }
+  .plumeria-layout {
+    margin-top: -3rem;
+  }
+  .project-desc p {
+    margin-top: 2rem;
   }
 }
 

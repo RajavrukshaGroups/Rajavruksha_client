@@ -6,6 +6,33 @@
   margin-right: 7.5rem;
 }
 
+.project-logo {
+  position: absolute;
+  top: 25px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  width: 150px; /* Adjust as needed */
+  height: auto;
+  z-index: 2;
+}
+.econest-project-logo{
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  width: 100px; /* Adjust as needed */
+  height: auto;
+  z-index: 2;
+}
+
+.plumeria-project-logo{
+  position: absolute;
+  top: -25px; /* Adjust as needed */
+  left: 20px; /* Adjust as needed */
+  width: 150px; /* Adjust as needed */
+  height: auto;
+  z-index: 2;
+}
+
+
 .plumeria{
   margin-left: 15rem;
 }
