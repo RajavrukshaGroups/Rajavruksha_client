@@ -1,22 +1,12 @@
 import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
-// import PageTitle from "../../components/pagetitle";
-// import Plumeria from "../../components/Projects/plumeria";
-// import Footer from "../../components/footer/index";
 import bg from "../../components/assets/plumeria3.webp";
-// import Amenities from "../../components/Amenities/amenities";
-import Plumeria_map from "../../components/assets/plumeria_map.jpg";
-// import RollingGallery from "../../utils/plumeriaGallery/plumeriagallery";
-// import ContactUs from "../../components/Projects/contactform";
-// import ThreeDCardDemo from "./plumeria3dDemo"
 import { Helmet } from "react-helmet";
 import "../AboutPage/loading.css";
 import "./pro-plumeria.css";
 import Loader from "../../components/Loader/loader";
 import { updateMetaTags } from "../../utils/updateMetaTags";
-// import PlumeriaAmenities from "../../components/Amenities/plumeria";
 import FadeContent from "../../utils/FadeContent";
-// import PlumeriaOveriew from "../../components/overview/plumeria/plumeriaOverview";
 
 const PageTitle = React.lazy(() => import("../../components/pagetitle"));
 const Plumeria = React.lazy(() => import("../../components/Projects/plumeria"));
