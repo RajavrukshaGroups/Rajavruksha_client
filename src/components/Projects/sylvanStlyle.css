@@ -7,6 +7,14 @@
   padding: 40px 0;
 }
 
+.syl-new-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 2rem;
+}
+
 .yt-video {
   margin-top: 3rem !important;
   position: relative;

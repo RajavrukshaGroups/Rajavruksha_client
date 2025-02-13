@@ -67,19 +67,6 @@ const items = [
     icon: <IconBusStop className="h-4 w-4 text-neutral-500" />,
   },
   {
-    title: "Growing ITER/SEZ Sector",
-    description:
-      "Increases demand for the residential properties in the region.",
-    header: (
-      <img
-        src={sez}
-        className="object-cover rounded-xl"
-        style={{ height: "150px" }}
-      />
-    ),
-    icon: <IconReceiptRupee className="h-4 w-4 text-neutral-500" />,
-  },
-  {
     title: "Educational Institutions",
     description:
       "Proximus to prestigious engineering and management institutions.",
@@ -91,6 +78,19 @@ const items = [
       />
     ),
     icon: <IconSchool className="h-4 w-4 text-neutral-500" />,
+  },
+  {
+    title: "Growing ITER/SEZ Sector",
+    description:
+      "Increases demand for residential properties in the region. For example, Foxconn is setting up an iPhone assembly plant (Project Elephant) in Karnataka, located in Doddaballapur.",
+    header: (
+      <img
+        src={sez}
+        className="object-cover rounded-xl"
+        style={{ height: "150px" }}
+      />
+    ),
+    icon: <IconReceiptRupee className="h-4 w-4 text-neutral-500" />,
   },
   {
     title: "KIADB Industrial Sectors",

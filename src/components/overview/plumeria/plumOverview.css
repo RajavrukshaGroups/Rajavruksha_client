@@ -1,6 +1,6 @@
 .plumeria-overview {
   text-align: center;
-  padding: 50px 20px;
+  padding: 3rem 1rem; /* Using rem for padding */
   font-family: "Arial", sans-serif;
 }
 
@@ -8,22 +8,22 @@
   font-size: 2rem;
   font-weight: bold;
   color: #333;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem; /* Using rem for margin */
   font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 0.05rem; /* Using rem for letter-spacing */
 }
 
 .overview-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 2rem; /* Using rem for gap */
   flex-wrap: wrap;
 }
 
 .overview-box {
-  width: 30%;
+  width: calc(33.333% - 2rem); /* Adjust width to account for the gap */
   min-width: 280px;
-  padding: 20px;
+  padding: 1.25rem; /* Using rem for padding */
   background: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -31,48 +31,84 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
 }
 
 .overview-box h3 {
-  font-size: 20px;
+  font-size: 1.25rem; /* Using rem for font size */
   font-weight: bold;
   color: #a38b5b;
 }
 
 .overview-box p {
-  font-size: 16px;
+  font-size: 1rem; /* Using rem for font size */
   color: #555;
-  line-height: 1.5;
-  flex-grow: 1;
+  line-height: 1.6; /* Slightly increased line height for better readability */
+  margin: 1rem 0; /* Adding margin for spacing */
+  text-align: center;
 }
 
 .overview-bottom {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Ensures both image and text are centered */
+  align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 0.5rem; /* Using rem for gap */
   margin-top: auto;
 }
 
 .overview-icon {
-  width: 50px;
-  height: 50px;
+  width: 3.125rem; /* Using rem for dimensions */
+  height: 3.125rem;
 }
 
 .icon-text {
-  font-size: 14px;
+  font-size: 0.875rem; /* Using rem for font size */
   font-weight: bold;
   color: #222;
-  text-align: center; /* Ensure text remains centered */
-  width: 100%; /* Makes sure text doesn't shrink */
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .overview-box {
+    width: calc(50% - 2rem); /* Two columns for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .plumeria-overview {
+    padding: 2rem 1rem;
+  }
+
+  .plumeria-title {
+    font-size: 1.75rem;
+  }
+
+  .overview-box {
+    width: 100%; /* Full width for mobile */
+    min-width: 0;
+  }
 }
 
 @media (max-width: 430px) {
   .location-plum {
-    letter-spacing: -0.92px;
+    letter-spacing: -0.02rem; /* Using rem for letter-spacing */
+  }
+
+  .plumeria-title {
+    font-size: 1.5rem;
+  }
+
+  .overview-box h3 {
+    font-size: 1.1rem;
+  }
+
+  .overview-box p {
+    font-size: 0.9rem;
+  }
+
+  .icon-text {
+    font-size: 0.8rem;
   }
 }

@@ -72,7 +72,7 @@ class Hero extends Component {
                       </Link>
                     </div>
                   </div>
-                  <div className="video-main">
+                  {/* <div className="video-main">
                     <div className="promo-video">
                       <div className="waves-block">
                         <div className="waves wave-1" />
@@ -81,7 +81,7 @@ class Hero extends Component {
                       </div>
                     </div>
                     <VideoModal videoId="xz14d8sd7Nc" />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -108,7 +108,7 @@ class Hero extends Component {
                       </Link>
                     </div>
                   </div>
-                  <div className="video-main">
+                  {/* <div className="video-main">
                     <div className="promo-video">
                       <div className="waves-block">
                         <div className="waves wave-1" />
@@ -117,7 +117,7 @@ class Hero extends Component {
                       </div>
                     </div>
                     <VideoModal videoId="xz14d8sd7Nc" />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

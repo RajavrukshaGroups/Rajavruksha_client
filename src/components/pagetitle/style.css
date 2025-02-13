@@ -11,6 +11,23 @@
   overflow: hidden;
 }
 
+/* Ensuring uniform size for all logos */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;  /* Ensure same width */
+  height: 100px; /* Ensure same height */
+  margin: auto;
+  margin-top: -3rem;
+}
+
+.logo-img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures the image fits within the box */
+}
+
 .breadcrumb-new {
   position: relative;
   padding-top: 152px;
@@ -86,6 +103,43 @@
   height: 100px;
   margin: auto;
   margin-top: -3rem;
+}
+
+/* Arrow Buttons */
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2; /* Ensure buttons are above the background */
+  transition: background-color 0.3s ease;
+}
+
+.arrow-button:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Slightly less transparent on hover */
+}
+
+.left-arrow {
+  left: 20px; /* Position left arrow */
+}
+
+.right-arrow {
+  right: 20px; /* Position right arrow */
 }
 
 .breadcrumb-inn h1 {
@@ -170,7 +224,7 @@
     margin-left: -60px;
     width: 362px;
   }
-  .econest-img-text{
+  .econest-img-text {
     width: 200px;
   }
 }

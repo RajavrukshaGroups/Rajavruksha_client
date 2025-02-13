@@ -5,6 +5,9 @@ import pipeline from "../../components/assets/pipeline.png";
 import playground from "../../components/assets/playground.png";
 import road from "../../components/assets/road.png";
 import streetlight from "../../components/assets/street-light.png";
+import sewage from "../../components/assets/sewage.png";
+import arch from "../../components/assets/arch.png";
+import electricity from "../../components/assets/und-electricity.png";
 import "./plumeriaAmenities.css"; // Import the CSS file
 import VariableProximity from "../../utils/VariableProximity";
 
@@ -18,6 +21,9 @@ const PlumeriaAmenities = () => {
     { icon: playground, text: "Play Area" },
     { icon: park, text: "Park" },
     { icon: streetlight, text: "Street Light" },
+    { icon: sewage, text: "Sewage Line" },
+    { icon: arch, text: "Arch" },
+    { icon: electricity, text: "Underground Electricity" },
   ];
 
   return (
