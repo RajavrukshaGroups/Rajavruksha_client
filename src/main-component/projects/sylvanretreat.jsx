@@ -1,6 +1,7 @@
 import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
-import bg from "../../components/assets/Sylan_retreat_new_Banner.webp";
+import bgImg1 from "../../components/assets/Sylan_retreat_new_Banner.webp";
+import bgImg2 from "../../components/assets/syl-retreat-home-page.jpg";
 import { Helmet } from "react-helmet";
 import { updateMetaTags } from "../../utils/updateMetaTags";
 import "../AboutPage/loading.css";
@@ -75,9 +76,10 @@ function Sylvanretreats() {
       >
         <PageTitle
           pagesub={"Project Details"}
-          pageImg={bg}
           project_page_syl={"Sylvan-Retreat"}
           PageTitle="Sylvan-Retreat"
+          bgImg1={bgImg1}
+          bgImg2={bgImg2}
         />
         <Sylvanretreat />
         <ContactUs projectTitle={"Sylvan-Retreat"} />

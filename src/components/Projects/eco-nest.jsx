@@ -4,6 +4,7 @@ import Amenities from "../../components/Amenities/amenities";
 import "../../components/Projects/eco-nest.css";
 import BlurText from "../../utils/BlurText";
 import { ThreeDCardDemo } from "../3d-Cards/ThreeDCardDemo";
+import FadeContent from "../../utils/FadeContent";
 
 function EcoNexts() {
   const handleAnimationComplete = () => {
@@ -24,6 +25,16 @@ function EcoNexts() {
     " KUDA’s nod, ensuring dreams aren’t lost.";
   return (
     <div className="project-details-area pt-4">
+      <h1 className="eco-new-title">
+        <FadeContent
+          blur={true}
+          duration={1000}
+          easing="ease-out"
+          initialOpacity={0}
+        >
+          Premium Plot with Glorious Panoramic Views in Coorg
+        </FadeContent>
+      </h1>
       <div className="container">
         <div className="row">
           <div

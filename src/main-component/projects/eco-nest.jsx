@@ -1,6 +1,7 @@
 import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
-import bg from "../../components/assets/eco_nest_img.webp";
+import bgImg1 from "../../components/assets/eco_nest_img.jpg";
+import bgImg2 from "../../components/assets/layer5.jpg";
 import { Helmet } from "react-helmet";
 import { updateMetaTags } from "../../utils/updateMetaTags";
 import "../AboutPage/loading.css";
@@ -72,7 +73,8 @@ function Econext() {
         <PageTitle
           PageTitle={"Eco-nest"}
           pagesub={"Project Details"}
-          pageImg={bg}
+          bgImg1={bgImg1}
+          bgImg2={bgImg2}
         />
         <EcoNexts />
         <div className="flex-container">

@@ -1,12 +1,15 @@
 import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
 import bg from "../../components/assets/plumeria3.webp";
+import bgImg1 from "../../components/assets/plumeria3.webp";
+import bgImg2 from "../../components/assets/plumeria1.webp";
 import { Helmet } from "react-helmet";
 import "../AboutPage/loading.css";
 import "./pro-plumeria.css";
 import Loader from "../../components/Loader/loader";
 import { updateMetaTags } from "../../utils/updateMetaTags";
 import FadeContent from "../../utils/FadeContent";
+import { InfiniteMovingCardsDemo } from "../../utils/plumeriaGallery/PlumeriaInfiniteGallary";
 
 const PageTitle = React.lazy(() => import("../../components/pagetitle"));
 const Plumeria = React.lazy(() => import("../../components/Projects/plumeria"));
@@ -18,9 +21,15 @@ const Amenities = React.lazy(() =>
   import("../../components/Amenities/amenities")
 );
 const ThreeDCardDemo = React.lazy(() => import("./plumeria3dDemo"));
-const RollingGallery=React.lazy(()=>import("../../utils/plumeriaGallery/plumeriagallery"));
-const PlumeriaAmenities=React.lazy(()=>import("../../components/Amenities/plumeria"));
-const PlumeriaOveriew=React.lazy(()=>import("../../components/overview/plumeria/plumeriaOverview"));
+const RollingGallery = React.lazy(() =>
+  import("../../utils/plumeriaGallery/plumeriagallery")
+);
+const PlumeriaAmenities = React.lazy(() =>
+  import("../../components/Amenities/plumeria")
+);
+const PlumeriaOveriew = React.lazy(() =>
+  import("../../components/overview/plumeria/plumeriaOverview")
+);
 const PlumeriaMain = () => {
   const title = "Plumeria - Residential Plots in North Bangalore";
   const description =
@@ -73,6 +82,9 @@ const PlumeriaMain = () => {
           pagesub={"Project Details"}
           pageImg={bg}
           PageTitle="Plumeria"
+          plumeriaSub="community where life blossoms"
+          bgImg1={bgImg1}
+          bgImg2={bgImg2}
         />
         <div>
           <h1 className="project-name">
@@ -191,7 +203,8 @@ const PlumeriaMain = () => {
         <div className="plumeria-plan-map">
           <div className="demo-layout">
             {/* <ThreeDCardDemo /> */}
-            <RollingGallery autoplay={true} pauseOnHover={true} />
+            {/* <RollingGallery autoplay={true} pauseOnHover={true} /> */}
+            <InfiniteMovingCardsDemo />
           </div>
         </div>
         <Plumeria />

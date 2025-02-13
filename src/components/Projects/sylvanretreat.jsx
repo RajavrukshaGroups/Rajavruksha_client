@@ -9,6 +9,7 @@ import planet_earth from "../../components/assets/planet-earth_syl.png";
 import compliance from "../../components/assets/compliance_syl.png";
 import VariableProximity from "../../utils/VariableProximity";
 import BlurText from "../../utils/BlurText";
+import FadeContent from "../../utils/FadeContent";
 
 function Sylvanretreat() {
   const containerRef = useRef(null);
@@ -27,10 +28,20 @@ function Sylvanretreat() {
 
   return (
     <div className="project-details-area pt-4">
+      <h1 className="syl-new-title">
+        <FadeContent
+          blur={true}
+          duration={1000}
+          easing="ease-out"
+          initialOpacity={0}
+        >
+          Farm Smart with Managed Farm Land
+        </FadeContent>
+      </h1>
       <div className="container">
         <div className="row">
           <div
-            style={{ color: "black"}}
+            style={{ color: "black" }}
             data-aos="fade-right"
             data-aos-delay="200"
             className="col-12"
@@ -42,18 +53,17 @@ function Sylvanretreat() {
             urban life, the project aims to celebrate the beauty of nature.
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12 yt-video">
-          <iframe
-                className="yt-iframe"
-                width="600"
-                height="460"
-                src="https://www.youtube.com/embed/xz14d8sd7Nc?autoplay=1&loop=1&playlist=xz14d8sd7Nc&mute=1"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                >
-              </iframe>
+            <iframe
+              className="yt-iframe"
+              width="600"
+              height="460"
+              src="https://www.youtube.com/embed/xz14d8sd7Nc?autoplay=1&loop=1&playlist=xz14d8sd7Nc&mute=1"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
             {/* <Tour /> */}
           </div>
           <div
