@@ -3,66 +3,111 @@ import "./ourOnGoingProjects.css";
 import React from "react";
 import ShinyText from "../../utils/shinyButtons";
 import FadeContent from "../../utils/FadeContent";
-import Images from "../../components/assets/Sylan retreat_Banner1.webp";
-import { ContainerScroll } from "../ui/container-scroll-animation.jsx";
+import SylImg from "../../components/assets/Sylan retreat_Banner1.webp";
+import PlumeriaImg from "../../components/assets/plumeria_2.webp";
 import { MovingBorderDemo } from "../MovingBorder/MovingBorderDemo";
+import { ContainerScroll } from "../ui/container-scroll-animation";
 
 const OngoingProjects = () => {
   return (
     <div className="projects-container-new -mt-40 responsive">
       <div className="flex flex-col overflow-hidden animate-threeD-container">
-        <ContainerScroll
-          titleComponent={
-            <>
-              <FadeContent
-                blur={true}
-                duration={600}
-                easing="ease-out"
-                initialOpacity={0}
-              >
-                <h1 className="projects-title">Our Ongoing Projects</h1>
-              </FadeContent>
-            </>
-          }
-        >
-          <img
-            src={Images}
-            alt="hero"
-            height={720}
-            width={1400}
-            className="mx-auto rounded-2xl object-cover h-full object-left-top animate-threeD"
-            draggable={false}
-          />
-        </ContainerScroll>
-        <FadeContent
-          blur={true}
-          duration={900}
-          easing="ease-out"
-          initialOpacity={0}
-        >
-          <h2 className="project-subtitle syl-retreat-title justify-center m-auto flex">
-            Sylvan Retreat
-          </h2>
-        </FadeContent>
-        <p className="project-description justify-center m-auto flex mt-3">
-          Farmland is not just a dream; it's a sound financial investment with
-          growing demand in the market.
-        </p>
+        <h1 className="projects-title">Our Ongoing Projects</h1>
       </div>
-      <div className="project-content mt-3">
-        <Link to="/sylvan-retreat">
-          <button className="project-button">
-            <MovingBorderDemo>
-              <ShinyText
-                text="Read More"
-                disabled={false}
-                speed={3}
-                className="project-button-wrapper"
-                gradient="linear-gradient(120deg, orange 40%, #ff8c00 50%, #ff8c00 60%)"
+      <div className="projects-wrapper">
+        <div className="project-card">
+          {/* <div className="project-image-container">
+            <img src={SylImg} alt="Sylvan Retreat" className="project-image" />
+          </div> */}
+          <div className="flex flex-col overflow-hidden">
+            <ContainerScroll
+              titleComponent={
+                <>
+                  {/* <h1 className="project-subtitle text-4xl font-semibold text-black dark:text-white">
+                    Sylvan Retreat
+                  </h1> */}
+                </>
+              }
+            >
+              <img
+                src={SylImg}
+                alt="hero"
+                height={600}
+                width={1400}
+                className="mx-auto rounded-2xl object-cover h-full object-left-top"
+                draggable={false}
               />
-            </MovingBorderDemo>
-          </button>
-        </Link>
+            </ContainerScroll>
+          </div>
+          <div className="projects-content">
+            <FadeContent
+              blur={true}
+              duration={900}
+              easing="ease-out"
+              initialOpacity={0}
+            >
+              <h2 className="project-subtitle syl-retreat-title">Sylvan Retreat</h2>
+            </FadeContent>
+            <p className="project-description">
+              Farmland is not just a dream; it's a sound financial investment
+              with growing demand in the market.
+            </p>
+            <Link to="/sylvan-retreat">
+              <button className="project-button">
+                <MovingBorderDemo>
+                  <ShinyText text="Read More" disabled={false} speed={3} />
+                </MovingBorderDemo>
+              </button>
+            </Link>
+          </div>
+        </div>
+
+        <div className="project-card">
+          {/* <div className="project-image-container">
+            <img src={PlumeriaImg} alt="Plumeria" className="project-image" />
+          </div> */}
+          <div className="flex flex-col overflow-hidden">
+            <ContainerScroll
+              titleComponent={
+                <>
+                  {/* <h1 className="project-subtitle text-4xl font-semibold text-black dark:text-white">
+                    Sylvan Retreat
+                  </h1> */}
+                </>
+              }
+            >
+              <img
+                src={PlumeriaImg}
+                alt="hero"
+                height={600}
+                width={1400}
+                className="mx-auto rounded-2xl object-cover h-full object-left-top"
+                draggable={false}
+              />
+            </ContainerScroll>
+          </div>
+          <div className="projects-content">
+            <FadeContent
+              blur={true}
+              duration={900}
+              easing="ease-out"
+              initialOpacity={0}
+            >
+              <h2 className="project-subtitle">Plumeria</h2>
+            </FadeContent>
+            <p className="project-description">
+              An exclusive premium residential project designed for peaceful living with
+              modern amenities.
+            </p>
+            <Link to="/plumeria">
+              <button className="project-button">
+                <MovingBorderDemo>
+                  <ShinyText text="Read More" disabled={false} speed={3} />
+                </MovingBorderDemo>
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
