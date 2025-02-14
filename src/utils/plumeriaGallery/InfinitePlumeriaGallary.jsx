@@ -66,6 +66,7 @@ export const InfiniteMovingCards = ({
         "scroller relative z-20  max-w-7xl overflow-hidden",
         className
       )}
+      style={{maxWidth:"inherit"}}
     >
       <ul
         ref={scrollerRef}

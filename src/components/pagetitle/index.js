@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import FadeContent from "../../utils/FadeContent";
-import Plumeria_logo from "../../components/assets/Plumeria_new_logo.png";
+import Plumeria_logo from "../../components/assets/Plumeria_upd_new_logo.png";
 import plumeria_kannada_logo from "../../components/assets/Plumeria_Kannada_Logo.png";
 import Sylvan_logo from "../../components/assets/Sylvan-official-logo.png";
 import sylvan_kannada_logo from "../../components/assets/Sylvan_Retreat_Kannada_Logo.png";
@@ -26,18 +26,18 @@ const PageTitle = (props) => {
       return () => clearInterval(interval);
     }
   }, [props.PageTitle]);
-  // Function to handle image switching
-  const handleImageChange = (direction) => {
-    if (direction === "next") {
-      setCurrentImage(
-        currentImage === props.bgImg1 ? props.bgImg2 : props.bgImg1
-      );
-    } else if (direction === "prev") {
-      setCurrentImage(
-        currentImage === props.bgImg1 ? props.bgImg2 : props.bgImg1
-      );
+
+  useEffect(() => {
+    if (props.bgImg1 && props.bgImg2) {
+      const interval = setInterval(() => {
+        setCurrentImage((prev) =>
+          prev === props.bgImg1 ? props.bgImg2 : props.bgImg1
+        );
+      }, 3000);
+      return () => clearInterval(interval);
     }
-  };
+  }, [props.bgImg1, props.bgImg2]);
+  // Function to handle image switching
 
   return (
     <section
@@ -51,23 +51,6 @@ const PageTitle = (props) => {
       }}
     >
       {/* Render buttons only if both bgImg1 and bgImg2 exist */}
-      {props.bgImg1 && props.bgImg2 && (
-        <>
-          <button
-            className="arrow-button left-arrow"
-            onClick={() => handleImageChange("prev")}
-          >
-            &larr;
-          </button>
-
-          <button
-            className="arrow-button right-arrow"
-            onClick={() => handleImageChange("next")}
-          >
-            &rarr;
-          </button>
-        </>
-      )}
 
       <div className="container">
         <div className="row">
