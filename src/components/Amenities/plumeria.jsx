@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { motion } from "framer-motion"; // Import Framer Motion
 import cctv from "../../components/assets/cctv-camera.png";
 import park from "../../components/assets/park.png";
 import pipeline from "../../components/assets/pipeline.png";
@@ -27,8 +28,18 @@ const PlumeriaAmenities = () => {
   ];
 
   return (
-    <div className="amenities-container">
-      <h1 className="amenities-headline">
+    <motion.div 
+      className="amenities-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      <motion.h1 
+        className="amenities-headline"
+        initial={{ y: -30, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         <div ref={containerRef} style={{ position: "relative" }}>
           <VariableProximity
             label={"Amenities"}
@@ -40,20 +51,28 @@ const PlumeriaAmenities = () => {
             falloff="linear"
           />
         </div>
-      </h1>
+      </motion.h1>
       <div className="amenities-grid">
         {amenities.map((amenity, index) => (
-          <div key={index} className="amenity-card">
+          <motion.div
+            key={index}
+            className="amenity-card"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true }} // Ensures animation runs only once on scroll
+            whileHover={{ scale: 1.05 }} // Small hover effect
+          >
             <img
               src={amenity.icon}
               alt={amenity.text}
               className="amenity-icon"
             />
             <p className="amenity-text">{amenity.text}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
