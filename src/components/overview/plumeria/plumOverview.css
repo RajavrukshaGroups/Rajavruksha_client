@@ -112,3 +112,17 @@
     font-size: 0.8rem;
   }
 }
+
+@media (min-width: 1560px) {
+  .plumeria-title {
+    display: flex;
+    justify-content: center;
+    margin-left: -21rem;
+  }
+  .overview-container {
+    margin-left: -24rem;
+  }
+  /* .project-desc p{
+    margin-left: -12rem;
+  } */
+}
