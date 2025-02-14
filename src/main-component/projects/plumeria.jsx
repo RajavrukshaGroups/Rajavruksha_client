@@ -200,13 +200,17 @@ const PlumeriaMain = () => {
         <div>
           <PlumeriaAmenities />
         </div>
-        <div className="plumeria-plan-map">
-          <div className="demo-layout">
-            {/* <ThreeDCardDemo /> */}
-            {/* <RollingGallery autoplay={true} pauseOnHover={true} /> */}
-            <InfiniteMovingCardsDemo />
-          </div>
+        <div className="new-gal-plumeria">
+          <InfiniteMovingCardsDemo />
         </div>
+
+        {/* <div className="plumeria-plan-map">
+          <div className="demo-layout">
+            <ThreeDCardDemo />
+            <RollingGallery autoplay={true} pauseOnHover={true} />
+            <InfiniteMovingCardsDemo />
+          </div>       
+        </div> */}
         <Plumeria />
         <div className="plumeria-contact-map row">
           <div className="plumeria-contact col-lg-12 col-sm-12 mb-5">
