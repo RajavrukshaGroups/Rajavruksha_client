@@ -31,7 +31,7 @@ export const ContainerScroll = ({ titleComponent, children }) => {
 
   return (
     <div
-      className="h-[50rem] flex items-center justify-center relative p-2 md:p-10 mb-[-180px] md:mb-[-130px]"
+      className="h-[35rem] flex items-center justify-center relative p-4 md:p-6 mb-[-100px] md:mb-[-70px]"
       ref={containerRef}
     >
       <div
@@ -68,10 +68,9 @@ export const Card = ({ rotate, scale, children }) => {
       style={{
         rotateX: rotate,
         scale,
-        boxShadow:
-          "0 0 #0000004d, 0 0px 2px #0000004a, 0 0px 0px #00000042, 0 4px 40px #00000026, 0 9px 0px #0000000a, 0 0px 0px #00000003",
+        marginTop: "-10rem",
       }}
-      className="syl-retreat max-w-3xl -mt-5 mx-auto h-[10rem] md:h-[25rem] sm:h-[500px] w-full border-4 border-[#6C6C6C] p-2 md:p-6 bg-[#222222] rounded-[30px] shadow-2xl"
+      className="syl-retreat max-w-3xl -mt-2 mx-auto h-[15rem] md:h-[22rem] sm:h-[400px] w-full border-4 border-[#6C6C6C] p-2 md:p-6 bg-[#222222] rounded-[30px]"
     >
       <div className=" h-full w-full overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 md:rounded-2xl md:p-4 ">
         {children}
