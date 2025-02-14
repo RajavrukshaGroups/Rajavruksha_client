@@ -119,6 +119,56 @@
   }
 }
 
+/* Animation for sliding in from left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation for sliding in from right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply animations on hover */
+/* Initial state: Hidden */
+.overview-box {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Odd items slide in from the left */
+.overview-box:nth-child(odd) {
+  transform: translateX(-100px);
+}
+
+/* Even items slide in from the right */
+.overview-box:nth-child(even) {
+  transform: translateX(100px);
+}
+
+/* When the box is in the viewport, it becomes visible */
+.overview-box.visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+
+
 /* Large Screens Fix */
 @media (min-width: 1560px) {
   .plumeria-overview {

@@ -10,7 +10,14 @@ import plumeria_5 from "../../components/assets/plumeria_5.webp";
 import "./plumeriaGal.css";
 import VariableProximity from "../VariableProximity";
 
-export function InfiniteMovingCardsDemo() {
+const galleryImages = [
+  { image: plumeria_1, alt: "Plumeria 1" },
+  { image: plumeria_2, alt: "Plumeria 2" },
+  { image: plumeria_3, alt: "Plumeria 3" },
+  { image: plumeria_4, alt: "Plumeria 4" },
+  { image: plumeria_5, alt: "Plumeria 5" },
+];
+const InfiniteMovingCardsDemo = () => {
   const containerRef = useRef(null);
 
   return (
@@ -35,12 +42,6 @@ export function InfiniteMovingCardsDemo() {
       />
     </div>
   );
-}
+};
 
-const galleryImages = [
-  { image: plumeria_1, alt: "Plumeria 1" },
-  { image: plumeria_2, alt: "Plumeria 2" },
-  { image: plumeria_3, alt: "Plumeria 3" },
-  { image: plumeria_4, alt: "Plumeria 4" },
-  { image: plumeria_5, alt: "Plumeria 5" },
-];
+export default InfiniteMovingCardsDemo;

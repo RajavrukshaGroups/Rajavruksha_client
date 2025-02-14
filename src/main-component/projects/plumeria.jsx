@@ -9,7 +9,7 @@ import "./pro-plumeria.css";
 import Loader from "../../components/Loader/loader";
 import { updateMetaTags } from "../../utils/updateMetaTags";
 import FadeContent from "../../utils/FadeContent";
-import { InfiniteMovingCardsDemo } from "../../utils/plumeriaGallery/PlumeriaInfiniteGallary";
+// import { InfiniteMovingCardsDemo } from "../../utils/plumeriaGallery/PlumeriaInfiniteGallary";
 
 const PageTitle = React.lazy(() => import("../../components/pagetitle"));
 const Plumeria = React.lazy(() => import("../../components/Projects/plumeria"));
@@ -17,6 +17,9 @@ const ContactUs = React.lazy(() =>
   import("../../components/Projects/contactform")
 );
 const Footer = React.lazy(() => import("../../components/footer"));
+const InfiniteMovingCardsDemo = React.lazy(() =>
+  import("../../utils/plumeriaGallery/PlumeriaInfiniteGallary")
+);
 const Amenities = React.lazy(() =>
   import("../../components/Amenities/amenities")
 );
@@ -109,85 +112,6 @@ const PlumeriaMain = () => {
                 a vibrant community, Plumeria provides the perfect balance of
                 luxury and tranquility, making it an ideal place to call home.
               </p>
-              {/* <div className="location-benefits">
-                <p class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
-                  Why Plumeria:
-                </p>
-                <ul class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
-                  <li class="flex items-center mb-2">
-                    <svg
-                      class="benefits w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 shrink-0"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                    </svg>
-                    Well-connected to major highways and transport hubs.
-                  </li>
-                  <li class="flex items-center mb-2">
-                    <svg
-                      class="benefits w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 shrink-0"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                    </svg>
-                    Proximus to schools, hospitals, and shopping centers.{" "}
-                  </li>
-                  <li class="flex items-center mb-2">
-                    <svg
-                      class="benefits w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 shrink-0"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                    </svg>
-                    Eco-friendly surroundings with green landscapes.
-                  </li>
-                  <li class="flex items-center mb-2">
-                    <svg
-                      class="benefits w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 shrink-0"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                    </svg>
-                    Access to public transport for easy commuting.{" "}
-                  </li>
-                  <li class="flex items-center mb-2">
-                    <svg
-                      class="benefits w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 shrink-0"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                    </svg>
-                    High appreciation potential for property investment.{" "}
-                  </li>
-                  <li class="flex items-center mb-2">
-                    <svg
-                      class="benefits w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 shrink-0"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
-                    </svg>
-                    Recreational spots like parks and entertainment zones.{" "}
-                  </li>
-                </ul>
-              </div> */}
               <PlumeriaOveriew />
             </div>
 
