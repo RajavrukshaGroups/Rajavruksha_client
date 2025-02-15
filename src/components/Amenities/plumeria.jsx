@@ -24,17 +24,17 @@ const PlumeriaAmenities = () => {
     { icon: streetlight, text: "Street Light" },
     { icon: sewage, text: "Sewage Line" },
     { icon: arch, text: "Arch" },
-    { icon: electricity, text: "Underground Electricity" },
+    { icon: electricity, text: "Electrical Supply Lines" },
   ];
 
   return (
-    <motion.div 
+    <motion.div
       className="amenities-container"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <motion.h1 
+      <motion.h1
         className="amenities-headline"
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

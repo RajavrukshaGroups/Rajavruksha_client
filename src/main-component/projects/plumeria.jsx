@@ -1,9 +1,4 @@
-import React, {
-  Fragment,
-  Suspense,
-  useEffect,
-  useState,
-} from "react";
+import React, { Fragment, Suspense, useEffect, useState } from "react";
 import Header from "../../components/header";
 import bg from "../../components/assets/plumeria3.webp";
 import bgImg1 from "../../components/assets/plumeria3.webp";
@@ -71,7 +66,7 @@ const PlumeriaMain = () => {
     };
 
     incrementCounts("acres", 2);
-    incrementCounts("plots", 60);
+    incrementCounts("plots", 35);
     incrementCounts("amenities", 10);
   }, []);
   return (
@@ -105,9 +100,9 @@ const PlumeriaMain = () => {
         />
         <div className="plumeria-icons-overview">
           {[
-            { img: land_overview, label: `${counts.acres}+ Acres` },
-            { img: plot_overview, label: `${counts.plots}+ Plots` },
-            { img: amenity_overview, label: `${counts.amenities}+ Amenities` },
+            { img: land_overview, label: `${counts.acres} Acres` },
+            { img: plot_overview, label: `${counts.plots}+  Plots` },
+            { img: amenity_overview, label: `${counts.amenities}+  Amenities` },
           ].map((item, index) => (
             <div key={index} className="icon-box">
               <img

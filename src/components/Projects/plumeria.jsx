@@ -4,7 +4,6 @@ import { BentoGridDemo } from "./plumeriaGridItem";
 import VariableProximity from "../../utils/VariableProximity";
 const Plumeria = () => {
   const containerRef = useRef(null);
-
   return (
     <div>
       <div className="key-highlights">
