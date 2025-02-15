@@ -1,15 +1,22 @@
-import React, { Fragment, Suspense, useEffect } from "react";
+import React, {
+  Fragment,
+  Suspense,
+  useEffect,
+  useState,
+} from "react";
 import Header from "../../components/header";
 import bg from "../../components/assets/plumeria3.webp";
 import bgImg1 from "../../components/assets/plumeria3.webp";
 import bgImg2 from "../../components/assets/plumeria1.webp";
+import land_overview from "../../components/assets/land_overview.png";
+import plot_overview from "../../components/assets/plot_overview.png";
+import amenity_overview from "../../components/assets/amenity_overview.png";
 import { Helmet } from "react-helmet";
 import "../AboutPage/loading.css";
 import "./pro-plumeria.css";
 import Loader from "../../components/Loader/loader";
 import { updateMetaTags } from "../../utils/updateMetaTags";
 import FadeContent from "../../utils/FadeContent";
-// import { InfiniteMovingCardsDemo } from "../../utils/plumeriaGallery/PlumeriaInfiniteGallary";
 
 const PageTitle = React.lazy(() => import("../../components/pagetitle"));
 const Plumeria = React.lazy(() => import("../../components/Projects/plumeria"));
@@ -20,13 +27,7 @@ const Footer = React.lazy(() => import("../../components/footer"));
 const InfiniteMovingCardsDemo = React.lazy(() =>
   import("../../utils/plumeriaGallery/PlumeriaInfiniteGallary")
 );
-const Amenities = React.lazy(() =>
-  import("../../components/Amenities/amenities")
-);
-const ThreeDCardDemo = React.lazy(() => import("./plumeria3dDemo"));
-const RollingGallery = React.lazy(() =>
-  import("../../utils/plumeriaGallery/plumeriagallery")
-);
+
 const PlumeriaAmenities = React.lazy(() =>
   import("../../components/Amenities/plumeria")
 );
@@ -42,6 +43,12 @@ const PlumeriaMain = () => {
     "Explore Plumeria, an exquisite residential plots project that promises a tranquil lifestyle. Ideal for nature lovers and investment opportunities.";
   const ogUrl = "https://rajavrukshagroup.in/sylvan-retreat";
 
+  const [counts, setCounts] = useState({
+    acres: 1,
+    plots: 1,
+    amenities: 1,
+  });
+
   useEffect(() => {
     updateMetaTags({
       title,
@@ -52,14 +59,21 @@ const PlumeriaMain = () => {
     });
   }, [title, description, ogTitle, ogDescription, ogUrl]);
 
-  const plumeriaAmenities = [
-    "Individual water connection",
-    "CCTV surveillance",
-    "A wide black top road",
-    "Play area",
-    "Park",
-    "Street lights",
-  ];
+  useEffect(() => {
+    const incrementCounts = (key, targetValue, duration = 2000) => {
+      let start = 1;
+      const stepTime = Math.abs(Math.floor(duration / targetValue));
+      const interval = setInterval(() => {
+        start++;
+        setCounts((prev) => ({ ...prev, [key]: start }));
+        if (start >= targetValue) clearInterval(interval);
+      }, stepTime);
+    };
+
+    incrementCounts("acres", 2);
+    incrementCounts("plots", 60);
+    incrementCounts("amenities", 10);
+  }, []);
   return (
     <Fragment>
       <Helmet>
@@ -89,6 +103,22 @@ const PlumeriaMain = () => {
           bgImg1={bgImg1}
           bgImg2={bgImg2}
         />
+        <div className="plumeria-icons-overview">
+          {[
+            { img: land_overview, label: `${counts.acres}+ Acres` },
+            { img: plot_overview, label: `${counts.plots}+ Plots` },
+            { img: amenity_overview, label: `${counts.amenities}+ Amenities` },
+          ].map((item, index) => (
+            <div key={index} className="icon-box">
+              <img
+                src={item.img}
+                alt={item.label}
+                className="overview-main-icon"
+              />
+              <p className="icon-label">{item.label}</p>
+            </div>
+          ))}
+        </div>
         <div>
           <h1 className="project-name">
             <FadeContent
@@ -114,11 +144,6 @@ const PlumeriaMain = () => {
               </p>
               <PlumeriaOveriew />
             </div>
-
-            {/* <div className="plumeria-amenities">
-              <Amenities amenities={plumeriaAmenities} projectType="plumeria" />
-            </div> */}
-            {/* <div className="plumeria-overview">Project Overview</div> */}
           </div>
         </div>
         <div>
@@ -127,14 +152,6 @@ const PlumeriaMain = () => {
         <div className="new-gal-plumeria">
           <InfiniteMovingCardsDemo />
         </div>
-
-        {/* <div className="plumeria-plan-map">
-          <div className="demo-layout">
-            <ThreeDCardDemo />
-            <RollingGallery autoplay={true} pauseOnHover={true} />
-            <InfiniteMovingCardsDemo />
-          </div>       
-        </div> */}
         <Plumeria />
         <div className="plumeria-contact-map row">
           <div className="plumeria-contact col-lg-12 col-sm-12 mb-5">

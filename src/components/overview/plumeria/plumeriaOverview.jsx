@@ -3,6 +3,9 @@ import verifiedDoc from "../../../components/assets/verified_doc.png";
 import map from "../../../components/assets/location.png";
 import nature from "../../../components/assets/nature.png";
 import amenity from "../../../components/assets/amenity.png";
+import plot_overview from "../../../components/assets/plot_overview.png";
+import amenity_overview from "../../../components/assets/amenity_overview.png";
+import land_overview from "../../../components/assets/land_overview.png";
 import "./plumOverview.css";
 import VariableProximity from "../../../utils/VariableProximity";
 
@@ -48,6 +51,23 @@ const PlumeriaOverview = () => {
           />
         </div>
       </h1>
+      {/* <div className="plumeria-icons-overview">
+        {[
+          { img: land_overview, label: "2+ Acres" },
+          { img: plot_overview, label: "60+ Plots" },
+          { img: amenity_overview, label: "10+ Amenities" },
+        ].map((item, index) => (
+          <div key={index} className="icon-box">
+            <img
+              src={item.img}
+              alt={item.label}
+              className="overview-main-icon"
+            />
+            <p className="icon-label">{item.label}</p>
+          </div>
+        ))}
+      </div> */}
+
       <div className="overview-container">
         {[
           {
