@@ -31,6 +31,7 @@ import TawkMessengerReact from "@tawk.to/tawk-messenger-react";
 import MainTermsCondition from "../TermsConditions/index.js";
 import CareerDetails from "../careers/careerDetails.jsx";
 import  HeroScrollDemo  from "../../components/BlogList/index.js";
+import SylvanRetreatNew from "../projects/sylvanRetreatNew.jsx";
 
 const RoutesWithLoader = () => {
   const [loading, setLoading] = useState(false);
@@ -65,6 +66,7 @@ const RoutesWithLoader = () => {
         <Route path="/careers" element={<CareerMainFooterComp />} />
         <Route path="/careerDetails/:id" element={<CareerDetails />} />
         <Route path="/sylvan-retreat" element={<SylvanRetreat />} />
+        {/* <Route path="/sylvan-retreat" element={<SylvanRetreatNew/>} /> */}
         <Route path="/eco-nest" element={<Econest />} />
         <Route path="/plumeria" element={<PlumeriaMain />} />
         <Route path="/journeySection" element={<JourneySection />} />

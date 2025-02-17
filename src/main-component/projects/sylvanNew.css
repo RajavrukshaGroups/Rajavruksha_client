@@ -1,0 +1,73 @@
+.page-heading-new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-heading-new h1 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-new-description {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem;
+}
+
+.sylvan-new-overview {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.syl-new-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  max-width: 900px;
+  width: 100%;
+}
+
+.feature-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  width: calc(33.33% - 20px); /* Three icons in a row with gap */
+  text-align: center;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); */
+  margin-bottom: 20px; /* Add margin for responsiveness */
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.label-title {
+  color: #a38b5b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .feature-box {
+    width: calc(50% - 20px); /* Two icons in a row for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-box {
+    width: 100%; /* One icon in a row for mobile */
+  }
+}
