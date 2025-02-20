@@ -156,6 +156,9 @@
   .icon-label {
     font-size: 0.75rem;
   }
+  .plumeria-brochure{
+    margin: 2rem;
+  }
 }
 
 @media (min-width: 1390px) and (max-width: 1600px) {
