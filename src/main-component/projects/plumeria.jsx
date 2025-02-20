@@ -12,6 +12,7 @@ import "./pro-plumeria.css";
 import Loader from "../../components/Loader/loader";
 import { updateMetaTags } from "../../utils/updateMetaTags";
 import FadeContent from "../../utils/FadeContent";
+import { ThreeDCardDemo } from "../../components/dowloadBrochure/plumeria";
 
 const PageTitle = React.lazy(() => import("../../components/pagetitle"));
 const Plumeria = React.lazy(() => import("../../components/Projects/plumeria"));
@@ -148,11 +149,18 @@ const PlumeriaMain = () => {
           <InfiniteMovingCardsDemo />
         </div>
         <Plumeria />
+        <div className="plumeria-brochure">
+          <ThreeDCardDemo />
+        </div>
         <div className="plumeria-contact-map row">
           <div className="plumeria-contact col-lg-12 col-sm-12 mb-5">
             <ContactUs projectPlumeria={"Plumeria"} />
           </div>
         </div>
+        {/* <div>
+          <ThreeDCardDemo />
+        </div> */}
+
         <Footer />
       </Suspense>
     </Fragment>
