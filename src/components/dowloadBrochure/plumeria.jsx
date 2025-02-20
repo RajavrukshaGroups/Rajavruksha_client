@@ -18,14 +18,14 @@ export function ThreeDCardDemo() {
           translateZ="50"
           className="text-xl font-bold text-neutral-600 dark:text-white"
         >
-          Discover Your Dream Home – Download the Brochure Today!
+          Get Your Brochure in a Click!
         </CardItem>
         <CardItem
           as="p"
           translateZ="60"
           className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
         >
-          Your Dream Home Awaits – Hover to Take a Sneak Peek!
+          Discover the Perfect Plot for Your Next Move!
         </CardItem>
         <CardItem translateZ="100" className="w-full mt-4">
           <img
