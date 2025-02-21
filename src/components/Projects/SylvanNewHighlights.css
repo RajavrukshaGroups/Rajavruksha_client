@@ -104,7 +104,7 @@
 .syl-extra-section {
   display: flex;
   justify-content: space-between;
-  gap: 75px;
+  gap: 25px;
   max-width: 1200px;
   width: 100%;
   /* margin-top: 40px; */
