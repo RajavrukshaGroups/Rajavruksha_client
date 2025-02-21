@@ -63,7 +63,7 @@
 
   .contact-image-container {
     width: 383px;
-    margin-left:-122px;
+    margin-left: -122px;
     margin-top: 3rem;
   }
 
@@ -294,5 +294,11 @@
   .contact-image-container {
     width: 100%;
     margin: auto;
+  }
+}
+
+@media (min-width: 1300px) {
+  .contact-image {
+    height: 565px;
   }
 }
