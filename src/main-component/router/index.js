@@ -65,8 +65,8 @@ const RoutesWithLoader = () => {
         <Route path="/experienceSection" element={<ExperienceSection />} />
         <Route path="/careers" element={<CareerMainFooterComp />} />
         <Route path="/careerDetails/:id" element={<CareerDetails />} />
-        <Route path="/sylvan-retreat" element={<SylvanRetreat />} />
-        {/* <Route path="/sylvan-retreat" element={<SylvanRetreatNew/>} /> */}
+        {/* <Route path="/sylvan-retreat" element={<SylvanRetreat />} /> */}
+        <Route path="/sylvan-retreat" element={<SylvanRetreatNew/>} />
         <Route path="/eco-nest" element={<Econest />} />
         <Route path="/plumeria" element={<PlumeriaMain />} />
         <Route path="/journeySection" element={<JourneySection />} />

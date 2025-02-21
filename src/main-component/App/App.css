@@ -106,9 +106,9 @@ p {
 	margin-bottom: 15px;
 }
 
-p:last-child {
+/* p:last-child {
 	margin: 0;
-}
+} */
 
 label {
 	color: #7e7e7e;

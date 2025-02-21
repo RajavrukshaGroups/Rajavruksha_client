@@ -6,6 +6,11 @@ import bgImg2 from "../../components/assets/plumeria1.webp";
 import land_overview from "../../components/assets/land_overview.png";
 import plot_overview from "../../components/assets/plot_overview.png";
 import amenity_overview from "../../components/assets/amenity_overview.png";
+import plumeria_1 from "../../components/assets/plumeria_1.webp";
+import plumeria_2 from "../../components/assets/plumeria_2.webp";
+import plumeria_3 from "../../components/assets/plumeria_3.webp";
+import plumeria_4 from "../../components/assets/plumeria_4.webp";
+import plumeria_5 from "../../components/assets/plumeria_5.webp";
 import { Helmet } from "react-helmet";
 import "../AboutPage/loading.css";
 import "./pro-plumeria.css";
@@ -70,6 +75,16 @@ const PlumeriaMain = () => {
     incrementCounts("plots", 35);
     incrementCounts("amenities", 10);
   }, []);
+
+  const galleryImages = [
+    { image: plumeria_1, alt: "Plumeria 1" },
+    { image: plumeria_2, alt: "Plumeria 2" },
+    { image: plumeria_3, alt: "Plumeria 3" },
+    { image: plumeria_4, alt: "Plumeria 4" },
+    { image: plumeria_5, alt: "Plumeria 5" },
+  ];
+
+
   return (
     <Fragment>
       <Helmet>
@@ -146,7 +161,7 @@ const PlumeriaMain = () => {
           <PlumeriaAmenities />
         </div>
         <div className="new-gal-plumeria">
-          <InfiniteMovingCardsDemo />
+          <InfiniteMovingCardsDemo  galleryImages={galleryImages}/>
         </div>
         <Plumeria />
         <div className="plumeria-brochure">

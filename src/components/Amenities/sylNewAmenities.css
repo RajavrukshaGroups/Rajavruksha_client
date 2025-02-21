@@ -1,0 +1,135 @@
+/* Overall amenities section */
+.syl-amenities-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Stretch both containers equally */
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: nowrap;
+}
+
+/* Amenities and Video Container should share equal space */
+.syl-amenities-container,
+.syl-video-container {
+  flex: 1 1 50%;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Spread content evenly */
+  height: 100%; /* Make them take full available height */
+}
+
+/* Section title */
+.syl-amenities-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0b3d2c;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Amenities grid with 3 cards in a row */
+.syl-amenities-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  flex-grow: 1;
+  height: 100%;
+}
+
+/* Individual amenity card */
+.syl-amenity-card {
+  text-align: center;
+  padding: 8px;
+  background: #eef7f1;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  min-height: unset;
+  height: 100%;
+
+}
+
+.syl-amenity-card:hover {
+  transform: scale(1.05);
+}
+
+.syl-amenity-card img {
+  width: 60%;
+  height: 75px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #eef7f1; /* Adds a background color for better visibility */
+}
+
+.syl-amenity-card p {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  white-space: nowrap; /* Force single-line text */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ... if text overflows */
+}
+
+/* YouTube video container */
+.syl-video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* margin: auto; */
+}
+
+/* Video fully fills the container */
+.yt-iframe {
+  width: 100%;
+  height: 100%; /* Fill container height */
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .syl-amenities-section {
+    flex-direction: column;
+  }
+
+  .syl-video-container,
+  .syl-amenities-container {
+    width: 100%;
+  }
+
+  .syl-amenities-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .yt-iframe {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .syl-amenities-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .yt-iframe {
+    min-height: 150px;
+  }
+}

@@ -1,0 +1,79 @@
+/* Why Choose Us Section */
+.why-sylvan-section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .why-sylvan-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0b3d2c;
+    margin-bottom: 40px;
+  }
+  
+  .why-sylvan-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .why-sylvan-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 320px;
+  }
+  
+  .why-sylvan-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .why-sylvan-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+  
+  .why-sylvan-card-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    color: #333;
+    margin: 16px 0 8px; /* Consistent spacing between image and description */
+  }
+  
+  .why-sylvan-description {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: #555;
+    margin-top: 0; /* Removed negative margin */
+    line-height: 2;
+    font-weight: 400;
+    text-align: center;
+    /* padding: 0 10px; */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .why-sylvan-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .why-sylvan-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+  

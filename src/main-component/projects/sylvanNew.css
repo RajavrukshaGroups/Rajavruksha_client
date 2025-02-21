@@ -1,73 +1,177 @@
+/* Page Heading with Subtle Shadow */
 .page-heading-new {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
 }
 
 .page-heading-new h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #0b3d2c;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 10px rgba(0, 61, 44, 0.3);
+  background: linear-gradient(to right, #0b3d2c, #a38b5b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* Page Description - Elegant with Centered Styling */
 .page-new-description {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  margin: 1rem;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 850px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
 }
 
+.page-new-description p {
+  color: #333;
+  font-size: 20px;
+  line-height: 1.7;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+/* Feature Overview - Gradient Background */
 .sylvan-new-overview {
   display: flex;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 40px;
+  padding: 30px;
+  /* background: linear-gradient(135deg, #f4f4f4, #e6e6e6); */
+  border-radius: 15px;
 }
 
+/* Feature Cards - Glassmorphism Effect */
 .syl-new-card {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 25px;
   justify-content: center;
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
-  max-width: 900px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  /* box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); */
+  max-width: 1100px;
   width: 100%;
 }
 
+/* Individual Feature Boxes */
 .feature-box {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #f9f9f9;
-  padding: 15px;
-  border-radius: 8px;
-  width: calc(33.33% - 20px); /* Three icons in a row with gap */
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  width: calc(33.33% - 25px);
   text-align: center;
-  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); */
-  margin-bottom: 20px; /* Add margin for responsiveness */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Animated Background Effect */
+.feature-box::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4), transparent);
+  top: -100%;
+  left: -50%;
+  transform: rotate(25deg);
+  transition: all 0.6s ease-in-out;
+}
+
+/* Hover Effects */
+.feature-box:hover::before {
+  top: 100%;
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Feature Icons */
 .feature-icon {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease-in-out;
 }
 
+.feature-box:hover .feature-icon {
+  transform: rotateY(360deg);
+}
+
+/* Feature Titles */
 .label-title {
-  color: #a38b5b;
+  color: #0b3d2c;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+.SylvanNewGallery {
+  margin-top: -6rem;
+}
+
+.sylNew-contact-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0b3d2c;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sylNew-contact-main-div {
+  margin-top: -2rem;
+}
+.sylNew-contact {
+  margin-bottom: 3rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .feature-box {
-    width: calc(50% - 20px); /* Two icons in a row for tablets */
+    width: calc(50% - 20px);
+  }
+  .page-new-description {
+    margin: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .feature-box {
-    width: 100%; /* One icon in a row for mobile */
+    width: 100%;
+  }
+
+  .page-heading-new h1 {
+    font-size: 28px;
+  }
+
+  .page-new-description p {
+    font-size: 16px;
   }
 }
