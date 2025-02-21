@@ -1,0 +1,215 @@
+/* Main Section Styling */
+.projects-area {
+  padding: 80px 20px;
+  background: #f9f9f9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.main-subtitle {
+  color: #b78d65;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.main-title {
+  color: #1e1e1e;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Project Cards Styling */
+.project-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.project-box {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #fff; /* Added white background for consistency */
+}
+
+.project-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Styling */
+.project-logo {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 190px; /* Increased logo size */
+  height: 120px; /* Increased logo size */
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.project-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(
+    0 4px 8px rgba(0, 0, 0, 0.2)
+  ); /* Added shadow for depth */
+}
+
+/* Image Styling */
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8); /* Darken the background image */
+  transition: filter 0.3s ease;
+}
+
+.project-box:hover .project-image {
+  filter: brightness(0.9); /* Slightly lighten on hover */
+}
+
+/* Content Styling */
+.project-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(5px); /* Added blur effect for premium look */
+}
+
+.project-content h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase; /* Added uppercase for a premium feel */
+  letter-spacing: 1px;
+}
+
+.project-content p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #ddd;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Download Brochure Button Styling */
+.download-projects-brochure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 4rem; */
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.download-btn-new {
+  text-align: center;
+  background-color: #b78d65; /* Primary color */
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(183, 141, 101, 0.3); /* Subtle shadow */
+}
+
+.download-btn-new::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: all 0.5s ease;
+}
+
+.download-btn-new:hover::before {
+  left: 100%;
+}
+
+.download-btn-new:hover {
+  background-color: #a67a52; /* Darker shade on hover */
+  box-shadow: 0 6px 20px rgba(183, 141, 101, 0.5); /* Enhanced shadow on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.download-btn-new:active {
+  transform: translateY(0); /* Reset lift on click */
+  box-shadow: 0 4px 15px rgba(183, 141, 101, 0.3); /* Reset shadow on click */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-box {
+    max-width: 100%;
+    height: 350px;
+  }
+
+  .main-title {
+    font-size: 28px;
+  }
+
+  .main-subtitle {
+    font-size: 16px;
+  }
+
+  .tagline {
+    font-size: 14px;
+  }
+
+  .project-logo {
+    width: 150px; /* Adjusted logo size for mobile */
+    height: 80px;
+  }
+
+  .project-content h3 {
+    font-size: 20px;
+  }
+
+  .project-content p {
+    font-size: 14px;
+  }
+}
