@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import paverlSyl from "../../components/assets/paver-syl.png";
 import playGroundSyl from "../../components/assets/playgorund-syl.png";
 import plumberSyl from "../../components/assets/plumber-syl.png";
@@ -9,8 +10,13 @@ import "./sylNewAmenities.css";
 const SylvanNewAmenities = () => {
   return (
     <div className="syl-amenities-section">
-      {/* Amenities Section */}
-      <div className="syl-amenities-container">
+      {/* Amenities Section with Smooth Animation */}
+      <motion.div
+        className="syl-amenities-container"
+        initial={{ y: 100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.2, ease: "easeInOut" }}
+      >
         <h2 className="syl-amenities-title">AMENITIES</h2>
         <div className="syl-amenities-list">
           {[
@@ -21,18 +27,33 @@ const SylvanNewAmenities = () => {
             { img: fenceSyl, title: "Security and Fencing" },
             { img: ecoHouseSyl, title: "Electricity" },
           ].map((amenity, index) => (
-            <div key={index} className="syl-amenity-card">
+            <motion.div
+              key={index}
+              className="syl-amenity-card"
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{
+                duration: 0.8,
+                ease: "easeInOut",
+                delay: index * 0.15,
+              }}
+            >
               <img src={amenity.img} alt={amenity.title} />
               <p>{amenity.title}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
-      {/* YouTube Video Section */}
-      <div className="syl-video-container">
+      {/* YouTube Video Section with Slide-Up Animation */}
+      <motion.div
+        className="syl-video-container"
+        initial={{ y: 150, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+      >
         <h2 className="syl-amenities-title">EXPLORE THROUGH VIDEO</h2>
-        <iframe
+        <motion.iframe
           className="yt-iframe"
           src="https://www.youtube.com/embed/xz14d8sd7Nc?autoplay=1&loop=1&playlist=xz14d8sd7Nc&mute=1"
           title="YouTube video player"
@@ -40,8 +61,11 @@ const SylvanNewAmenities = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
-        ></iframe>
-      </div>
+          initial={{ scale: 0.9, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+        />
+      </motion.div>
     </div>
   );
 };

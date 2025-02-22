@@ -49,7 +49,7 @@ const ProjectListNew = () => {
       <div className="container">
         <div className="site-heading">
           <p className="main-subtitle">OUR PROJECTS</p>
-          <h2 className="main-title">Featured Work.</h2>
+          <h2 className="main-title">Featured Work</h2>
         </div>
         <div className="download-projects-brochure">
           <a
