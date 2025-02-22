@@ -3,6 +3,7 @@ import verifiedDoc from "../../../components/assets/verified_doc.png";
 import map from "../../../components/assets/location.png";
 import nature from "../../../components/assets/nature.png";
 import amenity from "../../../components/assets/amenity.png";
+import mansion from "../../../components/assets/mansion.png";
 import plot_overview from "../../../components/assets/plot_overview.png";
 import amenity_overview from "../../../components/assets/amenity_overview.png";
 import land_overview from "../../../components/assets/land_overview.png";
@@ -88,14 +89,20 @@ const PlumeriaOverview = () => {
             icon: verifiedDoc,
             iconText: "VERIFIED DOCUMENTS",
           },
+          // {
+          //   title: "AMENITIES",
+          //   text: `Plumeria offers more than just plots; we provide amenities such as
+          //   CCTV surveillance, parks, a play area, and more.Additionally, the
+          //   well-connected road network ensures seamless travel to major city
+          //   hubs and tourists destinations.`,
+          //   icon: amenity,
+          //   iconText: "AMENITIES",
+          // },
           {
-            title: "AMENITIES",
-            text: `Plumeria offers more than just plots; we provide amenities such as
-            CCTV surveillance, parks, a play area, and more.Additionally, the
-            well-connected road network ensures seamless travel to major city
-            hubs and tourists destinations.`,
-            icon: amenity,
-            iconText: "AMENITIES",
+            title: "CRAFTED FOR YOU",
+            text: `At Plumeria, we offer fewer plots and more space, giving you the freedom to design your dream home with privacy and room to grow. Enjoy a personalized living experience without compromise or overcrowding.`,
+            icon: mansion,
+            iconText: "SPACE FOR DREAMS",
           },
         ].map((item, index) => (
           <div

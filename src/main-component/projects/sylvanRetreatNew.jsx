@@ -1,7 +1,7 @@
 import React, { Fragment, Suspense, useEffect } from "react";
+import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 import Header from "../../components/header";
-// import PageTitle from "../../components/pagetitle";
 import { updateMetaTags } from "../../utils/updateMetaTags";
 import Loader from "../../components/Loader/loader";
 import bgImg1 from "../../components/assets/Sylan_retreat_new_Banner.webp";
@@ -18,12 +18,7 @@ import sylGalImg3 from "../../components/assets/syl-retreat_gallary_img3.webp";
 import sylGalImg4 from "../../components/assets/syl-retreat_gallary_img4.webp";
 import sylGalImg5 from "../../components/assets/syl-retreat_gallary_img5.webp";
 import "./sylvanNew.css";
-// import Footer from "../../components/footer";
-// import SylvanNewHighlights from "../../components/Projects/sylvanNew";
-// import SylvanNewAmenities from "../../components/Amenities/sylvanNewAmenities";
-// import SylvanNewWhy from "../../components/Projects/whySlyvanNew";
-// import InfiniteMovingCardsDemo from "../../utils/plumeriaGallery/PlumeriaInfiniteGallary";
-// import ContactUs from "../../components/Projects/contactform";
+import FadeContent from "../../utils/FadeContent";
 
 const PageTitle = React.lazy(() => import("../../components/pagetitle"));
 const SylvanNewHighlights = React.lazy(() =>
@@ -140,17 +135,28 @@ const SylvanRetreatNew = () => {
             />
           </div>
           <div className="page-heading-new">
-            <h1>Farm Smart with Managed Farm Land</h1>
+            <FadeContent
+              blur={true}
+              duration={1000}
+              easing="ease-out"
+              initialOpacity={0}
+            >
+              <h1>Farm Smart with Managed Farm Land</h1>
+            </FadeContent>
           </div>
           <div className="page-new-description">
-            <p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+            >
               Escape the urban chaos and embrace the tranquility of nature.
               Sylvan Retreat is designed to offer a sustainable, eco-friendly
               living experience, where modern comfort blends seamlessly with
               organic farming and rural charm.
-            </p>
+            </motion.p>
           </div>
-          <div className="sylvan-new-overview">
+          {/* <div className="sylvan-new-overview">
             <div className="syl-new-card">
               {features.map((feature, index) => (
                 <div className="feature-box" key={index}>
@@ -163,7 +169,34 @@ const SylvanRetreatNew = () => {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
+          <motion.div
+            className="sylvan-new-overview"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <div className="syl-new-card">
+              {features.map((feature, index) => (
+                <motion.div
+                  className="feature-box"
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }} // Ensures animation runs only once on scroll
+                  whileHover={{ scale: 1.05 }} // Small hover effect
+                >
+                  <img
+                    src={feature.img}
+                    alt={feature.label}
+                    className="feature-icon"
+                  />
+                  <h3 className="label-title">{feature.label}</h3>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
           <div className="syl-new-highlights">
             <SylvanNewHighlights />
           </div>
