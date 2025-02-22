@@ -104,10 +104,10 @@ const SylvanNewHighlights = () => {
           <div className="syl-extra-text">
             <h4>Animal Husbandry: Ethical Livestock Care</h4>
             <p>
-              A well-managed livestock farm ensures quality meat, dairy, and
-              wool production, creating sustainable income sources. The demand
-              for organic, ethically raised products is rising, providing
-              economic stability for farmers.
+              A well-managed livestock farm ensures quality dairy and wool
+              production, creating sustainable income sources. The demand for
+              organic, ethically raised products is rising, providing economic
+              stability for farmers.
             </p>
           </div>
         </div>
