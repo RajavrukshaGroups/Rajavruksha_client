@@ -1,0 +1,71 @@
+.eco-amenities-wrapper {
+  padding: 3rem;
+}
+
+.eco-new-amenities {
+  text-align: center;
+  margin-top: -5rem;
+}
+
+.eco-amenities-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
+
+.eco-amenities-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2e7d32;
+  /* text-transform: uppercase; */
+  margin-right: 1rem;
+}
+
+.eco-title-line {
+  flex-grow: 1;
+  height: 0.5px;
+  background-color: #2e7d32;
+  margin-left: 1rem;
+}
+
+.eco-amenities-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.eco-amenity-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eco-amenity-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.eco-amenity-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  color: #1b5e20;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.eco-amenities-list .eco-amenity-card:last-child {
+  grid-column: 2 / 3; /* Centers the 7th item in the middle */
+}
+
+@media (max-width: 768px) {
+  .eco-amenities-list {
+    grid-template-columns: 1fr;
+  }
+
+  .eco-amenities-list .eco-amenity-card:last-child {
+    grid-column: auto; /* Reset for small screens */
+  }
+}

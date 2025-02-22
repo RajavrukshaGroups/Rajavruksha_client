@@ -73,10 +73,7 @@ const PlumeriaOverview = () => {
         {[
           {
             title: "PICTURESQUE LOCATION",
-            text: `Doddaballapura is a serene escape surrounded by lush greenery,
-            rolling hills, and fertile farmlands.Its cool climate and scenic
-            countryside make it an ideal destination for nature lovers and
-            weekend getaways.`,
+            text: `Doddaballapura, surrounded by lush greenery and rolling hills, is a serene escape with a cool climate, perfect for nature lovers and weekend getaways. The plot is connected to SH - 09, offering easy access.`,
             icon: nature,
             iconText: "LOCATED AT DODDABALLAPURA",
           },

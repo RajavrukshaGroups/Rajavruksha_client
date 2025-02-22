@@ -33,6 +33,7 @@ import CareerDetails from "../careers/careerDetails.jsx";
 import  HeroScrollDemo  from "../../components/BlogList/index.js";
 import SylvanRetreatNew from "../projects/sylvanRetreatNew.jsx";
 import ProjectPageNew from "../ProjectsPageNew/index.js";
+import EcoNestNewMain from "../projects/EcoNestNewMain.jsx";
 
 const RoutesWithLoader = () => {
   const [loading, setLoading] = useState(false);
@@ -70,6 +71,7 @@ const RoutesWithLoader = () => {
         {/* <Route path="/sylvan-retreat" element={<SylvanRetreat />} /> */}
         <Route path="/sylvan-retreat" element={<SylvanRetreatNew/>} />
         <Route path="/eco-nest" element={<Econest />} />
+        {/* <Route path="/eco-nest" element={<EcoNestNewMain />} /> */}
         <Route path="/plumeria" element={<PlumeriaMain />} />
         <Route path="/journeySection" element={<JourneySection />} />
         <Route path="/status" element={<Status />} />
