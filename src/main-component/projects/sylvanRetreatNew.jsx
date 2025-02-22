@@ -185,7 +185,6 @@ const SylvanRetreatNew = () => {
               <ContactUs projectTitle={"Sylvan-Retreat"} />
             </div>
           </div>
-          /
           <div>
             <Footer />
           </div>
