@@ -1,0 +1,30 @@
+.eco-new-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  /* background: linear-gradient(135deg, #f0f4f8, #d9e2ec); Soft premium background */
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
+}
+
+.eco-new-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  color: #1a202c;
+  letter-spacing: 1.5px;
+  text-align: center;
+  /* background: linear-gradient(90deg, #8e44ad, #3498db); */
+  background: linear-gradient(90deg, #6ab04c, #f9ca24);
+  /* background: linear-gradient(90deg, #a8e063, #f6e27a); */
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.eco-new-heading:hover {
+  transform: scale(1.05);
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+}

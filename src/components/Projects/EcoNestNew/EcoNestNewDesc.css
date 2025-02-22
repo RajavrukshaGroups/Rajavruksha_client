@@ -1,0 +1,142 @@
+.eco-new-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+  /* background: linear-gradient(135deg, #e8f5e9, #f1f8e9); */
+  border-radius: 20px;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
+}
+
+.eco-title-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.eco-why-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #2e7d32;
+  margin: 0;
+  white-space: nowrap;
+  margin-right: 1rem;
+}
+
+.eco-title-wrapper::after {
+  content: "";
+  flex-grow: 1;
+  height: 0.5px;
+  background-color: #2e7d32;
+  margin-left: 1rem;
+}
+
+/* .eco-why-title::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-color: #2e7d32;
+} */
+
+.eco-points-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  width: 100%;
+}
+
+.eco-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Push highlights to the bottom */
+  flex: 1;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.eco-point:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.eco-point-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+
+.eco-point-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.75rem;
+  color: #1b5e20;
+  margin-bottom: 1rem;
+}
+
+.eco-point-description {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  color: #4e4e4e;
+  line-height: 1.6;
+  min-height: 120px; /* Adjust this value as needed for uniform height */
+  display: flex;
+  flex-grow: 1;
+  align-items: center; /* Vertically center shorter text */
+  justify-content: center;
+  text-align: center;
+}
+
+.eco-point-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.eco-highlight-badge {
+  background: #e8f5e9;
+  color: #1b5e20;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
+}
+
+.eco-highlight-badge:hover {
+  background: #c8e6c9;
+  cursor: default;
+}
+
+@media (max-width: 768px) {
+  .eco-points-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .eco-why-title {
+    font-size: 2rem;
+  }
+
+  .eco-point {
+    padding: 1.5rem;
+  }
+
+  .eco-point-title {
+    font-size: 1.5rem;
+  }
+}
