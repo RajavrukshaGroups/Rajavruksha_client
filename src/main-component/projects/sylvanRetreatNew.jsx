@@ -19,6 +19,7 @@ import sylGalImg4 from "../../components/assets/syl-retreat_gallary_img4.webp";
 import sylGalImg5 from "../../components/assets/syl-retreat_gallary_img5.webp";
 import "./sylvanNew.css";
 import FadeContent from "../../utils/FadeContent";
+import SylvanNewRunner from "../../components/Projects/SylvanNewRunner";
 
 const PageTitle = React.lazy(() => import("../../components/pagetitle"));
 const SylvanNewHighlights = React.lazy(() =>
@@ -197,6 +198,7 @@ const SylvanRetreatNew = () => {
               ))}
             </div>
           </motion.div>
+          <SylvanNewRunner />
           <div className="syl-new-highlights">
             <SylvanNewHighlights />
           </div>
