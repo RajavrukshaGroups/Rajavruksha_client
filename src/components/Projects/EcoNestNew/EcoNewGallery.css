@@ -1,0 +1,117 @@
+.eco-new-location-high {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* margin-bottom: 2rem; */
+}
+
+.eco-new-location-high::after {
+  content: "";
+  flex-grow: 1;
+  height: 0.5px;
+  background-color: #2e7d32;
+  margin-right: 1rem;
+  margin-left: 2rem;
+}
+
+.location-high-eco-new {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-left: 3rem;
+}
+
+.econew-gal-line {
+  flex-grow: 1;
+  height: 0.5px;
+  background-color: #2e7d32;
+  margin-left: 1rem;
+}
+
+.eco-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 6rem;
+}
+
+.eco-gallery-card {
+  overflow: hidden;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.eco-gallery-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.eco-gallery-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.eco-gallery-card:hover .eco-gallery-image {
+  transform: scale(1.1);
+}
+
+.eco-gallery-caption {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2e7d32;
+  margin-top: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .eco-gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 2rem;
+  }
+
+  .eco-gallery-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .location-high-eco-new {
+    font-size: 2rem;
+    margin-left: 1.5rem;
+  }
+
+  .eco-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1.5rem;
+  }
+
+  .eco-gallery-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .location-high-eco-new {
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+
+  .eco-gallery-grid {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+  }
+
+  .eco-gallery-image {
+    height: 150px;
+  }
+  .eco-new-location-high {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+}

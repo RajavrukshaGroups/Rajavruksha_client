@@ -131,6 +131,9 @@
   .eco-why-title {
     font-size: 2rem;
   }
+  .eco-title-wrapper {
+    width: 124%;
+  }
 
   .eco-point {
     padding: 1.5rem;

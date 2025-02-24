@@ -68,4 +68,8 @@
   .eco-amenities-list .eco-amenity-card:last-child {
     grid-column: auto; /* Reset for small screens */
   }
+  .eco-amenities-heading{
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
 }
