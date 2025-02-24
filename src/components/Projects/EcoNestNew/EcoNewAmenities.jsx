@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import "./EcoNewAmenities.css";
 import road from "../../../components/assets/road-eco.png";
 import water from "../../../components/assets/water-supply-eco.png";
@@ -27,14 +28,21 @@ const EcoNewAmenities = () => {
         </div>
         <div className="eco-amenities-list">
           {amenities.map((amenity, index) => (
-            <div key={index} className="eco-amenity-card">
+            <motion.div
+              key={index}
+              className="eco-amenity-card"
+              initial={{ x: index % 2 === 0 ? -100 : 100, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: false, amount: 0.5 }} // Repeats animation every time the element enters view
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            >
               <img
                 src={amenity.icon}
                 alt={amenity.title}
                 className="eco-amenity-icon"
               />
               <p className="eco-amenity-title">{amenity.title}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

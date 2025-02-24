@@ -22,9 +22,16 @@
   -webkit-text-fill-color: transparent;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, text-shadow 0.3s ease;
+  text-transform: uppercase;
 }
 
 .eco-new-heading:hover {
   transform: scale(1.05);
   text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 430px) {
+  .eco-new-heading {
+    font-size: 2rem;
+  }
 }
