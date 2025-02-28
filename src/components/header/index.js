@@ -60,9 +60,9 @@ const Header = () => {
                         <li>
                           <Link to="/sylvan-retreat">Sylvan-Retreat</Link>
                         </li>
-                        <li>
+                        {/* <li>
                           <Link to="/eco-nest">Eco-nest</Link>
-                        </li>
+                        </li> */}
                         <li>
                           <Link to="/plumeria">Plumeria</Link>
                         </li>

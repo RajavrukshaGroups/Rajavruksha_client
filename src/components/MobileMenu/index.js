@@ -27,11 +27,11 @@ const MobileMenu = () => {
           title: "Sylvan-Retreat",
           link: "/sylvan-retreat",
         },
-        {
-          id: 32,
-          title: "Eco-Nest",
-          link: "/eco-nest",
-        },
+        // {
+        //   id: 32,
+        //   title: "Eco-Nest",
+        //   link: "/eco-nest",
+        // },
         {
           id: 33,
           title: "Plumeria",

@@ -52,6 +52,7 @@ export function ThreeDCardDemo() {
          show={showModal}
          handleClose={handleCloseModal}
          onSubmitSuccess={handleDownloadBrochure}
+         project="Plumeria"
         />
       )}
     </CardContainer>

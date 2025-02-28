@@ -4,11 +4,12 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import "./contactmodal.css";
 import Loader from "../Loader/loader";
-import { SuccessMessage,ErrorMessage } from "../../utils/toastify";
+import { SuccessMessage, ErrorMessage } from "../../utils/toastify";
 
-function ContactModal({ show, handleClose, onSubmitSuccess }) {
+function ContactModal({ show, handleClose, onSubmitSuccess, project }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone_no, setPhone] = useState("");
   const [errors, setErrors] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 
@@ -21,6 +22,11 @@ function ContactModal({ show, handleClose, onSubmitSuccess }) {
       newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(email)) {
       newErrors.email = "Invalid email format.";
+    }
+    if (!phone_no.trim()) {
+      newErrors.phone_no = "Contact No is required";
+    } else if (!/^\d{10}$/.test(phone_no)) {
+      newErrors.phone_no = "Contact No must be a 10-digit number.";
     }
     return newErrors;
   };
@@ -36,7 +42,9 @@ function ContactModal({ show, handleClose, onSubmitSuccess }) {
       const formData = {
         name: name,
         email: email,
+        phone_no: phone_no,
         isModal: true,
+        project: project,
       };
 
       //http://localhost:4000/contact
@@ -54,6 +62,7 @@ function ContactModal({ show, handleClose, onSubmitSuccess }) {
           setIsLoading(false);
           setName("");
           setEmail("");
+          setPhone("");
           SuccessMessage("Your message has been submitted successfully!");
           onSubmitSuccess();
           handleClose();
@@ -95,7 +104,7 @@ function ContactModal({ show, handleClose, onSubmitSuccess }) {
               )}
             </Form.Group>
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Email Address</Form.Label>
               <Form.Control
                 type="email"
                 name="email"
@@ -107,6 +116,22 @@ function ContactModal({ show, handleClose, onSubmitSuccess }) {
               {errors.email && (
                 <Form.Control.Feedback type="invalid">
                   {errors.email}
+                </Form.Control.Feedback>
+              )}
+            </Form.Group>
+            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+              <Form.Label>Contact Number</Form.Label>
+              <Form.Control
+                type="number"
+                name="phone_no"
+                value={phone_no}
+                onChange={(e) => setPhone(e.target.value)}
+                placeholder="Enter your contact number"
+                isInvalid={!!errors.phone_no}
+              />
+              {errors.phone_no && (
+                <Form.Control.Feedback type="invalid">
+                  {errors.phone_no}
                 </Form.Control.Feedback>
               )}
             </Form.Group>
