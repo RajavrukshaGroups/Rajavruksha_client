@@ -30,12 +30,12 @@ const ProjectListNew = () => {
       logo: Sylvan_logo,
       description: "Farm Land",
     },
-    {
-      title: "Eco Nest",
-      img: EcoNestImg,
-      logo: EcoNest_logo,
-      description: "Eco Acres",
-    },
+    // {
+    //   title: "Eco Nest",
+    //   img: EcoNestImg,
+    //   logo: EcoNest_logo,
+    //   description: "Eco Acres",
+    // },
     {
       title: "Plumeria",
       img: PlumeriaImg,
@@ -87,6 +87,7 @@ const ProjectListNew = () => {
           show={showModal}
           handleClose={handleCloseModal}
           onSubmitSuccess={handleDownloadBrochure}
+          project="Download Brochure"
         />
       )}
     </section>
