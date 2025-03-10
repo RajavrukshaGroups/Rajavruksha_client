@@ -92,8 +92,8 @@ const PrivacyPolicy = () => {
       </div>
       <div className="introduction">
         <p className="para-heading"> 6. Electronic Communications </p>
-        <p className="para-text">
-          {/* Rajavruksha Realtors Pvt. Ltd. can update this privacy policy at any
+        {/* <p className="para-text"> */}
+        {/* Rajavruksha Realtors Pvt. Ltd. can update this privacy policy at any
           time. We encourage users to frequently check this page for any changes
           to stay informed about how we are helping to protect the personal
           information we collect. By using this Site, you signify your
@@ -102,7 +102,7 @@ const PrivacyPolicy = () => {
           the Site following the posting of changes to this policy will be
           deemed your acceptance of those changes. With the terms of this
           privacy policy, please do not access the site. */}
-          When you voluntarily send us electronic mail / fillup the form, we
+        {/* When you voluntarily send us electronic mail / fillup the form, we
           will keep a record of this information so that we can respond to you.
           We only collect information from you when you register on our site or
           fill out a form. Also, when filling out a form on our site, you may be
@@ -110,8 +110,35 @@ const PrivacyPolicy = () => {
           however, visit our site anonymously. In case you have submitted your
           personal information and contact details, we reserve the rights to
           Call, SMS, Email or WhatsApp about our products and offers, even if
-          your number has DND activated on it.
-        </p>
+          your number has DND activated on it. */}
+        <ul className="list-methods">
+          <li className="list-text privacy-points">
+            Rajavruksha Realtors Pvt Ltd can update this privacy policy at any
+            time. We encourage users to frequently check this page for any
+            changes to stay informed about how we are helping to protect the
+            personal information we collect. By using this Site, you signify
+            your acceptance of this policy. If you do not agree to our above
+            policies you could restrain from the use of our website. Your
+            continued use of the Site following the posting of changes to this
+            policy will be deemed your acceptance of those changes. With the
+            terms of this privacy policy, please do not access the site.
+          </li>
+          <li className="list-text privacy-points">
+            When you voluntarily send us electronic mail / fillup the form, we
+            will keep a record of this information so that we can respond to
+            you. We only collect information from you when you register on our
+            site or fill out a form. Also, when filling out a form on our site,
+            you may be asked to enter your: name, e-mail address or phone
+            number. You may, however, visit our site anonymously.
+          </li>
+          <li className="list-text privacy-points">
+            In case you have submitted your personal information and contact
+            details, we reserve the rights to Call, SMS, Email or WhatsApp about
+            our products and offers, even if your number has DND activated on
+            it.
+          </li>
+        </ul>
+        {/* </p> */}
       </div>
     </div>
   );
