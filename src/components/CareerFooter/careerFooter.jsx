@@ -7,6 +7,9 @@ const CareerFooter = () => {
   const [careers, setCareers] = useState([]);
   const [errors, setErrors] = useState(null);
 
+  const videoUrl =
+    "https://res.cloudinary.com/den0iz8zn/video/upload/v1750312023/rrpl_career_video_w38q4b.mp4";
+
   useEffect(() => {
     const fetchCareers = async () => {
       try {
@@ -18,7 +21,6 @@ const CareerFooter = () => {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        console.log("data", data.data);
         setCareers(data.data);
       } catch (err) {
         setErrors("An error occurred while fetching career details.");
@@ -31,23 +33,37 @@ const CareerFooter = () => {
   const disableContextMenu = (e) => {
     e.preventDefault();
   };
+
   return (
     <div>
-      {errors && <p className="error-message">{errors}</p>}{" "}
+      {errors && <p className="error-message">{errors}</p>}
       <div className="careers-list">
-        {careers.map((career) => (
-          <div
-            key={career._id}
-            className="career-ind"
-            onContextMenu={disableContextMenu}
-          >
-            <Link to={`/careerDetails/${career._id}`}>
-              <img src={career.image?.url || bdeImg} alt={career.title} />
-              <div className="bde-title">
-                <p className="para-title text-capitalize">{career.title}</p>
+        {careers.map((career, index) => (
+          <React.Fragment key={career._id}>
+            <div className="career-ind" onContextMenu={disableContextMenu}>
+              <Link to={`/careerDetails/${career._id}`}>
+                <img src={career.image?.url || bdeImg} alt={career.title} />
+                <div className="bde-title">
+                  <p className="para-title text-capitalize">{career.title}</p>
+                </div>
+              </Link>
+            </div>
+
+            {/* Show video after the first two careers */}
+            {index === 1 && (
+              <div className="career-video-container">
+                <video
+                  className="career-video"
+                  src={videoUrl}
+                  autoPlay
+                  controls
+                  muted
+                  playsInline
+                  preload="metadata"
+                />
               </div>
-            </Link>
-          </div>
+            )}
+          </React.Fragment>
         ))}
       </div>
     </div>
