@@ -154,13 +154,16 @@ const Footer = () => {
       </div>
       <div className="copyright">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
+          <div className="row align-items-center justify-content-between">
+            <div className="col-auto">
               <p className="foote-copyright">
-                &copy; Copyright © 2024 Rajavruksha. All rights reserved.
-                <br></br>
-                Designed by Digital Elite Services
+                Copyright © {new Date().getFullYear()} Rajavruksha All rights
+                reserved.
               </p>
+            </div>
+            <div className="col-auto footer-credit">
+              Designed by{" "}
+              <span className="font-semibold">Digital Elite Services</span>
             </div>
           </div>
         </div>
