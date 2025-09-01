@@ -158,6 +158,8 @@ const Footer = () => {
             <div className="col-lg-12">
               <p className="foote-copyright">
                 &copy; Copyright © 2024 Rajavruksha. All rights reserved.
+                <br></br>
+                Designed by Digital Elite Services
               </p>
             </div>
           </div>
