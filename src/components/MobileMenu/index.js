@@ -59,7 +59,8 @@ const MobileMenu = () => {
     const fetchCareerDetails = async () => {
       try {
         const response = await fetch(
-          "https://servermain.rajavrukshagroup.in/getCareerDetails"
+          // "https://servermain.rajavrukshagroup.in/getCareerDetails"
+          "https://rrplserver.rajavrukshagroup.in/getCareerDetails"
           // "http://localhost:4010/getCareerDetails"
         );
         if (!response.ok) {
