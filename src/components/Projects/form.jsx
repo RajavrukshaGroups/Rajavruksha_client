@@ -57,7 +57,8 @@ const FormContact = () => {
     if (hasErrors) return;
     
     try {
-      const response = await fetch("https://servermain.rajavrukshagroup.in/contact", {
+      // const response = await fetch("https://servermain.rajavrukshagroup.in/contact", {
+      const response = await fetch("https://rrplserver.rajavrukshagroup.in/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
