@@ -85,7 +85,6 @@ const CareerForm = ({ careerDetails }) => {
         formDataToSubmit.append("file", formData.file);
 
         const response = await fetch(
-          // "https://rajavruksha-server.vercel.app/careerForm",
           // "https://servermain.rajavrukshagroup.in/careerForm",
           "https://rrplserver.rajavrukshagroup.in/careerForm",
           {
