@@ -15,7 +15,8 @@ const CareerFooter = () => {
       try {
         // const response = await fetch("http://localhost:4000/getCareerDetails");
         const response = await fetch(
-          "https://servermain.rajavrukshagroup.in/getCareerDetails"
+          // "https://servermain.rajavrukshagroup.in/getCareerDetails"
+          "https://rrplserver.rajavrukshagroup.in/getCareerDetails"
         );
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);

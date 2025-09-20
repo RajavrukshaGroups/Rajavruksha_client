@@ -86,7 +86,8 @@ const CareerForm = ({ careerDetails }) => {
 
         const response = await fetch(
           // "https://rajavruksha-server.vercel.app/careerForm",
-          "https://servermain.rajavrukshagroup.in/careerForm",
+          // "https://servermain.rajavrukshagroup.in/careerForm",
+          "https://rrplserver.rajavrukshagroup.in/careerForm",
           {
             // const response = await fetch("http://localhost:3000/careerForm", {
             method: "POST",
