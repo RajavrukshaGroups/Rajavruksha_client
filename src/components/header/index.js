@@ -17,7 +17,8 @@ const Header = () => {
     const fetchCareerDetails = async () => {
       try {
         const response = await fetch(
-          "https://servermain.rajavrukshagroup.in/getCareerDetails"
+          // "https://servermain.rajavrukshagroup.in/getCareerDetails"
+          "https://rrplserver.rajavrukshagroup.in/getCareerDetails"
         );
         // const response = await fetch("http://localhost:4010/getCareerDetails");
         if (!response.ok) {
