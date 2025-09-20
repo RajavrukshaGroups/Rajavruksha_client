@@ -47,9 +47,9 @@ function ContactModal({ show, handleClose, onSubmitSuccess, project }) {
         project: project,
       };
 
-      //http://localhost:4000/contact
-      // https://servermain.rajavrukshagroup.in/contact
-      fetch("https://servermain.rajavrukshagroup.in/contact", {
+  
+      // fetch("https://servermain.rajavrukshagroup.in/contact", {
+      fetch("https://rrplserver.rajavrukshagroup.in/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
