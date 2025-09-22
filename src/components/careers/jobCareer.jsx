@@ -85,8 +85,8 @@ const CareerForm = ({ careerDetails }) => {
         formDataToSubmit.append("file", formData.file);
 
         const response = await fetch(
-          // "https://servermain.rajavrukshagroup.in/careerForm",
-          "https://rrplserver.rajavrukshagroup.in/careerForm",
+          "https://servermain.rajavrukshagroup.in/careerForm",
+          // "https://rrplserver.rajavrukshagroup.in/careerForm",
           {
             // const response = await fetch("http://localhost:3000/careerForm", {
             method: "POST",

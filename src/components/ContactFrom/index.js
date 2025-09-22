@@ -104,8 +104,8 @@ const ContactForm = ({ status }) => {
       console.log("Preparing to send request to backend...");
 
       const response = await fetch(
-        // "https://servermain.rajavrukshagroup.in/contact",
-        "https://rrplserver.rajavrukshagroup.in/contact",
+        "https://servermain.rajavrukshagroup.in/contact",
+        // "https://rrplserver.rajavrukshagroup.in/contact",
         // "http://localhost:4000/contact",
         {
           method: "POST",
