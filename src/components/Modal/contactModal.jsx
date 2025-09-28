@@ -48,8 +48,8 @@ function ContactModal({ show, handleClose, onSubmitSuccess, project }) {
       };
 
   
-      fetch("https://servermain.rajavrukshagroup.in/contact", {
-      // fetch("https://rrplserver.rajavrukshagroup.in/contact", {
+      // fetch("https://servermain.rajavrukshagroup.in/contact", {
+      fetch("https://rajavruksha-server.rajavrukshagroup.in/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

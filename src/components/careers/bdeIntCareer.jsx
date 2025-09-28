@@ -87,8 +87,8 @@ const BdeInternCareer = () => {
         //"https://rajavruksha-server.vercel.app/careerForm"
         //http://localhost:3000/careerForm
         const response = await fetch(
-          "https://servermain.rajavrukshagroup.in/careerForm",
-          // "https://rrplserver.rajavrukshagroup.in/careerForm",
+          // "https://servermain.rajavrukshagroup.in/careerForm",
+          "https://rajavruksha-server.rajavrukshagroup.in/careerForm",
           {
             method: "POST",
             body: formDataToSubmit,

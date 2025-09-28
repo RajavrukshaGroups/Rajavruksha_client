@@ -20,8 +20,8 @@ const CareerDetails = () => {
     const fetchCareerDetails = async () => {
       try {
         const response = await fetch(
-          `https://servermain.rajavrukshagroup.in/getCareerIndDetails/${id}`
-          // `https://rrplserver.rajavrukshagroup.in/getCareerIndDetails/${id}`
+          // `https://servermain.rajavrukshagroup.in/getCareerIndDetails/${id}`
+          `https://rajavruksha-server.rajavrukshagroup.in/getCareerIndDetails/${id}`
         );
         // const response = await fetch(
         //   `http://localhost:4000/getCareerIndDetails/${id}`
