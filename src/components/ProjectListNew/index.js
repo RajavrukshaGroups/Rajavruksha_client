@@ -7,7 +7,9 @@ import Sylvan_logo from "../../components/assets/Sylvan-official-logo.png";
 import EcoNest_logo from "../../components/assets/Econest-official-logo.png";
 import Plumeria_logo from "../../components/assets/Plumeria_new_logo.png";
 import Brochure from "../../components/assets/RRPL_Brochure_new.pdf";
+import PHSBgImg from "../../components/assets/protwo.jpg"
 import ContactModal from "../Modal/contactModal";
+// import DHS_Logo from "../../components/assets/"
 import "./style.css";
 
 const ProjectListNew = () => {
@@ -42,6 +44,12 @@ const ProjectListNew = () => {
       logo: Plumeria_logo,
       description: "Residential Plots",
     },
+    {
+      title: "DHS Websites",
+      img: PHSBgImg,
+      logo: 'https://digitaleliteservices.in/assets/DHS.png',
+      description: "Real Estate",
+    },
   ];
 
   return (
@@ -59,7 +67,6 @@ const ProjectListNew = () => {
             Download Brochure
           </a>
         </div>
-
         <div className="project-box-container">
           {projects.map((project, index) => (
             <div

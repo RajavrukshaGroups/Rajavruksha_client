@@ -1,6 +1,7 @@
 import React, { Fragment, Suspense, useEffect } from "react";
 import Header from "../../components/header";
-import bg from "../../components/assets/new_project.webp";
+// import bg from "../../components/assets/new_project.webp";
+import bg from "../../components/assets/proone.jpg";
 import { Helmet } from "react-helmet";
 import { updateMetaTags } from "../../utils/updateMetaTags";
 import "../AboutPage/loading.css";

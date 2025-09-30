@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import MobileMenu from "../../components/MobileMenu";
 import { Link } from "react-router-dom";
-import Logo from "../../components/assets/RRPL_Horizontal_new.webp";
+import Logo from "../../components/assets/Samrudhi.png";
 import "./style.css";
 
 const Header = () => {

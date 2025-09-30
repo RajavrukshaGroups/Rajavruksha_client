@@ -10,6 +10,7 @@ import hero2 from "../../img/slider-2.png";
 import field from "../../components/assets/field.jpg";
 import Container from "../../main-component/Status/status.jsx";
 import HomePageImg from "../../components/assets/home_page_imp.webp";
+import HeroVideo from "../../components/assets/banner_video.mp4"
 
 import "./style.css";
 class Hero extends Component {
@@ -50,18 +51,37 @@ class Hero extends Component {
           </div>
           <Slider ref={(c) => (this.slider = c)} {...settings}>
             <div className="slide">
+               <video
+                autoPlay
+                loop  
+
+                muted
+                style={{
+                  position: "absolute",
+                  width: "100%",
+                  left: "50%",
+                  top: "50%",
+                  height: "100%",
+                  objectFit: "cover",
+                  transform: "translate(-50%, -50%)",
+                  zIndex: "-1",
+                }}
+              >
+                <source src={HeroVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               <div
                 className="hero-slide-item"
                 style={{
-                  backgroundImage: `url(${HomePageImg})`,
+                  // backgroundImage: `url(${'https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'})`,
                 }}
               >
                 <div className="container">
                   <div className="hero-text">
                     <h2>
-                      Plow Your Capital into
+                      Plots That Promise a
                       <br />
-                      Farmland for Growth
+                      Prosperous Tomorrow
                     </h2>
                     <div className="hero-action">
                       <Link to="/projects" className="cta-btn btn-border">
@@ -87,17 +107,36 @@ class Hero extends Component {
             </div>
 
             <div className="slide">
+               <video
+                autoPlay
+                loop  
+
+                muted
+                style={{
+                  position: "absolute",
+                  width: "100%",
+                  left: "50%",
+                  top: "50%",
+                  height: "100%",
+                  objectFit: "cover",
+                  transform: "translate(-50%, -50%)",
+                  zIndex: "-1",
+                }}
+              >
+                <source src={HeroVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               <div
                 className="hero-slide-item"
                 style={{
-                  backgroundImage: `url(${HomePageImg})`,
+                  backgroundImage: `url(${'https://videos.pexels.com/video-files/4875313/4875313-uhd_1922_1440_30fps.mp4'})`,
                 }}
               >
                 <div className="container">
                   <div className="hero-text">
                     <h2>
-                      Invest in Farmland for <br />
-                      Long-Term Prosperity
+                      Grow Your Wealth Steadily <br />
+                      with Land Investments
                     </h2>
                     <div className="hero-action">
                       <Link to="/projects" className="cta-btn btn-border">

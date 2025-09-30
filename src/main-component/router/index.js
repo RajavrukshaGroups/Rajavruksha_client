@@ -90,7 +90,7 @@ const RoutesWithLoader = () => {
           <>
           <div>
               <FloatingIcons />
-            <Router>
+               <Router>
             {/* <button onClick={notify}>Notify!</button> */}
               {/* <TawkMessengerReact
                           propertyId="66d2d5ab50c10f7a00a26593"

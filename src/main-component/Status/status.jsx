@@ -11,7 +11,7 @@ function Status() {
         <div className="project-item">
           <img src={AboutIcon} alt="Managed Farmland" />
           <div className="project-info">
-            <h3 className="info-title">Managed Farmland</h3>
+            <h3 className="info-title">Managed Plot</h3>
             <div className="item-divider"></div>
             <p>On-Going</p>
           </div>

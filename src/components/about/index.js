@@ -3,7 +3,8 @@ import CountUp from "react-countup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import AboutImg from "../../components/assets/about-1.e32a7109.webp";
+// import AboutImg from "../../components/assets/about-1.e32a7109.webp";
+import AboutImg from "../../components/assets/homeforsamrudhi.jpg";
 import AboutBgImg from "../../components/assets/about-bg-home-page.png";
 import "./style.css";
 import FadeContent from "../../utils/FadeContent";
@@ -133,7 +134,7 @@ const About = ({ text, readMore }) => {
               data-aos-offset="100"
               onContextMenu={disableContextMenu}
             >
-              <img className="about_img_2" src={AboutImg} alt="img" />
+              <img style={{width:'400px'}} className="about_img_2" src={'https://images.pexels.com/photos/15743362/pexels-photo-15743362/free-photo-of-facade-of-residential-building.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'} alt="img" />
             </div>
           </div>
           <div className="row">

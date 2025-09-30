@@ -333,7 +333,9 @@
   display: inline-block;
 }
 .site-logo img {
-  width: 340px;
+  width: 275px;
+  height: 100px;
+  margin-top: 20px;
   user-select: none;
   pointer-events: none;
   -webkit-user-drag: none;
