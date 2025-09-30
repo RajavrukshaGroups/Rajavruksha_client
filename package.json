@@ -21,6 +21,7 @@
         "clsx": "^2.1.1",
         "framer-motion": "^11.18.0",
         "lottie-web": "^5.12.2",
+        "lucide-react": "^0.544.0",
         "motion": "^12.4.1",
         "react": "^19.0.0",
         "react-axios": "^2.0.6",
