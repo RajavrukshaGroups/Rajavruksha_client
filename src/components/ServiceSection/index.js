@@ -1,15 +1,15 @@
-
 "use client"
 
 import { useEffect, useRef, useState } from "react"
 import { Search, Users, TrendingUp, Lightbulb } from "lucide-react"
 import FadeContent from "../../utils/FadeContent";
+
 const steps = [
   {
     id: "01",
-    title: "PRELIMINARY RESEARCH",
+    title: "Land Procurement:",
     description:
-      "In the initial phase of the project, we will conduct preliminary research to gather essential insights and information.",
+      " Identifying and acquiring strategically located plots for development",
     icon: Search,
     color: "orange",
     bgGradient: "from-orange-500 to-orange-600",
@@ -18,9 +18,9 @@ const steps = [
   },
   {
     id: "02",
-    title: "STAKEHOLDER ENGAGEMENT",
+    title: "Project Planning and Execution",
     description:
-      "In the second phase, we will engage with stakeholders to identify key perspectives and ensure their input is incorporated into the process.",
+      "From conceptualization to completion, managing all phases of residential layout development",
     icon: Users,
     color: "red",
     bgGradient: "from-red-500 to-red-600",
@@ -29,9 +29,9 @@ const steps = [
   },
   {
     id: "03",
-    title: "DATA EVALUATION",
+    title: "Legal Documentation:",
     description:
-      "In the third phase, we will perform data analysis to identify key patterns and insights that will inform our next steps.",
+      "Ensuring all necessary legal processes and documentation are meticulously handled",
     icon: TrendingUp,
     color: "purple",
     bgGradient: "from-purple-600 to-purple-700",
@@ -40,9 +40,9 @@ const steps = [
   },
   {
     id: "04",
-    title: "COMMUNICATION OPTIMIZATION",
+    title: "Marketing and Sales",
     description:
-      "In the fourth phase, we will communicate our findings to relevant stakeholders to share insights and recommendations.",
+      "Developing and implementing effective marketing strategies to promote our projects and facilitate sales.",
     icon: Lightbulb,
     color: "teal",
     bgGradient: "from-teal-500 to-teal-600",
@@ -74,182 +74,459 @@ export default function ServiceSection() {
 
   return (
     <>
-       <FadeContent
+      <FadeContent
         blur={true}
         duration={900}
         easing="ease-out"
         initialOpacity={0}
       >
-        <h1
-          className="work-title"
-          style={{ textAlign: "center", marginTop: "29px" }}
-        >
-          Our Working Process
-        </h1>
+        <h2 className="project-subtitle justify-center flex">Our Services </h2>
       </FadeContent>
-    <div ref={containerRef} className="w-full max-w-7xl mx-auto pt-14 pb-14">
-      {/* Desktop Layout */}
-      <div className="hidden lg:flex items-start justify-center gap-0">
-        {steps.map((step, index) => (
-          <div key={step.id} className="flex items-start">
-            {/* Step Card */}
+      
+      <div ref={containerRef} className="w-full max-w-7xl mx-auto pt-14 pb-20">
+        {/* Desktop Layout */}
+        <div className="hidden lg:flex items-start justify-center gap-0 rounded-2xl p-8 bg-white/50 backdrop-blur-sm">
+          {steps.map((step, index) => (
+            <div key={step.id} className="flex items-start ">
+              {/* Step Card Container */}
+              <div className="flex flex-col items-center">
+                {/* Step Number Badge - Moved to top */}
+                <div
+                  className={`px-4 py-1.5 rounded-md bg-gradient-to-r ${step.bgGradient} text-white font-bold text-sm tracking-wider shadow-lg transform transition-all duration-500 group-hover:scale-105 mb-6`}
+                >
+                   {step.id}
+                </div>
+                
+                {/* Step Card */}
+                <div
+                  className={`flex flex-col items-center transition-all duration-700 delay-${index * 150} ${
+                    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                  }`}
+                >
+                  {/* Circle Badge with 3D Effect - Reduced size */}
+                  <div className="relative group">
+                    {/* Outer ring for hover effect */}
+                    <div
+                      className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.bgGradient} opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500 scale-110`}
+                    />
+                    {/* Main circle container with 3D shadow */}
+                    <div className="relative">
+                      {/* Bottom shadow layer */}
+                      <div
+                        className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.bgGradient} translate-y-2 blur-md ${step.shadowColor} shadow-2xl`}
+                      />
+
+                      {/* Middle shadow layer */}
+                      <div
+                        className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.bgGradient} translate-y-1 opacity-60`}
+                      />
+
+                      {/* Top circle with white background - Reduced size */}
+                      <div
+                        className={`relative w-28 h-28 rounded-full bg-white flex items-center justify-center transform transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 ${step.shadowColor} shadow-xl ring-6 ${step.ringColor} ring-offset-3`}
+                      >
+                        {/* Icon - Reduced size */}
+                        <step.icon
+                          className={`w-10 h-10 text-gray-700 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6`}
+                          strokeWidth={1.5}
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Title */}
+                  {/* <h3 className="mt-6 text-m font-bold text-gray-800 tracking-wide text-center max-w-[200px] transition-colors duration-300 group-hover:text-gray-900">
+                    {step.title}
+                  </h3> */}
+                        <FadeContent
+        blur={true}
+        duration={900}
+        easing="ease-out"
+        initialOpacity={0}
+      >
+        {/* <h2 className="project-subtitle justify-center flex">Our Services </h2> */}
+        <h3 className="mt-6 text-m font-bold text-gray-800 tracking-wide text-center max-w-[200px] transition-colors duration-300 group-hover:text-gray-900">
+                    {step.title}
+                  </h3>
+      </FadeContent>
+
+                  {/* Description */}
+                  <p className="mt-4 text-m text-gray-600 text-center max-w-[220px] leading-relaxed pb-2">
+                    {step.description}
+                  </p>
+                </div>
+              </div>
+
+              {/* Arrow Connector */}
+              {index < steps.length - 1 && (
+                <div
+                  className={`flex items-center justify-center mt-20 mx-4 transition-all duration-700 delay-${
+                    index * 150 + 300
+                  } ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}
+                >
+                  <div className="relative">
+                    {/* Animated arrow */}
+                    <svg width="60" height="40" viewBox="0 0 60 40" className="animate-pulse-slow">
+                      <defs>
+                        <linearGradient id={`gradient-${index}`} x1="0%" y1="0%" x2="100%" y2="0%">
+                          <stop
+                            offset="0%"
+                            className={`text-${steps[index].color}-500`}
+                            stopColor="currentColor"
+                            stopOpacity="0.6"
+                          />
+                          <stop
+                            offset="100%"
+                            className={`text-${steps[index + 1].color}-500`}
+                            stopColor="currentColor"
+                            stopOpacity="0.6"
+                          />
+                        </linearGradient>
+                      </defs>
+                      {/* Arrow line */}
+                      <line
+                        x1="0"
+                        y1="20"
+                        x2="45"
+                        y2="20"
+                        stroke={`url(#gradient-${index})`}
+                        strokeWidth="3"
+                        className="animate-draw-line"
+                      />
+                      {/* Arrow head */}
+                      <polygon
+                        points="45,12 60,20 45,28"
+                        className={`fill-${steps[index + 1].color}-500`}
+                        fill="currentColor"
+                        fillOpacity="0.6"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile/Tablet Layout */}
+        <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-12 border-2 border-blue-700 rounded-2xl p-6 bg-white/50 backdrop-blur-sm">
+          {steps.map((step, index) => (
             <div
+              key={step.id}
               className={`flex flex-col items-center transition-all duration-700 delay-${index * 150} ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
+            >
+              {/* Step Number Badge - Moved to top for mobile */}
+              <div
+                className={`px-4 py-1.5 rounded-md bg-gradient-to-r ${step.bgGradient} text-white font-bold text-sm tracking-wider shadow-lg transform transition-all duration-500 group-hover:scale-105 mb-6`}
               >
-              {/* Circle Badge with 3D Effect */}
+                Step {step.id}
+              </div>
+
+              {/* Circle Badge with 3D Effect - Reduced size */}
               <div className="relative group">
-                {/* Outer ring for hover effect */}
                 <div
                   className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.bgGradient} opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500 scale-110`}
-                  />
+                />
 
-                {/* Main circle container with 3D shadow */}
                 <div className="relative">
-                  {/* Bottom shadow layer */}
                   <div
                     className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.bgGradient} translate-y-2 blur-md ${step.shadowColor} shadow-2xl`}
-                    />
+                  />
 
-                  {/* Middle shadow layer */}
                   <div
                     className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.bgGradient} translate-y-1 opacity-60`}
-                    />
+                  />
 
-                  {/* Top circle with white background */}
+                  {/* Reduced size for mobile */}
                   <div
-                    className={`relative w-40 h-40 rounded-full bg-white flex items-center justify-center transform transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 ${step.shadowColor} shadow-xl ring-8 ${step.ringColor} ring-offset-4`}
-                    >
-                    {/* Icon */}
+                    className={`relative w-24 h-24 md:w-28 md:h-28 rounded-full bg-white flex items-center justify-center transform transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 ${step.shadowColor} shadow-xl ring-6 ${step.ringColor} ring-offset-3`}
+                  >
+                    {/* Reduced icon size */}
                     <step.icon
-                      className={`w-16 h-16 text-gray-700 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6`}
+                      className={`w-8 h-8 md:w-10 md:h-10 text-gray-700 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6`}
                       strokeWidth={1.5}
-                      />
+                    />
                   </div>
                 </div>
               </div>
 
-              {/* Step Number Badge */}
-              <div
-                className={`mt-6 px-4 py-1.5 rounded-md bg-gradient-to-r ${step.bgGradient} text-white font-bold text-sm tracking-wider shadow-lg transform transition-all duration-500 group-hover:scale-105`}
-                >
-                {step.id}
-              </div>
-
-              {/* Title */}
-              <h3 className="mt-4 text-sm font-bold text-gray-800 tracking-wide text-center max-w-[200px] transition-colors duration-300 group-hover:text-gray-900">
+              <h3 className="mt-6 text-sm font-bold text-gray-800 tracking-wide text-center max-w-[200px]">
                 {step.title}
               </h3>
 
-              {/* Description */}
-              <p className="mt-3 text-xs text-gray-600 text-center max-w-[220px] leading-relaxed">{step.description}</p>
+              <p className="mt-4 text-xs text-gray-600 text-center max-w-[220px] leading-relaxed pb-2">
+                {step.description}
+              </p>
             </div>
-
-            {/* Arrow Connector */}
-            {index < steps.length - 1 && (
-              <div
-              className={`flex items-center justify-center mt-20 mx-4 transition-all duration-700 delay-${
-                index * 150 + 300
-              } ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}
-              >
-                <div className="relative">
-                  {/* Animated arrow */}
-                  <svg width="60" height="40" viewBox="0 0 60 40" className="animate-pulse-slow">
-                    <defs>
-                      <linearGradient id={`gradient-${index}`} x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop
-                          offset="0%"
-                          className={`text-${steps[index].color}-500`}
-                          stopColor="currentColor"
-                          stopOpacity="0.6"
-                          />
-                        <stop
-                          offset="100%"
-                          className={`text-${steps[index + 1].color}-500`}
-                          stopColor="currentColor"
-                          stopOpacity="0.6"
-                          />
-                      </linearGradient>
-                    </defs>
-                    {/* Arrow line */}
-                    <line
-                      x1="0"
-                      y1="20"
-                      x2="45"
-                      y2="20"
-                      stroke={`url(#gradient-${index})`}
-                      strokeWidth="3"
-                      className="animate-draw-line"
-                      />
-                    {/* Arrow head */}
-                    <polygon
-                      points="45,12 60,20 45,28"
-                      className={`fill-${steps[index + 1].color}-500`}
-                      fill="currentColor"
-                      fillOpacity="0.6"
-                      />
-                  </svg>
-                </div>
-              </div>
-            )}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-
-      {/* Mobile/Tablet Layout */}
-      <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-12">
-        {steps.map((step, index) => (
-          <div
-          key={step.id}
-          className={`flex flex-col items-center transition-all duration-700 delay-${index * 150} ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
-          >
-            {/* Circle Badge with 3D Effect */}
-            <div className="relative group">
-              <div
-                className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.bgGradient} opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500 scale-110`}
-              />
-
-              <div className="relative">
-                <div
-                  className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.bgGradient} translate-y-2 blur-md ${step.shadowColor} shadow-2xl`}
-                  />
-
-                <div
-                  className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.bgGradient} translate-y-1 opacity-60`}
-                  />
-
-                <div
-                  className={`relative w-32 h-32 md:w-40 md:h-40 rounded-full bg-white flex items-center justify-center transform transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 ${step.shadowColor} shadow-xl ring-8 ${step.ringColor} ring-offset-4`}
-                  >
-                  <step.icon
-                    className={`w-12 h-12 md:w-16 md:h-16 text-gray-700 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6`}
-                    strokeWidth={1.5}
-                    />
-                </div>
-              </div>
-            </div>
-
-            <div
-              className={`mt-6 px-4 py-1.5 rounded-md bg-gradient-to-r ${step.bgGradient} text-white font-bold text-sm tracking-wider shadow-lg transform transition-all duration-500 group-hover:scale-105`}
-              >
-              {step.id}
-            </div>
-
-            <h3 className="mt-4 text-sm font-bold text-gray-800 tracking-wide text-center max-w-[200px]">
-              {step.title}
-            </h3>
-
-            <p className="mt-3 text-xs text-gray-600 text-center max-w-[220px] leading-relaxed">{step.description}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-        </>
+    </>
   )
 }
+
+// "use client"
+
+// import { useEffect, useRef, useState } from "react"
+// import { Search, Users, TrendingUp, Lightbulb } from "lucide-react"
+// import FadeContent from "../../utils/FadeContent";
+// const steps = [
+//   {
+//     id: "01",
+//     title: "PRELIMINARY RESEARCH",
+//     description:
+//       "In the initial phase of the project, we will conduct preliminary research to gather essential insights and information.",
+//     icon: Search,
+//     color: "orange",
+//     bgGradient: "from-orange-500 to-orange-600",
+//     shadowColor: "shadow-orange-500/50",
+//     ringColor: "ring-orange-400/30",
+//   },
+//   {
+//     id: "02",
+//     title: "STAKEHOLDER ENGAGEMENT",
+//     description:
+//       "In the second phase, we will engage with stakeholders to identify key perspectives and ensure their input is incorporated into the process.",
+//     icon: Users,
+//     color: "red",
+//     bgGradient: "from-red-500 to-red-600",
+//     shadowColor: "shadow-red-500/50",
+//     ringColor: "ring-red-400/30",
+//   },
+//   {
+//     id: "03",
+//     title: "DATA EVALUATION",
+//     description:
+//       "In the third phase, we will perform data analysis to identify key patterns and insights that will inform our next steps.",
+//     icon: TrendingUp,
+//     color: "purple",
+//     bgGradient: "from-purple-600 to-purple-700",
+//     shadowColor: "shadow-purple-600/50",
+//     ringColor: "ring-purple-500/30",
+//   },
+//   {
+//     id: "04",
+//     title: "COMMUNICATION OPTIMIZATION",
+//     description:
+//       "In the fourth phase, we will communicate our findings to relevant stakeholders to share insights and recommendations.",
+//     icon: Lightbulb,
+//     color: "teal",
+//     bgGradient: "from-teal-500 to-teal-600",
+//     shadowColor: "shadow-teal-500/50",
+//     ringColor: "ring-teal-400/30",
+//   },
+// ]
+
+// export default function ServiceSection() {
+//   const [isVisible, setIsVisible] = useState(false)
+//   const containerRef = useRef(null)
+
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       ([entry]) => {
+//         if (entry.isIntersecting) {
+//           setIsVisible(true)
+//         }
+//       },
+//       { threshold: 0.1 },
+//     )
+
+//     if (containerRef.current) {
+//       observer.observe(containerRef.current)
+//     }
+
+//     return () => observer.disconnect()
+//   }, [])
+
+//   return (
+//     <>
+//        {/* <FadeContent
+//         blur={true}
+//         duration={900}
+//         easing="ease-out"
+//         initialOpacity={0}
+//       >
+//         <h1
+//           className="work-title"
+//           style={{ textAlign: "center", marginTop: "29px" }}
+//         >
+//           Our Working Process
+//         </h1>
+//       </FadeContent> */}
+//         <FadeContent
+//               blur={true}
+//               duration={900}
+//               easing="ease-out"
+//               initialOpacity={0}
+//             >
+//               <h2 className="project-subtitle justify-center flex">Our Working Process</h2>
+//             </FadeContent>
+//     <div ref={containerRef} className="w-full max-w-7xl mx-auto pt-14 pb-14">
+//       {/* Desktop Layout */}
+//       <div className="hidden lg:flex items-start justify-center gap-0">
+//         {steps.map((step, index) => (
+//           <div key={step.id} className="flex items-start ">
+//                {/* Step Number Badge */}
+//               <div
+//                 className={` mt-6 px-4 py-1.5 rounded-md bg-gradient-to-r ${step.bgGradient} text-white font-bold text-sm tracking-wider shadow-lg transform transition-all duration-500 group-hover:scale-105`}
+//                 >
+//                 Step {step.id}
+//               </div>
+//             {/* Step Card */}
+//             <div
+//               className={` border-2 border-blue-700 flex flex-col items-center transition-all duration-700 delay-${index * 150} ${
+//                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+//               }`}
+//               >
+                
+//               {/* Circle Badge with 3D Effect */}
+//               <div className="relative group">
+//                 {/* Outer ring for hover effect */}
+//                 <div
+//                   className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.bgGradient} opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500 scale-110`}
+//                   />
+//                 {/* Main circle container with 3D shadow */}
+//                 <div className="relative">
+//                   {/* Bottom shadow layer */}
+//                   <div
+//                     className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.bgGradient} translate-y-2 blur-md ${step.shadowColor} shadow-2xl`}
+//                     />
+
+//                   {/* Middle shadow layer */}
+//                   <div
+//                     className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.bgGradient} translate-y-1 opacity-60`}
+//                     />
+
+//                   {/* Top circle with white background */}
+//                   <div
+//                     className={`relative w-40 h-40 rounded-full bg-white flex items-center justify-center transform transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 ${step.shadowColor} shadow-xl ring-8 ${step.ringColor} ring-offset-4`}
+//                     >
+//                     {/* Icon */}
+//                     <step.icon
+//                       className={`w-16 h-16 text-gray-700 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6`}
+//                       strokeWidth={1.5}
+//                       />
+//                   </div>
+//                 </div>
+//               </div>
+
+           
+
+//               {/* Title */}
+//               <h3 className="mt-4 text-sm font-bold text-gray-800 tracking-wide text-center max-w-[200px] transition-colors duration-300 group-hover:text-gray-900">
+//                 {step.title}
+//               </h3>
+
+//               {/* Description */}
+//               <p className="mt-3 text-xs text-gray-600 text-center max-w-[220px] leading-relaxed">{step.description}</p>
+//             </div>
+
+//             {/* Arrow Connector */}
+//             {index < steps.length - 1 && (
+//               <div
+//               className={`flex items-center justify-center mt-20 mx-4 transition-all duration-700 delay-${
+//                 index * 150 + 300
+//               } ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}`}
+//               >
+//                 <div className="relative">
+//                   {/* Animated arrow */}
+//                   <svg width="60" height="40" viewBox="0 0 60 40" className="animate-pulse-slow">
+//                     <defs>
+//                       <linearGradient id={`gradient-${index}`} x1="0%" y1="0%" x2="100%" y2="0%">
+//                         <stop
+//                           offset="0%"
+//                           className={`text-${steps[index].color}-500`}
+//                           stopColor="currentColor"
+//                           stopOpacity="0.6"
+//                           />
+//                         <stop
+//                           offset="100%"
+//                           className={`text-${steps[index + 1].color}-500`}
+//                           stopColor="currentColor"
+//                           stopOpacity="0.6"
+//                           />
+//                       </linearGradient>
+//                     </defs>
+//                     {/* Arrow line */}
+//                     <line
+//                       x1="0"
+//                       y1="20"
+//                       x2="45"
+//                       y2="20"
+//                       stroke={`url(#gradient-${index})`}
+//                       strokeWidth="3"
+//                       className="animate-draw-line"
+//                       />
+//                     {/* Arrow head */}
+//                     <polygon
+//                       points="45,12 60,20 45,28"
+//                       className={`fill-${steps[index + 1].color}-500`}
+//                       fill="currentColor"
+//                       fillOpacity="0.6"
+//                       />
+//                   </svg>
+//                 </div>
+//               </div>
+//             )}
+//           </div>
+//         ))}
+//       </div>
+
+//       {/* Mobile/Tablet Layout */}
+//       <div className="lg:hidden grid grid-cols-1 md:grid-cols-2 gap-12">
+//         {steps.map((step, index) => (
+//           <div
+//           key={step.id}
+//           className={`flex flex-col items-center transition-all duration-700 delay-${index * 150} ${
+//             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+//           }`}
+//           >
+//             {/* Circle Badge with 3D Effect */}
+//             <div className="relative group">
+//               <div
+//                 className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.bgGradient} opacity-0 group-hover:opacity-20 blur-xl transition-all duration-500 scale-110`}
+//               />
+
+//               <div className="relative">
+//                 <div
+//                   className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.bgGradient} translate-y-2 blur-md ${step.shadowColor} shadow-2xl`}
+//                   />
+
+//                 <div
+//                   className={`absolute inset-0 rounded-full bg-gradient-to-br ${step.bgGradient} translate-y-1 opacity-60`}
+//                   />
+
+//                 <div
+//                   className={`relative w-32 h-32 md:w-40 md:h-40 rounded-full bg-white flex items-center justify-center transform transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-2 ${step.shadowColor} shadow-xl ring-8 ${step.ringColor} ring-offset-4`}
+//                   >
+//                   <step.icon
+//                     className={`w-12 h-12 md:w-16 md:h-16 text-gray-700 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6`}
+//                     strokeWidth={1.5}
+//                     />
+//                 </div>
+//               </div>
+//             </div>
+
+//             <div
+//               className={`mt-6 px-4 py-1.5 rounded-md bg-gradient-to-r ${step.bgGradient} text-white font-bold text-sm tracking-wider shadow-lg transform transition-all duration-500 group-hover:scale-105`}
+//               >
+//               {step.id}
+//             </div>
+
+//             <h3 className="mt-4 text-sm font-bold text-gray-800 tracking-wide text-center max-w-[200px]">
+//               {step.title}
+//             </h3>
+
+//             <p className="mt-3 text-xs text-gray-600 text-center max-w-[220px] leading-relaxed">{step.description}</p>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//         </>
+//   )
+// }
 
 
 
