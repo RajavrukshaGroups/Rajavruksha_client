@@ -15,17 +15,15 @@ const OngoingProjects = () => {
         <h1 className="projects-title">Our Ongoing Projects</h1>
       </div>
       <div className="projects-wrapper">
-        <div className="project-card">
-          {/* <div className="project-image-container">
-            <img src={SylImg} alt="Sylvan Retreat" className="project-image" />
-          </div> */}
+        {/* <div className="project-card">
+       
           <div className="flex flex-col overflow-hidden">
             <ContainerScroll
               titleComponent={
                 <>
-                  {/* <h1 className="project-subtitle text-4xl font-semibold text-black dark:text-white">
+                  <h1 className="project-subtitle text-4xl font-semibold text-black dark:text-white">
                     Sylvan Retreat
-                  </h1> */}
+                  </h1>
                 </>
               }
             >
@@ -60,7 +58,7 @@ const OngoingProjects = () => {
               </button>
             </Link>
           </div>
-        </div>
+        </div> */}
 
         <div className="project-card">
           {/* <div className="project-image-container">

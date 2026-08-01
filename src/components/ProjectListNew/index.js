@@ -24,12 +24,12 @@ const ProjectListNew = () => {
   };
 
   const projects = [
-    {
-      title: "Sylvan Retreat",
-      img: SylRetreatImg,
-      logo: Sylvan_logo,
-      description: "Farm Land",
-    },
+    // {
+    //   title: "Sylvan Retreat",
+    //   img: SylRetreatImg,
+    //   logo: Sylvan_logo,
+    //   description: "Farm Land",
+    // },
     // {
     //   title: "Eco Nest",
     //   img: EcoNestImg,

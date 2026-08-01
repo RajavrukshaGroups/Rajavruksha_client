@@ -58,9 +58,9 @@ const Header = () => {
                     <li>
                       <Link to="/projects">Projects</Link>
                       <ul>
-                        <li>
+                        {/* <li>
                           <Link to="/sylvan-retreat">Sylvan-Retreat</Link>
-                        </li>
+                        </li> */}
                         {/* <li>
                           <Link to="/eco-nest">Eco-nest</Link>
                         </li> */}
